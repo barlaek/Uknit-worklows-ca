@@ -1,0 +1,25 @@
+.primary-cta {
+    background-color: $primary;
+    display: flex;
+    flex-shrink: 0;
+    color: white;
+}
+
+.btn {
+    border: none;
+    border-radius: $border-standard;
+}
+
+.btn-padding {
+    padding: $button-padding-top-lg $button-padding-sides-lg;
+}
+
+.inverted-cta {
+    background-color: $secondary;
+}
+
+.category-btn {
+    background-color: $white;
+    color: $dark;
+    width: 100%;
+}
