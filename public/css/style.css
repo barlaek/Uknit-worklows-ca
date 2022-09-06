@@ -6,7 +6,7 @@ i img {
 
 .icon-nav-wrap {
   width: 100%;
-  border-bottom: 1px solid #C96973;
+  border-bottom: 1px solid #c96973;
   justify-content: space-evenly;
 }
 .icon-nav-wrap > a > i > img {
@@ -14,7 +14,7 @@ i img {
 }
 
 .main-nav {
-  background-color: #C96973;
+  background-color: #c96973;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -47,7 +47,7 @@ i img {
   top: 100px;
   height: 100vh;
   transition: 300ms;
-  background-color: #C96973;
+  background-color: #c96973;
 }
 
 .list-item {
@@ -136,7 +136,7 @@ i img {
 }
 
 .primary-cta {
-  background-color: #C96973;
+  background-color: #c96973;
   display: flex;
   flex-shrink: 0;
   color: white;
@@ -152,15 +152,25 @@ i img {
 }
 
 .inverted-cta {
-  background-color: #F4E9DE;
+  background-color: #f4e9de;
 }
 
 .category-btn {
   background-color: white;
-  color: #1F1F1F;
+  color: #1f1f1f;
   width: 100%;
 }
 
+.btn-group {
+  position: relative;
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  .btn-group {
+    flex-wrap: wrap;
+  }
+}
 .rotate {
   transform: rotate(45deg) translateY(-11px) translateX(-2px);
 }
@@ -196,7 +206,7 @@ i img {
 }
 
 a {
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 
 img {
@@ -242,10 +252,10 @@ section {
 
 h1 {
   font-size: 2.5rem;
-  color: #C96973;
+  color: #c96973;
 }
 h1 span {
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 
 h2 {
@@ -431,7 +441,7 @@ h4 {
 }
 
 body {
-  background-color: #F4E9DE;
+  background-color: #f4e9de;
 }
 
 .header-form-wrap .btn,
@@ -443,7 +453,7 @@ body {
   max-width: 600px;
 }
 .hero-left span h4 {
-  color: #C96973;
+  color: #c96973;
 }
 
 .card-grid {

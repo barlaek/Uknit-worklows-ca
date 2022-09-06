@@ -1,25 +1,36 @@
 .primary-cta {
-    background-color: $primary;
-    display: flex;
-    flex-shrink: 0;
-    color: white;
+  background-color: $primary;
+  display: flex;
+  flex-shrink: 0;
+  color: white;
 }
 
 .btn {
-    border: none;
-    border-radius: $border-standard;
+  border: none;
+  border-radius: $border-standard;
 }
 
 .btn-padding {
-    padding: $button-padding-top-lg $button-padding-sides-lg;
+  padding: $button-padding-top-lg $button-padding-sides-lg;
 }
 
 .inverted-cta {
-    background-color: $secondary;
+  background-color: $secondary;
 }
 
 .category-btn {
-    background-color: $white;
-    color: $dark;
-    width: 100%;
+  background-color: $white;
+  color: $dark;
+  width: 100%;
+}
+
+.btn-group {
+  position: relative;
+  display: inline-flex;
+  //   flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .btn-group {
+    flex-wrap: wrap;
+  }
 }

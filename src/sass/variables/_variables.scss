@@ -5,15 +5,15 @@ $rem-size: 1rem;
 // THEME
 
 // theme color variables
-$primary: #C96973;
-$secondary: #F4E9DE;
-$grey: #EBE9E7;
+$primary: #c96973;
+$secondary: #f4e9de;
+$grey: #ebe9e7;
 $success: null;
 $info: null;
 $warning: null;
 $danger: null;
-$light: #F8F8F8;
-$dark: #1F1F1F;
+$light: #f8f8f8;
+$dark: #1f1f1f;
 $white: #ffff;
 
 // Borders
@@ -21,13 +21,13 @@ $border-small: 0.25rem;
 $border-standard: 0.5rem;
 $border-xl: 1rem;
 
-// Active 
+// Active
 $component-active-color: $white;
 $component-active-bg: $primary;
 
 // FONT
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-sm: $font-size-base * .875;
+$font-size-sm: $font-size-base * 0.875;
 $font-size-lg: $font-size-base * 1.25;
 
 $font-weight-lighter: lighter;
@@ -49,7 +49,7 @@ $h1-giant: $font-size-base * 5;
 
 // font
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
 // PADDING
 
@@ -69,15 +69,14 @@ $button-padding-top-lg: $button-padding-top * 1.25;
 $button-padding-sides-lg: $button-padding-sides * 1.25;
 
 // BOX SHADOW
-$box-shadow: 0 .5rem 1rem rgba(black, .15);
-$box-shadow-sm: 0 .125rem .25rem rgba(black, .075);
-$box-shadow-lg: 0 1rem 3rem rgba(black, .175);
-$box-shadow-inset: inset 0 1px 2px rgba(black, .075);
-
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(black, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(black, 0.175);
+$box-shadow-inset: inset 0 1px 2px rgba(black, 0.075);
 
 // SPACING
 
-//gaps 
+//gaps
 $gap-1: $rem-size * 0.25;
 $gap-2: $rem-size * 0.5;
 $gap-3: $rem-size * 0.75;

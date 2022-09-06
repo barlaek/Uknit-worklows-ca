@@ -1,129 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/public/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
     <header>
-        <!-- Primary Nav -->
-        <nav class="main-nav">
-            <div class="nav-container d-flex justify-content-center">
-                <div class="nav-wrap d-flex justify-content-between">
-                    <a class="logo" href="#"><img src="/src/assets/logo.png" alt="Uknit logo"></a>
-                    <button class="toggle-menu" id="toggleBtn">Menu</button>
-                    <div class="collapse-nav justify-content-end gap-4">
-                        <ul class="nav-ul gap-1 z-10">
-                            <li class="list-item"><a class="link" href="#">Team</a></li>
-                            <li class="list-item"><a class="link" href="#">About us</a></li>
-                            <li class="list-item"><a class="link" href="#">Invest</a></li>
-                        </ul>
-                        <div class="secondary-nav">
-                            <a href="#"><button class="btn btn-padding inverted-cta hover">Login / Create account</button></a>
-                        </div>
-                    </div>
-                </div>
+      <!-- Primary Nav -->
+      <nav class="main-nav">
+        <div class="nav-container d-flex justify-content-center">
+          <div class="nav-wrap d-flex justify-content-between">
+            <a class="logo" href="#"><img src="/src/assets/logo.png" alt="Uknit logo" /></a>
+            <button class="toggle-menu" id="toggleBtn">Menu</button>
+            <div class="collapse-nav justify-content-end gap-4">
+              <ul class="nav-ul gap-1 z-10">
+                <li class="list-item"><a class="link" href="#">Team</a></li>
+                <li class="list-item"><a class="link" href="#">About us</a></li>
+                <li class="list-item"><a class="link" href="#">Invest</a></li>
+              </ul>
+              <div class="secondary-nav">
+                <a href="#"
+                  ><button class="btn btn-padding inverted-cta hover">
+                    Login / Create account
+                  </button></a
+                >
+              </div>
             </div>
-        </nav>
-        <!-- /Primary Nav -->
-        <!-- Secondary Nav -->
-        <nav>
-            <div class="container z-0">
-                <div class="icon-nav-wrap d-flex py-3">
-                    <a href="#"><i><img class="hover hover-icon" src="/src/assets/create-icon.svg" alt="Profile-icon"></i></a>
-                    <a href="#"><i><img class="hover hover-icon" src="/src/assets/home-icon.svg" alt="Profile-icon"></i></a>
-                    <a href="#"><i><img class="hover hover-icon" src="/src/assets/search-icon.svg" alt="Profile-icon"></i></a>
-                    <a href="#"><i><img class="hover hover-icon rotate" src="/src/assets/message-icon.svg" alt="Profile-icon"></i></a>
-                    <a href="#"><i><img class="hover hover-icon" src="/src/assets/notification-icon.svg" alt="Profile-icon"></i></a>
-                    <a href="#"><i><img class="hover hover-icon" src="/src/assets/profile-icon.svg" alt="Profile-icon"></i></a>
-                </div>
-            </div>
-        </nav>
-        <!-- /Secondary Nav -->
+          </div>
+        </div>
+      </nav>
+      <!-- /Primary Nav -->
+      <!-- Secondary Nav -->
+      <nav>
+        <div class="container z-0">
+          <div class="icon-nav-wrap d-flex py-3">
+            <a href="#"
+              ><i
+                ><img
+                  class="hover hover-icon"
+                  src="/src/assets/create-icon.svg"
+                  alt="Profile-icon" /></i
+            ></a>
+            <a href="#"
+              ><i
+                ><img
+                  class="hover hover-icon"
+                  src="/src/assets/home-icon.svg"
+                  alt="Profile-icon" /></i
+            ></a>
+            <a href="#"
+              ><i
+                ><img
+                  class="hover hover-icon"
+                  src="/src/assets/search-icon.svg"
+                  alt="Profile-icon" /></i
+            ></a>
+            <a href="#"
+              ><i
+                ><img
+                  class="hover hover-icon rotate"
+                  src="/src/assets/message-icon.svg"
+                  alt="Profile-icon" /></i
+            ></a>
+            <a href="#"
+              ><i
+                ><img
+                  class="hover hover-icon"
+                  src="/src/assets/notification-icon.svg"
+                  alt="Profile-icon" /></i
+            ></a>
+            <a href="#"
+              ><i
+                ><img
+                  class="hover hover-icon"
+                  src="/src/assets/profile-icon.svg"
+                  alt="Profile-icon" /></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+      <!-- /Secondary Nav -->
     </header>
     <section>
-        <div class="container d-flex">
-            <!-- Hero -->
-            <div class="hero-left w-100">
-                <h1 class="giant">If it sits, <br>
-                <span class="giant">It knits</span>
-                </h1>
-                <div class="hero-info-wrap mt-3">
-                    <div class="d-flex align-items-center"><img class="knit-bullet" src="/src/assets/knitting-svgrepo-com.svg" alt=""><h4>Buy & sell homeknitted products,</h4></div>
-                    <div class="d-flex align-items-center mt-2"><img class="knit-bullet" src="/src/assets/knitting-svgrepo-com.svg" alt=""><h4>Earn money knitting for someone else,</h4></div>
-                    <div class="d-flex align-items-center mt-2"><img class="knit-bullet" src="/src/assets/knitting-svgrepo-com.svg" alt=""><h4>Or hire a knitter for a custom task</h4></div>
-                </div>
-                <div class="header-form-wrap d-flex flex-column mt-5 py-4">
-                    <div>
-                        <form>
-                            <input class="search btn-padding w-100" type="search" inputmode="search" placeholder="What are you looking for?">
-                        </form>
-                    </div>
-                    <div class="d-flex justify-content-between mt-5 gap-4">
-                        <button class="hover btn category-btn btn-padding box-shadow-sm">Knit's</button>
-                        <button class="hover btn category-btn btn-padding box-shadow-sm">Knit on Hire's</button>
-                    </div>
-                    <div class="mt-5 w-100">
-                        <button class="hover btn-padding box-shadow-sm btn primary-cta w-100 justify-content-center">Create ad</button>
-                    </div>
-                </div>
+      <div class="container d-flex">
+        <!-- Hero -->
+        <div class="hero-left w-100">
+          <h1 class="giant">
+            If it sits, <br />
+            <span class="giant">It knits</span>
+          </h1>
+          <div class="hero-info-wrap mt-3">
+            <div class="d-flex align-items-center">
+              <img class="knit-bullet" src="/src/assets/knitting-svgrepo-com.svg" alt="" />
+              <h4>Buy & sell homeknitted products,</h4>
             </div>
-             <!-- /Hero -->
+            <div class="d-flex align-items-center mt-2">
+              <img class="knit-bullet" src="/src/assets/knitting-svgrepo-com.svg" alt="" />
+              <h4>Earn money knitting for someone else,</h4>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <img class="knit-bullet" src="/src/assets/knitting-svgrepo-com.svg" alt="" />
+              <h4>Or hire a knitter for a custom task</h4>
+            </div>
+          </div>
+          <div class="header-form-wrap d-flex flex-column mt-5 py-4">
+            <div>
+              <form>
+                <input
+                  class="search btn-padding w-100"
+                  type="search"
+                  inputmode="search"
+                  placeholder="What are you looking for?"
+                />
+              </form>
+            </div>
+            <div class="btn-group d-flex justify-content-between mt-5 gap-4">
+              <button class="hover btn category-btn btn-padding box-shadow-sm">Knit's</button>
+              <button class="hover btn category-btn btn-padding box-shadow-sm">
+                Knit on Hire's
+              </button>
+            </div>
+            <div class="mt-5 w-100">
+              <button
+                class="hover btn-padding box-shadow-sm btn primary-cta w-100 justify-content-center"
+              >
+                Create ad
+              </button>
+            </div>
+          </div>
         </div>
+        <!-- /Hero -->
+      </div>
     </section>
     <section>
-        <div class="container">
-            <h4 class="mb-5">New today</h4>
-            <div class="card-grid grid">
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
-                <div class="card">
-                    <div class="card-image-div"><img class="card-image" src="/src/assets/Images/sweater.jpg" alt=""></div>
-                    <h5 class="mt-2">Sweater</h5>
-                    <p class="mt-1 small-font">Rating: 5/5</p>
-                </div>
+      <div class="container">
+        <h4 class="mb-5">New today</h4>
+        <div class="card-grid grid">
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
             </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
+          <div class="card">
+            <div class="card-image-div">
+              <img class="card-image" src="/src/assets/Images/sweater.jpg" alt="" />
+            </div>
+            <h5 class="mt-2">Sweater</h5>
+            <p class="mt-1 small-font">Rating: 5/5</p>
+          </div>
         </div>
-        <div class="d-flex justify-content-center mt-6">
-            <a href="#"><button class="btn primary-cta btn-padding">Go to explore</button></a>
-        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-6">
+        <a href="#"><button class="btn primary-cta btn-padding">Go to explore</button></a>
+      </div>
     </section>
     <script src="../src/js/script.js"></script>
-</body>
+  </body>
 </html>
