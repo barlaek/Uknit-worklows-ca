@@ -1,8 +1,7 @@
-// variables 
-@import "./variables/variables";
-
-@import "./layout/index.scss";
-@import "./flex/index.scss";
-@import "./components/index.scss";
+// variables
 @import "./abstracts/index.scss";
+@import "./base/index.scss";
+@import "./components/index.scss";
+@import "./layout/index.scss";
 @import "./pages/index.scss";
+@import "./utils/index.scss";

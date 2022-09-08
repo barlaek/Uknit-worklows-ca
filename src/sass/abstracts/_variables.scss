@@ -1,0 +1,87 @@
+// === GLOBAL VARIABLES ===
+
+// <<<-------------  THEME VARIABLES ------------>>>
+// Theme global colors
+$primary-color: #c96973;
+$secondary-color: #f4e9de;
+$grey-color: #efefef;
+$success-color: #28a745;
+$info-color: rgb(205, 205, 205);
+$warning-color: rgb(224, 216, 182);
+$danger-color: #dc3545;
+$light-color: #fafafa;
+$dark-color: #1f1f1f;
+$white-color: #ffff;
+
+// Active colors
+$active-color: $dark-color;
+$active-bg: $primary-color;
+
+// <<<-------------  TYPOGRAPHY VARIABLES ------------>>>
+// Paragraph and heading font sizes
+$rem-size: 1rem;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.9;
+$font-size-lg: $font-size-base * 1.2;
+
+$display-1-font-size: $font-size-base * 5;
+$display-2-font-size: $font-size-base * 4;
+
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.2;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base * 0.9;
+
+// Font weights
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-500: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+// <<<------------- SPACING VARIABLES ------------>>>
+$sp1: $rem-size * 0.25;
+$sp2: $rem-size * 0.5;
+$sp3: $rem-size * 0.75;
+$sp4: $rem-size * 1;
+$sp5: $rem-size * 1.2;
+$sp6: $rem-size * 1.5;
+$sp7: $rem-size * 1.7;
+$sp8: $rem-size * 2;
+$sp9: $rem-size * 2.5;
+$sp10: $rem-size * 3;
+$section-padding: 80px;
+
+// PADDINGS
+// Buttons
+$regular-btn-padding: 1rem 2rem;
+$large-btn-padding: 1.25rem 2.25rem;
+$container-padding: 0 1.5em;
+// Cards
+
+// MARGINS
+
+//GAPS
+$gap-1: $rem-size * 0.25;
+$gap-2: $rem-size * 0.5;
+$gap-3: $rem-size * 0.75;
+$gap-4: $rem-size * 1;
+$gap-5: $rem-size * 1.5;
+
+// <<<------------- BOX SHADOW VARIABLES ------------>>>
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(black, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(black, 0.175);
+$box-shadow-inset: inset 0 1px 2px rgba(black, 0.075);
+
+// <<<------------- BORDER VARIABLES ------------>>>
+$border-small: 0.5rem;
+$border-standard: 1rem;
+$border-xl: 1.5rem;
+
+// <<<------------- TRANSITION VARIABLES ------------>>>
+$regular-transition: all 0.3s ease-in;

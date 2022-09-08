@@ -1,0 +1,10 @@
+// === GLOBAL FUNCTIONS ===
+
+// <<<-------------  SETTING TEXT COLOR BASED ON THE BACKGROUND COLOR ------------>>>
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}

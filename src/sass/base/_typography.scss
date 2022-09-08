@@ -1,0 +1,144 @@
+// === GLOBAL TYPOGRAPHY FONTS, STYLES AND COLORS STYLES ===
+
+// <<<-------------  TYPOGRAPHY CLASSES ------------>>>
+/* See below typography style classes and typography color classes used so far in the project:
+
+Typography styling classes
+ - display-1__dark
+ - display-1__primary
+ - text-large
+ - text-small
+
+ Typography color classes
+ - color-primary
+ - color-secondary
+ - color-white
+ - color-light
+ - color-dark
+ - color-info
+ - color-success
+ - color-danger
+ - color-warning
+ 
+*/
+
+// <<<-------------  FONT IMPORTS ------------>>>
+// Google font import
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+// <<<-------------  HEADING STYLES ------------>>>
+//Display headings
+.display-1__dark {
+  font-size: $display-1-font-size;
+  font-weight: 900;
+  color: $dark-color;
+  // margin-bottom: $sp4;
+}
+
+.display-1__primary {
+  font-size: $display-1-font-size;
+  font-weight: 900;
+  color: $primary-color;
+  // margin-bottom: $sp4;
+}
+//Regular headings
+h1,
+h2,
+h3 {
+  font-family: "Montserrat";
+  font-weight: $font-weight-bold;
+  color: $dark-color;
+  line-height: 1.2em;
+  // margin-bottom: $sp5;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-family: "Montserrat";
+  color: $dark-color;
+  font-size: $h4-font-size;
+  font-weight: $font-weight-semibold;
+  line-height: 1.2em;
+  // margin-bottom: $sp4;
+}
+
+h5 {
+  font-family: "Montserrat";
+  color: $dark-color;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-500;
+  line-height: 1.2em;
+  // margin-bottom: $sp4;
+}
+
+h6 {
+  font-family: "Montserrat";
+  font-size: $h6-font-size;
+  color: $dark-color;
+  font-weight: $font-weight-semibold;
+  line-height: 1.2em;
+  // margin-bottom: $sp4;
+}
+
+// <<<------------- TEXT STYLES ------------>>>
+
+// Extra text classes
+.text {
+  &-large {
+    font-size: $font-size-lg;
+    color: $dark-color;
+    line-height: 1.5rem;
+    font-weight: $font-weight-normal;
+    // margin-bottom: $sp4;
+  }
+  &-small {
+    color: $dark-color;
+    font-size: $font-size-sm;
+    line-height: 1.5rem;
+    font-weight: $font-weight-normal;
+    // margin-bottom: $sp4;
+  }
+}
+
+// <<<------------- TYPOGRAPHY COLORS ------------>>>
+
+.color {
+  &-primary {
+    @include set-color($primary-color);
+  }
+  &-secondary {
+    @include set-color($secondary-color);
+  }
+  &-white {
+    @include set-color($white-color);
+  }
+  &-light {
+    @include set-color($light-color);
+  }
+  &-dark {
+    @include set-color($dark-color);
+  }
+  &-info {
+    @include set-color($info-color);
+  }
+  &-success {
+    @include set-color($success-color);
+  }
+  &-danger {
+    @include set-color($danger-color);
+  }
+  &-warning {
+    @include set-color($warning-color);
+  }
+}

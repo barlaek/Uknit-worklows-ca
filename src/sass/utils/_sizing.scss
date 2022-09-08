@@ -1,0 +1,40 @@
+// === WIDTH SIZES GLOBAL STYLES ===
+
+// <<<------------- Sizing Classes ------------>>>
+
+/* See below the sizing classes: 
+ - w-large
+ - w-medium
+ - w-small
+ - w-100
+ - w-50
+ - w-25
+*/
+
+// <<<------------- MAX-WIDTH ------------>>>
+
+.w-large {
+  max-width: 740px;
+}
+
+.w-medium {
+  max-width: 540px;
+}
+
+.w-small {
+  max-width: 300px;
+}
+
+// <<<------------- WIDTH ------------>>>
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}

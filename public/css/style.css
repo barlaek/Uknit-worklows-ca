@@ -1,16 +1,367 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-i img {
-  padding: 0.25rem;
-  padding-left: 1rem;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.icon-nav-wrap {
-  width: 100%;
-  border-bottom: 1px solid #c96973;
-  justify-content: space-evenly;
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #f4e9de;
+  color: #1f1f1f;
+  font-weight: 400;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
-.icon-nav-wrap > a > i > img {
-  height: 40px;
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #c96973;
+}
+
+.link.active {
+  color: #1f1f1f;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  overflow: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.z_-1 {
+  z-index: -1;
+}
+
+.z-0 {
+  z-index: -1;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-4 {
+  z-index: 4;
+}
+
+.box-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.box-shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* See below typography style classes and typography color classes used so far in the project:
+
+Typography styling classes
+ - display-1__dark
+ - display-1__primary
+ - text-large
+ - text-small
+
+ Typography color classes
+ - color-primary
+ - color-secondary
+ - color-white
+ - color-light
+ - color-dark
+ - color-info
+ - color-success
+ - color-danger
+ - color-warning
+
+*/
+.display-1__dark {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #1f1f1f;
+}
+
+.display-1__primary {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #c96973;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "Montserrat";
+  color: #1f1f1f;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+h5 {
+  font-family: "Montserrat";
+  color: #1f1f1f;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+h6 {
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  color: #1f1f1f;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+.text-large {
+  font-size: 1.2rem;
+  color: #1f1f1f;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.text-small {
+  color: #1f1f1f;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.color-primary {
+  color: #c96973;
+}
+.color-secondary {
+  color: #f4e9de;
+}
+.color-white {
+  color: white;
+}
+.color-light {
+  color: #fafafa;
+}
+.color-dark {
+  color: #1f1f1f;
+}
+.color-info {
+  color: rgb(205, 205, 205);
+}
+.color-success {
+  color: #28a745;
+}
+.color-danger {
+  color: #dc3545;
+}
+.color-warning {
+  color: rgb(224, 216, 182);
+}
+
+/* Every time we use a button is good to know that we need the default button class together with the button we want to use ( EX: btn btn-primary ). See below the button classes: 
+ - btn = default button class
+ - btn btn-primary
+ - btn btn-secondary
+ - btn btn-white
+ - btn btn-dark
+ - btn btn-success
+ - btn btn-danger
+ - btn btn-warning
+ - btn btn-info
+ - btn btn-category
+*/
+.btn {
+  display: inline-block;
+  background: #fafafa;
+  color: #1f1f1f;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+}
+.btn.btn-primary {
+  background-color: #c96973;
+  color: #fafafa;
+  padding: 1.25rem 2.25rem;
+}
+.btn.btn-primary:hover {
+  background: #ce7881;
+}
+.btn.btn-secondary {
+  background-color: #f4e9de;
+  color: #1f1f1f;
+  padding: 1.25rem 2.25rem;
+}
+.btn.btn-secondary:hover {
+  background: #f9f3ed;
+}
+.btn.btn-white {
+  background-color: white;
+  color: #1f1f1f;
+  padding: 1.25rem 2.25rem;
+}
+.btn.btn-dark {
+  background-color: #1f1f1f;
+  color: #fafafa;
+  padding: 1rem 2rem;
+}
+.btn.btn-dark:hover {
+  background: #292929;
+}
+.btn.btn-success {
+  background-color: #28a745;
+  color: #fafafa;
+  padding: 1rem 2rem;
+}
+.btn.btn-success:hover {
+  background: #2cb74c;
+}
+.btn.btn-danger {
+  background-color: #dc3545;
+  color: #fafafa;
+  padding: 1rem 2rem;
+}
+.btn.btn-danger:hover {
+  background: #df4655;
+}
+.btn.btn-warning {
+  background-color: rgb(224, 216, 182);
+  color: #1f1f1f;
+  padding: 1rem 2rem;
+}
+.btn.btn-warning:hover {
+  background: #e6e0c4;
+}
+.btn.btn-info {
+  background-color: rgb(205, 205, 205);
+  color: #1f1f1f;
+  padding: 1rem 2rem;
+}
+.btn.btn-info:hover {
+  background: #d7d7d7;
+}
+.btn.btn-category {
+  background-color: #fafafa;
+  color: #1f1f1f;
+  padding: 1rem 2rem;
+}
+.btn.btn-category:hover {
+  background: white;
+}
+.btn:hover {
+  background: white;
+}
+
+.btn-group {
+  position: relative;
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  .btn-group {
+    flex-wrap: wrap;
+  }
+}
+/*See below the card classes: 
+ - card
+ - card-header
+ - card-body
+ - card-footer
+ - card-img-wrapper
+ - card-img
+
+*/
+.card {
+  border-radius: 1.5rem;
+}
+
+.card-img {
+  border-radius: 1rem;
+}
+
+/* Every time we use a button is good to know that we need the default button class together with the button we want to use ( EX: btn btn-primary ). See below the button classes: 
+ - form-wrapper
+ - form-control
+ - input
+ - label
+ - placeholder
+ - option
+ - select
+
+*/
+.search {
+  border: none;
+  border-radius: 1rem;
+  outline-style: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.search:focus {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: 300ms;
 }
 
 .main-nav {
@@ -22,19 +373,12 @@ i img {
   height: 100px;
 }
 .main-nav a {
-  color: white;
-}
-
-.nav-container {
-  margin: 0 auto;
-  width: 100%;
+  color: #fafafa;
 }
 
 .nav-wrap {
   width: 100%;
-  margin: 0 16px;
   align-items: center;
-  max-width: 1020px;
 }
 
 .collapse-nav {
@@ -89,7 +433,7 @@ i img {
     justify-content: space-between;
     height: unset;
   }
-  .icon-nav-wrap {
+  .nav-icon-wrapper {
     justify-content: flex-end;
   }
   .nav-ul {
@@ -99,6 +443,78 @@ i img {
     padding: 0;
   }
 }
+nav .content-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #c96973;
+  gap: 1rem;
+}
+nav .content-wrapper img {
+  width: 32px;
+}
+nav .content-wrapper img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}
+nav .content-wrapper .rotate {
+  transform: rotate(45deg) translateY(-11px) translateX(-2px);
+}
+
+/* See below classes used on the homepage: 
+ - container
+ - title-wrapper
+ - content-wrapper
+ - content
+ - content-header
+ - content-body
+ - content-footer
+ - form-wrapper
+ - list-wrapper
+ - d-flex
+ - d-grid
+ - d-none
+ - product-grid
+ - card
+ - card-img-wrapper
+ - card-img
+ - w-medium
+ - w-100
+ - text-large
+ - text-small
+ - btn btn-white
+ - btn btn-primary
+ - btn btn-secondary
+ - box-shadow-sm
+
+*/
+.knit-bullet {
+  height: 20px;
+  width: 20px;
+  margin-right: 1rem;
+}
+
+.form-wrapper .btn,
+.form-wrapper input {
+  font-size: 1.2rem;
+}
+
+.product-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+/* See below the grid classes: 
+ - d-flex
+ - flex-column
+ - flex-row
+ - justify-content-center
+ - justify-content-between
+ - justify-content-evenly
+ - justify-content-end
+ - justify-content-start
+ - align-items-center
+
+*/
 .d-flex {
   display: flex;
 }
@@ -135,150 +551,96 @@ i img {
   align-items: center;
 }
 
-.primary-cta {
+/* See below the grid classes: 
+ - d-grid
+*/
+.d-grid {
+  display: grid;
+}
+
+/* See below the sizing classes: 
+ - w-large
+ - w-medium
+ - w-small
+ - w-100
+ - w-50
+ - w-25
+*/
+.w-large {
+  max-width: 740px;
+}
+
+.w-medium {
+  max-width: 540px;
+}
+
+.w-small {
+  max-width: 300px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+/* NOTE!! Depending on the background class we use in the HTML structure, the paragraph font color will change accordingly ( EX: if the background is a light color, the text will automatically be a dark color. Please see _mixin.scss and _functions.scss in the sass abstract folder for reference to this setup. See below the background classes:
+ - bg-primary
+ - bg-secondary
+ - bg-white
+ - bg-light
+ - bg-dark
+ - bg-info
+ - bg-success
+ - bg-danger
+ - bg-warning
+*/
+.bg-primary {
   background-color: #c96973;
-  display: flex;
-  flex-shrink: 0;
-  color: white;
+  color: #fafafa;
 }
-
-.btn {
-  border: none;
-  border-radius: 0.5rem;
-}
-
-.btn-padding {
-  padding: 1.25rem 2.5rem;
-}
-
-.inverted-cta {
+.bg-secondary {
   background-color: #f4e9de;
+  color: #1f1f1f;
 }
-
-.category-btn {
+.bg-white {
   background-color: white;
   color: #1f1f1f;
-  width: 100%;
 }
-
-.btn-group {
-  position: relative;
-  display: inline-flex;
+.bg-light {
+  background-color: #fafafa;
+  color: #1f1f1f;
 }
-
-@media (max-width: 640px) {
-  .btn-group {
-    flex-wrap: wrap;
-  }
+.bg-dark {
+  background-color: #1f1f1f;
+  color: #fafafa;
 }
-.rotate {
-  transform: rotate(45deg) translateY(-11px) translateX(-2px);
+.bg-info {
+  background-color: rgb(205, 205, 205);
+  color: #1f1f1f;
 }
-
-.search {
-  border: none;
-  border-radius: 0.5rem;
-  outline-style: none;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+.bg-success {
+  background-color: #28a745;
+  color: #fafafa;
 }
-
-.search:focus {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transition: 300ms;
+.bg-danger {
+  background-color: #dc3545;
+  color: #fafafa;
 }
-
-.card {
-  border-radius: 1rem;
-}
-
-.card-image {
-  border-radius: 0.5rem;
-}
-
-* {
-  list-style: none;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat";
-  font-size: 1rem;
-}
-
-a {
+.bg-warning {
+  background-color: rgb(224, 216, 182);
   color: #1f1f1f;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
+/* See below the spacing classes: 
 
-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  position: relative;
-}
-
-.container {
-  width: 100%;
-  max-width: 1020px;
-  margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.hover:hover {
-  cursor: pointer;
-}
-
-.hover-icon:hover {
-  transform: scale(1.2);
-  transition: 300ms;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.z-0 {
-  z-index: -1;
-}
-
-.giant {
-  font-size: 5rem;
-  font-weight: 900;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #c96973;
-}
-h1 span {
-  color: #1f1f1f;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.box-shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.box-shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-
+*/
 .p-1 {
   padding: 0.25rem;
 }
@@ -296,7 +658,7 @@ h4 {
 }
 
 .p-5 {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .py-1 {
@@ -320,8 +682,8 @@ h4 {
 }
 
 .py-5 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 }
 
 .px-1 {
@@ -341,7 +703,7 @@ h4 {
 }
 
 .px-5 {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .m-1 {
@@ -361,7 +723,7 @@ h4 {
 }
 
 .m-5 {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .mt-1 {
@@ -381,7 +743,7 @@ h4 {
 }
 
 .mt-5 {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 .mt-6 {
@@ -405,7 +767,7 @@ h4 {
 }
 
 .mb-5 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .mb-6 {
@@ -428,42 +790,14 @@ h4 {
   gap: 1rem;
 }
 
-.w-100 {
+/* See below the overlay classes: 
+ - dark-overlay
+*/
+.dark-overlay {
+  height: 100%;
   width: 100%;
-}
-
-.grid {
-  display: grid;
-}
-
-.small-font {
-  font-size: 0.875rem;
-}
-
-body {
-  background-color: #f4e9de;
-}
-
-.header-form-wrap .btn,
-.header-form-wrap input {
-  font-size: 1.25rem;
-}
-
-.hero-left {
-  max-width: 600px;
-}
-.hero-left span h4 {
-  color: #c96973;
-}
-
-.card-grid {
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  gap: 1rem;
-}
-
-.knit-bullet {
-  height: 20px;
-  width: 20px;
-  margin-right: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }

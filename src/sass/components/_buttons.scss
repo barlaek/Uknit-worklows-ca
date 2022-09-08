@@ -1,33 +1,119 @@
-.primary-cta {
-  background-color: $primary;
-  display: flex;
-  flex-shrink: 0;
-  color: white;
-}
+// === GLOBAL BUTTONS STYLES ===
 
+// <<<-------------  Button Classes ------------>>>
+
+/* Every time we use a button is good to know that we need the default button class together with the button we want to use ( EX: btn btn-primary ). See below the button classes: 
+ - btn = default button class
+ - btn btn-primary
+ - btn btn-secondary
+ - btn btn-white
+ - btn btn-dark
+ - btn btn-success
+ - btn btn-danger
+ - btn btn-warning
+ - btn btn-info
+ - btn btn-category
+*/
+
+// Default button
 .btn {
+  display: inline-block;
+  background: $light-color;
+  color: $dark-color;
+  padding: $regular-btn-padding;
   border: none;
+  cursor: pointer;
+  font-size: $font-size-base;
+  outline: none;
   border-radius: $border-standard;
+  transition: all 0.3s ease-in;
+
+  // Primary button
+  &.btn-primary {
+    @include set-background($primary-color);
+    padding: $large-btn-padding;
+    &:hover {
+      background: lighten($primary-color, 4%);
+    }
+  }
+
+  // Secondary button
+  &.btn-secondary {
+    @include set-background($secondary-color);
+    padding: $large-btn-padding;
+    &:hover {
+      background: lighten($secondary-color, 4%);
+    }
+  }
+
+  // White button
+  &.btn-white {
+    @include set-background($white-color);
+    padding: $large-btn-padding;
+  }
+
+  // Dark button
+  &.btn-dark {
+    @include set-background($dark-color);
+    padding: $regular-btn-padding;
+    &:hover {
+      background: lighten($dark-color, 4%);
+    }
+  }
+
+  // Success button
+  &.btn-success {
+    @include set-background($success-color);
+    padding: $regular-btn-padding;
+    &:hover {
+      background: lighten($success-color, 4%);
+    }
+  }
+
+  // Danger button
+  &.btn-danger {
+    @include set-background($danger-color);
+    padding: $regular-btn-padding;
+    &:hover {
+      background: lighten($danger-color, 4%);
+    }
+  }
+
+  // Warning button
+  &.btn-warning {
+    @include set-background($warning-color);
+    padding: $regular-btn-padding;
+    &:hover {
+      background: lighten($warning-color, 4%);
+    }
+  }
+
+  // Info button
+  &.btn-info {
+    @include set-background($info-color);
+    padding: $regular-btn-padding;
+    &:hover {
+      background: lighten($info-color, 4%);
+    }
+  }
+
+  // Category button
+  &.btn-category {
+    @include set-background($light-color);
+    padding: $regular-btn-padding;
+    &:hover {
+      background: lighten($light-color, 4%);
+    }
+  }
+  &:hover {
+    background: lighten($light-color, 4%);
+  }
 }
 
-.btn-padding {
-  padding: $button-padding-top-lg $button-padding-sides-lg;
-}
-
-.inverted-cta {
-  background-color: $secondary;
-}
-
-.category-btn {
-  background-color: $white;
-  color: $dark;
-  width: 100%;
-}
-
+// Button group wrapper
 .btn-group {
   position: relative;
   display: inline-flex;
-  //   flex-wrap: wrap;
 }
 @media (max-width: 640px) {
   .btn-group {
