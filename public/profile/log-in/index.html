@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="log-in-section">
+        <div class="account-grid w-100">
+          <div class="content bg-primary d-flex flex-column justify-content-between w-100 p-5">
+            <div class="brand">
+              <a class="logo" href="/public/"
+                ><img src="/src/assets/logo.png" alt="Uknit logo"
+              /></a>
+            </div>
+            <div class="add">
+              <h3 class="color-light">This is an Add.</h3>
+              <p>Handmade is not homemade. Do it right and wear it with pride!.</p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="account-card bg-light mb-4">
+              <div class="card-header">
+                <div class="title-wrapper d-flex justify-content-center">
+                  <h2 class="color-primary">Sign In</h2>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-wrapper">
+                  <form action="dashboard.html" class="form">
+                    <!-- Form Email -->
+                    <div class="form-group mb-4">
+                      <input
+                        type="email"
+                        id="email"
+                        minlength="8"
+                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                        maxlength="20"
+                        class="form-control"
+                        name="email"
+                        placeholder="Email address"
+                        required
+                      />
+                      <div class="form-error" id="emailError"></div>
+                    </div>
+
+                    <!-- Form Password -->
+                    <div class="form-group mb-4">
+                      <!-- <label for="password" class="form-label">Password</label> -->
+                      <input
+                        type="password"
+                        id="password"
+                        minlength="6"
+                        class="form-control"
+                        name="password"
+                        placeholder="Your password"
+                        required
+                      />
+                    </div>
+
+                    <!-- Check-box -->
+                    <div class="remember-pass text-small mt-4 mb-4">
+                      <input type="checkbox" name="legal" id="legal" />
+                      <label for="legal"
+                        >Remember me
+                        <a href="/public/profile/forget-password/" class="forgot-link ml-2"
+                          >Forgot Password?</a
+                        >
+                      </label>
+                    </div>
+
+                    <!-- Form Button -->
+                    <button type="submit" value="Login" class="btn w-100">Log In</button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Form alert error -->
+              <div class="alert-wrapper bg-danger mt-4 mb-4">
+                <p class="p-5">Invalid credentials. Please try again.</p>
+              </div>
+
+              <!-- Check-box -->
+              <div class="card-footer text-small mt-4 mb-4">
+                <input type="checkbox" name="legal" id="legal" />
+                <label for="legal">I agree to the <a href="#">Terms and conditions</a> </label>
+                <p class="text-small mt-2">
+                  Don't have an account?
+                  <a href="/public/profile/sign-up/">Create account</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../src/js/script.js"></script>
+  </body>
+</html>

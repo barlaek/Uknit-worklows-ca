@@ -1,0 +1,45 @@
+// === GLOBAL BACKGROUNDS ===
+
+// <<<-------------  Background Classes ------------>>>
+
+/* NOTE!! Depending on the background class we use in the HTML structure, the paragraph font color will change accordingly ( EX: if the background is a light color, the text will automatically be a dark color. Please see _mixin.scss and _functions.scss in the sass abstract folder for reference to this setup. See below the background classes:
+ - bg-primary
+ - bg-secondary
+ - bg-white
+ - bg-light
+ - bg-dark
+ - bg-info
+ - bg-success
+ - bg-danger
+ - bg-warning
+*/
+
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-secondary {
+    @include set-background($secondary-color);
+  }
+  &-white {
+    @include set-background($white-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-info {
+    @include set-background($info-color);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+  &-warning {
+    @include set-background($warning-color);
+  }
+}

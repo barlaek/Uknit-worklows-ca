@@ -1,0 +1,12 @@
+// === GLOBAL MIXINS ===
+
+// <<<-------------  SETTING BACKGROUND COLORS ------------>>>
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// <<<-------------  SETTING FONT COLORS ------------>>>
+@mixin set-color($color) {
+  color: $color;
+}

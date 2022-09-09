@@ -1,0 +1,119 @@
+// === GLOBAL RESETS ===
+
+// <<<------------- BOX SIZING RESETS ------------>>>
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// <<<------------- BODY RESETS ------------>>>
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: $font-size-base;
+  line-height: 1.5rem;
+  background-color: $secondary-color;
+  color: $dark-color;
+  font-weight: $font-weight-normal;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+// <<<------------- LISTS RESETS ------------>>>
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// <<<------------- LINKS RESETS ------------>>>
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.link.active {
+  color: $active-color;
+}
+
+// <<<------------- IMAGES RESETS ------------>>>
+img {
+  width: 100%;
+}
+
+// <<<------------- SECTION RESETS ------------>>>
+section {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  position: relative;
+}
+
+// <<<------------- CONTAINER RESETS ------------>>>
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $container-padding;
+  overflow: hidden;
+}
+
+// <<<------------- DISPLAY AND OPACITY and Z-INDEX RESETS ------------>>>
+
+// Display
+.d-none {
+  display: none;
+}
+
+// Opacity
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+// Z-index
+.z_-1 {
+  z-index: -1;
+}
+
+.z-0 {
+  z-index: -1;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-4 {
+  z-index: 4;
+}
+
+// BOX SHADOW
+.box-shadow {
+  box-shadow: $box-shadow;
+}
+
+.box-shadow-sm {
+  box-shadow: $box-shadow-sm;
+}
+
+.text-center {
+  text-align: center;
+}
