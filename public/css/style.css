@@ -92,6 +92,10 @@ section {
   z-index: 4;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .box-shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -392,6 +396,10 @@ form textarea {
   color: #fafafa;
 }
 
+.toggle-menu {
+  z-index: 100;
+}
+
 .nav-wrap {
   width: 100%;
   align-items: center;
@@ -401,7 +409,6 @@ form textarea {
   position: absolute;
   width: 100%;
   transform: translateY(-100%);
-  z-index: -10;
   left: 0;
   overflow: hidden;
   top: 100px;
@@ -444,8 +451,8 @@ form textarea {
   .collapse-nav {
     display: flex;
     position: unset;
-    z-index: 1;
     transform: translateY(0%);
+    z-index: 10;
     justify-content: space-between;
     height: unset;
   }
@@ -462,7 +469,7 @@ form textarea {
 nav .content-wrapper {
   width: 100%;
   border-bottom: 1px solid #c96973;
-  gap: 1rem;
+  gap: 1.5rem;
   display: flex;
   justify-content: end;
   flex-wrap: wrap;
@@ -475,7 +482,7 @@ nav .content-wrapper img:hover {
   transition: all 0.3s ease-in;
 }
 nav .content-wrapper .rotate {
-  transform: rotate(45deg) translateY(-11px) translateX(-2px);
+  transform: rotate(45deg) translateY(-5px) translateX(-2px);
 }
 
 @media screen and (max-width: 468px) {

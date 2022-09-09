@@ -13,6 +13,10 @@
   }
 }
 
+.toggle-menu {
+  z-index: 100;
+}
+
 // .nav-container {
 //   margin: 0 auto;
 //   width: 100%;
@@ -29,7 +33,6 @@
   position: absolute;
   width: 100%;
   transform: translateY(-100%);
-  z-index: -10;
   left: 0;
   overflow: hidden;
   top: 100px;
@@ -78,8 +81,8 @@
   .collapse-nav {
     display: flex;
     position: unset;
-    z-index: 1;
     transform: translateY(0%);
+    z-index: 10;
     justify-content: space-between;
     height: unset;
   }

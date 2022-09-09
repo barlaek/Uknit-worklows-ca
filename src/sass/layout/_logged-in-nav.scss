@@ -4,7 +4,7 @@
 nav .content-wrapper {
   width: 100%;
   border-bottom: 1px solid $primary-color;
-  gap: $gap-4;
+  gap: $gap-5;
   display: flex;
   justify-content: end;
   flex-wrap: wrap;
@@ -12,12 +12,14 @@ nav .content-wrapper {
   & img {
     width: 32px;
   }
+
   & img:hover {
     transform: scale(1.1);
     transition: $regular-transition;
   }
+
   & .rotate {
-    transform: rotate(45deg) translateY(-11px) translateX(-2px);
+    transform: rotate(45deg) translateY(-5px) translateX(-2px);
   }
 }
 
