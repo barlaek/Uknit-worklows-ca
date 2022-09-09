@@ -18,8 +18,8 @@
 // Default button
 .btn {
   display: inline-block;
-  background: $light-color;
-  color: $dark-color;
+  background: $primary-color;
+  color: $white-color;
   padding: $regular-btn-padding;
   border: none;
   cursor: pointer;
@@ -106,7 +106,7 @@
     }
   }
   &:hover {
-    background: lighten($light-color, 4%);
+    background: lighten($primary-color, 4%);
   }
 }
 

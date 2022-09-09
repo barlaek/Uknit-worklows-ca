@@ -1,0 +1,72 @@
+.log-in-section {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-auto-rows: auto;
+  height: 100%;
+}
+
+.account-card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0 1.5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header {
+  padding-bottom: 4rem;
+}
+
+.card-body {
+  width: 500px;
+  padding: 0 1.5rem;
+}
+
+.card-footer {
+  width: 500px;
+  padding: 0 1.5rem;
+}
+
+.brand img {
+  width: 120px;
+}
+
+.alert-wrapper {
+  // opacity: 0;
+  display: none;
+  text-align: center;
+  width: 400px;
+}
+
+// <<<------------- Media Queries ------------>>>
+
+@media screen and (max-width: 768px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .card-header {
+    padding-top: 2rem;
+  }
+  .card-body {
+    width: 100%;
+  }
+  .card-footer {
+    width: 100%;
+  }
+  .alert-wrapper {
+    text-align: center;
+    width: 90%;
+  }
+}

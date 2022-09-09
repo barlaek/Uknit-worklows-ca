@@ -100,6 +100,10 @@ section {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* See below typography style classes and typography color classes used so far in the project:
 
 Typography styling classes
@@ -232,8 +236,8 @@ h6 {
 */
 .btn {
   display: inline-block;
-  background: #fafafa;
-  color: #1f1f1f;
+  background: #c96973;
+  color: white;
   padding: 1rem 2rem;
   border: none;
   cursor: pointer;
@@ -312,7 +316,7 @@ h6 {
   background: white;
 }
 .btn:hover {
-  background: white;
+  background: #ce7881;
 }
 
 .btn-group {
@@ -362,6 +366,23 @@ h6 {
 .search:focus {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: 300ms;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=date],
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font: inherit;
+  border: 1px solid #ccc;
+  border: none;
+  border-radius: 1rem;
+  outline-style: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 .main-nav {
@@ -503,6 +524,74 @@ nav .content-wrapper .rotate {
   gap: 1rem;
 }
 
+.log-in-section {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-auto-rows: auto;
+  height: 100%;
+}
+
+.account-card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0 1.5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header {
+  padding-bottom: 4rem;
+}
+
+.card-body {
+  width: 500px;
+  padding: 0 1.5rem;
+}
+
+.card-footer {
+  width: 500px;
+  padding: 0 1.5rem;
+}
+
+.brand img {
+  width: 120px;
+}
+
+.alert-wrapper {
+  display: none;
+  text-align: center;
+  width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+@media screen and (max-width: 468px) {
+  .card-header {
+    padding-top: 2rem;
+  }
+  .card-body {
+    width: 100%;
+  }
+  .card-footer {
+    width: 100%;
+  }
+  .alert-wrapper {
+    text-align: center;
+    width: 90%;
+  }
+}
 /* See below the grid classes: 
  - d-flex
  - flex-column
@@ -565,6 +654,8 @@ nav .content-wrapper .rotate {
  - w-100
  - w-50
  - w-25
+ - h-100-vh
+ - h-100-percent
 */
 .w-large {
   max-width: 740px;
@@ -588,6 +679,14 @@ nav .content-wrapper .rotate {
 
 .w-25 {
   width: 25%;
+}
+
+.h-100-vh {
+  width: 100vh;
+}
+
+.h-100-percent {
+  width: 100%;
 }
 
 /* NOTE!! Depending on the background class we use in the HTML structure, the paragraph font color will change accordingly ( EX: if the background is a light color, the text will automatically be a dark color. Please see _mixin.scss and _functions.scss in the sass abstract folder for reference to this setup. See below the background classes:
@@ -686,6 +785,10 @@ nav .content-wrapper .rotate {
   padding-bottom: 1.2rem;
 }
 
+.m-auto {
+  margin: 0 auto;
+}
+
 .px-1 {
   padding: 0.25rem;
 }
@@ -704,6 +807,10 @@ nav .content-wrapper .rotate {
 
 .px-5 {
   padding: 1.2rem;
+}
+
+.m-auto {
+  margin: 0 auto;
 }
 
 .m-1 {
@@ -772,6 +879,30 @@ nav .content-wrapper .rotate {
 
 .mb-6 {
   margin-bottom: 4rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-5 {
+  margin-left: 1.2rem;
+}
+
+.ml-6 {
+  margin-left: 4rem;
 }
 
 .gap-1 {

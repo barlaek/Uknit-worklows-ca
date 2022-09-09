@@ -56,6 +56,12 @@
   padding-bottom: $sp5;
 }
 
+// Margin auto
+
+.m-auto {
+  margin: 0 auto;
+}
+
 // sides
 
 .px-1 {
@@ -79,6 +85,10 @@
 }
 
 // MARGIN
+
+.m-auto {
+  margin: 0 auto;
+}
 
 // all around
 .m-1 {
@@ -149,6 +159,31 @@
 
 .mb-6 {
   margin-bottom: $rem-size * 4;
+}
+
+// left
+.ml-1 {
+  margin-left: $sp1;
+}
+
+.ml-2 {
+  margin-left: $sp2;
+}
+
+.ml-3 {
+  margin-left: $sp3;
+}
+
+.ml-4 {
+  margin-left: $sp4;
+}
+
+.ml-5 {
+  margin-left: $sp5;
+}
+
+.ml-6 {
+  margin-left: $rem-size * 4;
 }
 
 // GAP
