@@ -343,7 +343,7 @@ h6 {
   border-radius: 1rem;
 }
 
-/* Every time we use a button is good to know that we need the default button class together with the button we want to use ( EX: btn btn-primary ). See below the button classes: 
+/*  
  - form-wrapper
  - form-control
  - input
@@ -351,7 +351,6 @@ h6 {
  - placeholder
  - option
  - select
-
 */
 .search-large {
   border: none;

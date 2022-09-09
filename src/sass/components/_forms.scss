@@ -2,7 +2,7 @@
 
 // <<<-------------  Form Classes ------------>>>
 
-/* Every time we use a button is good to know that we need the default button class together with the button we want to use ( EX: btn btn-primary ). See below the button classes: 
+/*  
  - form-wrapper
  - form-control
  - input
@@ -10,7 +10,6 @@
  - placeholder
  - option
  - select
-
 */
 
 .search-large {
@@ -32,6 +31,7 @@
 // }
 
 form {
+
   input[type="text"],
   input[type="email"],
   input[type="password"],
