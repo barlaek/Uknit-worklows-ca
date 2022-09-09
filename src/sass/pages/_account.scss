@@ -22,7 +22,7 @@
 }
 
 .card-header {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .card-body {
@@ -56,6 +56,9 @@
 }
 
 @media screen and (max-width: 468px) {
+  .account-card {
+    justify-content: start;
+  }
   .card-header {
     padding-top: 2rem;
   }

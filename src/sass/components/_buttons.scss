@@ -105,9 +105,9 @@
       background: lighten($light-color, 4%);
     }
   }
-  &:hover {
-    background: lighten($primary-color, 4%);
-  }
+  // &:hover {
+  //   background: lighten($primary-color, 4%);
+  // }
 }
 
 // Button group wrapper

@@ -13,28 +13,25 @@
 
 */
 
-.search {
+.search-large {
   border: none;
   border-radius: $border-standard;
   outline-style: none;
+  cursor: auto;
   box-shadow: $box-shadow-sm;
+
+  &:focus {
+    box-shadow: $box-shadow;
+    transition: $regular-transition;
+  }
 }
 
-.search:focus {
-  box-shadow: $box-shadow;
-  transition: 300ms;
-}
+// .search:focus {
+//   box-shadow: $box-shadow;
+//   transition: $regular-transition;
+// }
 
 form {
-  // &-group {
-  //   margin: 1.2rem 0;
-  // }
-  // &-text {
-  //   display: block;
-  //   margin-top: 0.3rem;
-  //   color: #888;
-  // }
-
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -45,7 +42,7 @@ form {
     width: 100%;
     padding: $input-padding;
     font: inherit;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     border: none;
     border-radius: $border-standard;
     outline-style: none;

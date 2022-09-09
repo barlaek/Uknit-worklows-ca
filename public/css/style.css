@@ -52,7 +52,7 @@ section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 0 1.2em;
   overflow: hidden;
 }
 
@@ -315,9 +315,6 @@ h6 {
 .btn.btn-category:hover {
   background: white;
 }
-.btn:hover {
-  background: #ce7881;
-}
 
 .btn-group {
   position: relative;
@@ -356,16 +353,16 @@ h6 {
  - select
 
 */
-.search {
+.search-large {
   border: none;
   border-radius: 1rem;
   outline-style: none;
+  cursor: auto;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
-
-.search:focus {
+.search-large:focus {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transition: 300ms;
+  transition: all 0.3s ease-in;
 }
 
 form input[type=text],
@@ -378,7 +375,6 @@ form textarea {
   width: 100%;
   padding: 1rem 2rem;
   font: inherit;
-  border: 1px solid #ccc;
   border: none;
   border-radius: 1rem;
   outline-style: none;
@@ -468,6 +464,9 @@ nav .content-wrapper {
   width: 100%;
   border-bottom: 1px solid #c96973;
   gap: 1rem;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
 }
 nav .content-wrapper img {
   width: 32px;
@@ -480,6 +479,11 @@ nav .content-wrapper .rotate {
   transform: rotate(45deg) translateY(-11px) translateX(-2px);
 }
 
+@media screen and (max-width: 468px) {
+  nav .content-wrapper {
+    justify-content: center;
+  }
+}
 /* See below classes used on the homepage: 
  - container
  - title-wrapper
@@ -524,6 +528,16 @@ nav .content-wrapper .rotate {
   gap: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 468px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .log-in-section {
   padding: 0;
   margin: 0;
@@ -548,7 +562,7 @@ nav .content-wrapper .rotate {
 }
 
 .card-header {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .card-body {
@@ -578,6 +592,9 @@ nav .content-wrapper .rotate {
   }
 }
 @media screen and (max-width: 468px) {
+  .account-card {
+    justify-content: start;
+  }
   .card-header {
     padding-top: 2rem;
   }

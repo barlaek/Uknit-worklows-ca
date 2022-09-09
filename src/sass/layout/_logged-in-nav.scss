@@ -5,6 +5,9 @@ nav .content-wrapper {
   width: 100%;
   border-bottom: 1px solid $primary-color;
   gap: $gap-4;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
 
   & img {
     width: 32px;
@@ -15,5 +18,11 @@ nav .content-wrapper {
   }
   & .rotate {
     transform: rotate(45deg) translateY(-11px) translateX(-2px);
+  }
+}
+
+@media screen and (max-width: 468px) {
+  nav .content-wrapper {
+    justify-content: center;
   }
 }

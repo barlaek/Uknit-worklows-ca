@@ -52,3 +52,15 @@
   grid-auto-rows: auto;
   gap: $rem-size;
 }
+
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
