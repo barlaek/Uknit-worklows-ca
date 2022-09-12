@@ -16,7 +16,6 @@ const alertWrapper = document.querySelector('.alert-wrapper');
 // Function collects data from inputs and puts them in object "values";
 function loginSubmit(event) {
     event.preventDefault();
-
     // creates new object from FormData on submit 
     const data = new FormData(event.target);
     // transforms key value pairs into an object
@@ -31,14 +30,13 @@ function loginSubmit(event) {
             'Content-type': 'application/json; charset=UTF-8',
         },
     }
-
     // Run async function that sends fetch request 
     loginFetch(baseURL + loginUrl, loginBody);
 }
 
 
 // Async fetch function with URL and Body as parameters. 
-async function getResponse(url, body) {
+async function loginFetch(url, body) {
     try {
         const response = await fetch(url, body);
         const data = await response.json();
@@ -48,12 +46,11 @@ async function getResponse(url, body) {
         localStorage.setItem('accessToken', accessToken);
 
         if (accessToken == undefined) {
-            alertWrapper.innerHTML = `<p>${data.message}</p>`;
+            alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
         }
         else {
             window.location.href = "../../../src/index.html";
         }
-
     }
     catch (error) {
         console.log(error);

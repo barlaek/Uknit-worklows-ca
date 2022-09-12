@@ -33,6 +33,7 @@
                     <!-- Form Email -->
                     <div class="form-group mb-4">
                       <!-- <label for="email" class="form-label">Email</label> -->
+                      <!-- pattern="[\p{L} \-\.]+" -->
                       <input
                         id="name"
                         type="text"
@@ -40,7 +41,7 @@
                         placeholder="Username"
                         minlength="3"
                         maxlength="30"
-                        pattern="[\p{L} \-\.]+"
+                        
                         required/>
                       <div class="form-error" id="usernameError"></div>
                     </div>
@@ -88,8 +89,7 @@
               </div>
 
               <!-- Form alert error-->
-              <div class="alert-wrapper bg-danger mt-4 mb-4">
-                <p class="p-5">Invalid credentials. Please try again.</p>
+              <div class="alert-wrapper mt-4 mb-4">
               </div>
 
               <!-- Check-box -->

@@ -28,7 +28,6 @@ function registerSubmit(event) {
     const data = new FormData(event.target);
     // transforms key value pairs into an object
     values = Object.fromEntries(data.entries());
-    console.log(values);
     // Body for fetch when user is registering
     registerBody = {
         method: 'POST',
@@ -51,9 +50,9 @@ function registerSubmit(event) {
             'Content-type': 'application/json; charset=UTF-8',
         },
     }
+
     // Run function with loginValues to automatically login after register
     loginFetch(baseURL + loginUrl, loginBody);
-
 }
 
 
@@ -77,14 +76,19 @@ async function loginFetch(url, body) {
         const response = await fetch(url, body);
         const data = await response.json();
         console.log(data);
-        // collects accessToken in variable and sends to local storage
+        // Collect accessToken and send to local storage
         accessToken = data.accessToken;
         localStorage.setItem('accessToken', accessToken);
-        // redirects user to homepage once logged in
-        // window.location.href = "../../../src/index.html";
+
+        if (accessToken == undefined) {
+            alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
+        }
+        else {
+            window.location.href = "../../../src/index.html";
+        }
     }
     catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 
