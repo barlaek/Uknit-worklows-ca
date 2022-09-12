@@ -14,25 +14,22 @@ let registerBody;
 let values;
 // loginValues is the values needed for login, derived from the variable "values"
 let loginValues;
+// loginBody is head of fetch with POST method with values needed for login
+let loginBody;
 
 
 // DOM variables
 const form = document.querySelector('#signUpForm');
 
 // Function collects data from inputs and puts them in object "values";
-function formSubmit(event) {
+function registerSubmit(event) {
     event.preventDefault();
-
     // creates new object from FormData on submit 
     const data = new FormData(event.target);
     // transforms key value pairs into an object
     values = Object.fromEntries(data.entries());
     console.log(values);
-
-    loginValues = createLoginValues(values);
-    console.log(loginValues);
-
-
+    // Body for fetch when user is registering
     registerBody = {
         method: 'POST',
         body: JSON.stringify({ ...values }),
@@ -40,20 +37,50 @@ function formSubmit(event) {
             'Content-type': 'application/json; charset=UTF-8',
         },
     }
-
     // Run async function that sends fetch request 
-    // getResponse(baseURL + registerUrl, registerBody);
+    registerFetch(baseURL + registerUrl, registerBody);
+
+    // Run function to create "loginValues" object from "values" object
+    loginValues = createLoginValues(values);
+
+    // Body for when user is logging in
+    loginBody = {
+        method: 'POST',
+        body: JSON.stringify({ ...loginValues }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    }
+    // Run function with loginValues to automatically login after register
+    loginFetch(baseURL + loginUrl, loginBody);
+
 }
 
 
 
 
 // Async fetch function with URL and Body as parameters. 
-async function getResponse(url, body) {
+async function registerFetch(url, body) {
     try {
         const response = await fetch(url, body);
         const data = await response.json();
         console.log(data);
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
+// Async fetch function with URL and Body as parameters. 
+async function loginFetch(url, body) {
+    try {
+        const response = await fetch(url, body);
+        const data = await response.json();
+        console.log(data);
+        // collects accessToken in variable and sends to local storage
+        accessToken = data.accessToken;
+        localStorage.setItem('accessToken', accessToken);
+        // redirects user to homepage once logged in
         // window.location.href = "../../../src/index.html";
     }
     catch (error) {
@@ -62,13 +89,15 @@ async function getResponse(url, body) {
 }
 
 
+
+
+
+
 // Function for creating loginValues from the variable values
 function createLoginValues(values) {
     delete values.name;
     return values;
 }
 
-
-
 // addEventListener on submit of form
-form.addEventListener('submit', formSubmit);
+form.addEventListener('submit', registerSubmit);

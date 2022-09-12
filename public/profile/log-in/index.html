@@ -29,15 +29,15 @@
               </div>
               <div class="card-body">
                 <div class="form-wrapper">
-                  <form action="dashboard.html" class="form">
+                  <form action="https://nf-api.onrender.com/api/v1/social/auth/login" class="form" id="loginForm">
                     <!-- Form Email -->
+                    <!-- pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" -->
                     <div class="form-group mb-4">
                       <input
                         type="email"
                         id="email"
                         minlength="8"
-                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                        maxlength="20"
+                        maxlength="40"
                         class="form-control"
                         name="email"
                         placeholder="Email address"
@@ -73,8 +73,7 @@
               </div>
 
               <!-- Form alert error -->
-              <div class="alert-wrapper bg-danger mt-4 mb-4">
-                <p class="p-5">Invalid credentials. Please try again.</p>
+              <div class="alert-wrapper mt-4 mb-4">
               </div>
 
               <!-- Check-box -->
@@ -92,6 +91,6 @@
       </section>
     </main>
 
-    <script type="module" src="../../../src/js/index.mjs"></script>
+    <script type="module" src="../../../src/js/components/login.mjs"></script>
   </body>
 </html>
