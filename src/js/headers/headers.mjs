@@ -1,5 +1,5 @@
 
-// login body
+// Create Body
 export function createBody(values) {
     const Body = {
         method: 'POST',
