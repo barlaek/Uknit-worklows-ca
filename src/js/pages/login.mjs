@@ -17,6 +17,4 @@ function loginSubmit(event) {
 }
 
 // addEventListener on submit of loginForm
-loginForm.addEventListener('submit', loginSubmit);
-
-localStorage.clear();
+loginForm.addEventListener('submit', loginSubmit); 

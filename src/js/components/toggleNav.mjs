@@ -1,12 +1,10 @@
-export * from "./toggleNav.mjs";
-
 /**
  * Function for nav toggler.
  * Function will toggle classes to add/remove display: none, and change z-index.
  */
 
-const toggleBtn = document.querySelector('#toggleBtn');
-const menu = document.querySelector('.collapse-nav');
+export const toggleBtn = document.querySelector('#toggleBtn');
+export const menu = document.querySelector('.collapse-nav');
 
 toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('show');

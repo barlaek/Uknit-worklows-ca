@@ -7,16 +7,17 @@ export async function loginFetch(url, body) {
         const response = await fetch(url, body);
         const data = await response.json();
         console.log(data);
-        // Collect accessToken and send to local storage
-        const accessToken = data.accessToken;
-        localStorage.setItem('accessToken', accessToken);
 
         const alertWrapper = document.querySelector('.alert-wrapper');
+        console.log(alertWrapper);
         // If user is rejected - preferably find a way to use status codes for this, not the token
-        if (accessToken == undefined) {
+        if (!response.ok) {
             alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
         }
         else {
+            // Collect accessToken and send to local storage
+            const accessToken = data.accessToken;
+            localStorage.setItem('accessToken', accessToken);
             window.location.href = "../../../src/index.html";
         }
     }
