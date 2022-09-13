@@ -1,61 +1,22 @@
-// URL'S
-const baseURL = "https://nf-api.onrender.com/";
-const loginUrl = "api/v1/social/auth/login";
-
-// Variables
-let values;
-let loginBody;
-
-// AccessToken
-let accessToken;
+import { baseURL, loginUrl } from "../constants/constants.mjs";
+import { createBody } from "../headers/headers.mjs";
+import { loginFetch } from "../fetch/fetch.mjs";
 
 // DOM
-const form = document.querySelector('#loginForm');
-const alertWrapper = document.querySelector('.alert-wrapper');
+const loginForm = document.querySelector('#loginForm');
 
 // Function collects data from inputs and puts them in object "values";
 function loginSubmit(event) {
     event.preventDefault();
     // creates new object from FormData on submit 
     const data = new FormData(event.target);
-    // transforms key value pairs into an object
-    values = Object.fromEntries(data.entries());
-    console.log(values);
-
-    // Body for fetch when user is registering
-    loginBody = {
-        method: 'POST',
-        body: JSON.stringify({ ...values }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    }
+    const values = Object.fromEntries(data.entries());
     // Run async function that sends fetch request 
-    loginFetch(baseURL + loginUrl, loginBody);
+    // Parameters are imported url and imported function that creates the body
+    loginFetch(baseURL + loginUrl, createBody(values));
 }
 
+// addEventListener on submit of loginForm
+loginForm.addEventListener('submit', loginSubmit);
 
-// Async fetch function with URL and Body as parameters. 
-async function loginFetch(url, body) {
-    try {
-        const response = await fetch(url, body);
-        const data = await response.json();
-        console.log(data);
-        // Collect accessToken and send to local storage
-        accessToken = data.accessToken;
-        localStorage.setItem('accessToken', accessToken);
-
-        if (accessToken == undefined) {
-            alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
-        }
-        else {
-            window.location.href = "../../../src/index.html";
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-// addEventListener on submit of form
-form.addEventListener('submit', loginSubmit);
+localStorage.clear();
