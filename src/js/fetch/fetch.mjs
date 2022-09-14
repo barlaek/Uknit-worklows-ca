@@ -1,5 +1,4 @@
-
-
+import { alertWrapper } from "../constants/constants.mjs";
 
 // Async fetch function for login with URL and Body as parameters. 
 export async function loginFetch(url, body) {
@@ -8,8 +7,6 @@ export async function loginFetch(url, body) {
         const data = await response.json();
         console.log(data);
 
-        const alertWrapper = document.querySelector('.alert-wrapper');
-        console.log(alertWrapper);
         // If user is rejected - preferably find a way to use status codes for this, not the token
         if (!response.ok) {
             alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
@@ -31,7 +28,9 @@ export async function registerFetch(url, body) {
     try {
         const response = await fetch(url, body);
         const data = await response.json();
-        console.log(data);
+        if (!response.ok) {
+            alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
+        }
     }
     catch (error) {
         console.log(error)

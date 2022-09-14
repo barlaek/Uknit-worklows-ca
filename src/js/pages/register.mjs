@@ -30,3 +30,4 @@ function createLoginValues(values) {
 
 // addEventListener on submit of form
 form.addEventListener('submit', registerSubmit);
+

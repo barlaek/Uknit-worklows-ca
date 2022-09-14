@@ -2,6 +2,7 @@ import { baseURL, loginUrl } from "../constants/constants.mjs";
 import { createBody } from "../headers/headers.mjs";
 import { loginFetch } from "../fetch/fetch.mjs";
 
+
 // DOM
 const loginForm = document.querySelector('#loginForm');
 
@@ -17,4 +18,5 @@ function loginSubmit(event) {
 }
 
 // addEventListener on submit of loginForm
-loginForm.addEventListener('submit', loginSubmit); 
+loginForm.addEventListener('submit', loginSubmit);
+
