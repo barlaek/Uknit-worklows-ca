@@ -14,7 +14,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   text-decoration: none;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: $font-size-base;
   line-height: 1.5rem;
   background-color: $secondary-color;
@@ -116,8 +116,4 @@ section {
 
 .box-shadow-sm {
   box-shadow: $box-shadow-sm;
-}
-
-.text-center {
-  text-align: center;
 }

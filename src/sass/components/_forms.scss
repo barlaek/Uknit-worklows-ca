@@ -10,42 +10,49 @@
  - placeholder
  - option
  - select
+ - search
+ - search-large
 */
 
-.search-large {
-  border: none;
-  border-radius: $border-standard;
-  outline-style: none;
-  cursor: auto;
-  box-shadow: $box-shadow-sm;
-
-  &:focus {
-    box-shadow: $box-shadow;
-    transition: $regular-transition;
-  }
-}
-
-// .search:focus {
-//   box-shadow: $box-shadow;
-//   transition: $regular-transition;
-// }
-
 form {
-
   input[type="text"],
   input[type="email"],
   input[type="password"],
   input[type="date"],
+  input[type="search"],
   select,
   textarea {
     display: block;
     width: 100%;
-    padding: $input-padding;
+    padding: $input-padding-standard;
     font: inherit;
-    // border: 1px solid #ccc;
+    cursor: auto;
     border: none;
     border-radius: $border-standard;
     outline-style: none;
     box-shadow: $box-shadow-sm;
   }
+}
+
+.search {
+  &-large {
+    border: none;
+    padding: $input-padding-large !important;
+    outline-style: none;
+    cursor: auto;
+    box-shadow: $box-shadow-sm;
+
+    &:focus {
+      box-shadow: $box-shadow;
+      transition: $regular-transition;
+    }
+  }
+
+  border: $border !important;
+  box-shadow: none !important;
+}
+
+.form-wrapper .btn,
+.form-wrapper input {
+  font: inherit !important;
 }

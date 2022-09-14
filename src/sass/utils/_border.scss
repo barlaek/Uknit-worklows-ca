@@ -1,0 +1,28 @@
+// === GLOBAL BORDERS ===
+
+// <<<-------------  Background Classes ------------>>>
+
+/* See below the border classes:
+ - border-small
+ - border-standard
+ - border-large
+
+*/
+// .border-small {
+//   border-radius: $border-small;
+// }
+
+.border {
+  &-small {
+    border: $border;
+    border-radius: $border-small;
+  }
+  &-standard {
+    border: $border;
+    border-radius: $border-standard;
+  }
+  &-large {
+    border: $border;
+    border-radius: $border-large;
+  }
+}
