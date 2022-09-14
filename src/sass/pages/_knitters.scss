@@ -1,0 +1,49 @@
+// === KNITTERS PAGE STYLES ===
+
+// <<<-------------  Home Page Classes ------------>>>
+
+/* See below classes used on the knitters page: 
+ - container
+ - title-wrapper
+ - content-wrapper
+ - content
+ - content-header
+ - content-body
+ - content-footer
+ - form-wrapper
+ - list-wrapper
+ - d-flex
+ - d-grid
+ - d-none
+ - product-grid
+ - card
+ - card-img-wrapper
+ - card-img
+ - w-medium
+ - w-100
+ - text-large
+ - text-small
+ - btn btn-white
+ - btn btn-primary
+ - btn btn-secondary
+ - box-shadow-sm
+
+*/
+
+// KNIT POST GRID SECTION
+
+.post-section {
+  padding-top: $sp0;
+}
+
+.users-list {
+  position: relative;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.comment-content {
+  border: $border;
+  border-radius: $border-small;
+  padding: $sp6;
+}

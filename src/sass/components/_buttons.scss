@@ -105,6 +105,16 @@
       background: lighten($light-color, 4%);
     }
   }
+
+  // Follow button
+  &.btn-follow {
+    @include set-background($primary-color);
+    padding: $small-btn-padding;
+    font-size: $font-size-sm;
+    &:hover {
+      background: lighten($primary-color, 4%);
+    }
+  }
   // &:hover {
   //   background: lighten($primary-color, 4%);
   // }

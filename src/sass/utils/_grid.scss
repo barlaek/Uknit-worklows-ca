@@ -4,8 +4,23 @@
 
 /* See below the grid classes: 
  - d-grid
+ - post-grid
 */
 
 .d-grid {
   display: grid;
+}
+
+.post-grid {
+  grid-template-columns: 0.5fr 1fr;
+  grid-auto-rows: auto;
+  gap: $rem-size;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  // @media screen and (max-width: 468px) {
+  //   grid-template-columns: 1fr;
+  // }
 }

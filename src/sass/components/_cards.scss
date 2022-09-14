@@ -3,19 +3,92 @@
 // <<<-------------  Card Classes ------------>>>
 
 /*See below the card classes: 
+ - post-card
  - card
+ - card-small
+ - card-large
  - card-header
  - card-body
  - card-footer
  - card-img-wrapper
+ - avatar-img-wrapper
  - card-img
 
 */
 
 .card {
-  border-radius: $border-xl;
+  border-radius: $border-standard;
+  background-color: $light-color;
+  // padding: $sp6;
+
+  &-small {
+    border-radius: $border-standard;
+    padding: $sp3;
+  }
+
+  &-large {
+    border-radius: $border-standard;
+    padding: $sp6;
+  }
+
+  & img {
+    border-radius: $border-standard;
+  }
 }
 
-.card-img {
+.post-card {
   border-radius: $border-standard;
+  background-color: $light-color;
+  padding: $sp6;
+}
+
+.users-card {
+  border-radius: $border-standard;
+  background-color: $light-color;
+  padding: $sp6;
+  height: 400px;
+  // position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.avatar-img-wrapper {
+  position: relative;
+  border-radius: 100%;
+
+  &-large {
+    width: $avatar-img-large;
+    height: $avatar-img-large;
+
+    & img {
+      position: absolute;
+      width: $avatar-img-large;
+      height: $avatar-img-large;
+      border-radius: 100%;
+    }
+  }
+
+  &-regular {
+    width: $avatar-img-regular;
+    height: $avatar-img-regular;
+
+    & img {
+      position: absolute;
+      width: $avatar-img-regular;
+      height: $avatar-img-regular;
+      border-radius: 100%;
+    }
+  }
+
+  &-small {
+    width: $avatar-img-small;
+    height: $avatar-img-small;
+
+    & img {
+      position: absolute;
+      width: $avatar-img-small;
+      height: $avatar-img-small;
+      border-radius: 100%;
+    }
+  }
 }
