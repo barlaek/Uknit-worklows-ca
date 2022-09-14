@@ -2,6 +2,7 @@ import { createBody } from "../headers/headers.mjs";
 import { registerUrl, baseURL, loginUrl } from "../constants/constants.mjs";
 import { registerFetch } from "../fetch/fetch.mjs";
 import { loginFetch } from "../fetch/fetch.mjs";
+import { alertWrapper } from "../constants/constants.mjs";
 
 
 // DOM variables
@@ -13,12 +14,22 @@ async function registerSubmit(event) {
     // creates new object from FormData on submit 
     const data = new FormData(event.target);
     const values = Object.fromEntries(data.entries());
-    // Run async function that sends fetch request 
-    await registerFetch(baseURL + registerUrl, createBody(values));
-    // Run function to create "loginValues" object from "values" object
-    const loginValues = createLoginValues(values);
-    // Run function with loginValues to automatically login after register
-    await loginFetch(baseURL + loginUrl, createBody(loginValues));
+
+    try {
+        // Run async function that sends fetch request 
+        await registerFetch(baseURL + registerUrl, createBody(values));
+    } catch (e) {
+        alertWrapper.innerHTML = `<h6>${e}</h6>`;
+        return; // code stops here if try throws an error
+    }
+    try {
+        // Run function to create "loginValues" object from "values" object
+        const loginValues = createLoginValues(values);
+        // Run function with loginValues to automatically login after register
+        await loginFetch(baseURL + loginUrl, createBody(loginValues));
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 
@@ -30,4 +41,5 @@ function createLoginValues(values) {
 
 // addEventListener on submit of form
 form.addEventListener('submit', registerSubmit);
+
 

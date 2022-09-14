@@ -25,15 +25,12 @@ export async function loginFetch(url, body) {
 
 // Async fetch function for register with URL and Body as parameters. 
 export async function registerFetch(url, body) {
-    try {
-        const response = await fetch(url, body);
-        const data = await response.json();
-        if (!response.ok) {
-            alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
-        }
+    const response = await fetch(url, body);
+    const data = await response.json();
+    console.log(data);
+    if (response.ok) {
+        return data;
     }
-    catch (error) {
-        console.log(error)
-    }
+    throw new Error(data.message);
 }
 
