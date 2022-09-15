@@ -34,3 +34,10 @@ export async function registerFetch(url, body) {
     throw new Error(data.message);
 }
 
+// ALL POSTS FETCH
+
+export async function allPostsFetch(url, body) {
+    const response = await fetch(url, body);
+    const data = await response.json();
+    console.log(data);
+}
