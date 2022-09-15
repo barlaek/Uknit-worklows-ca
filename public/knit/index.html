@@ -206,6 +206,36 @@
               </div>
             </div>
             <div class="content-wrapper d-flex flex-column gap-7">
+              <div class="form-wrapper d-flex">
+                <form method="GET" action="" id="searchPost" class="filtered-form w-100">
+                  <!-- Form Post -->
+                  <div class="form-group d-flex">
+                    <input
+                      class="search-post"
+                      id="search"
+                      type="text"
+                      name="post"
+                      placeholder="Search post"
+                      minlength="3"
+                      maxlength="300"
+                    />
+                    <!-- <button type="submit" value="Search" class="btn btn-follow">Search</button> -->
+                    <div class="form-error" id="postError"></div>
+
+                    <!-- <div class="option">
+                      <button class="btn btn-info">Old/New</button>
+                    </div> -->
+                  </div>
+                  <div class="select-group d-flex gap-4">
+                    <select class="select-menu" id="filteredPosts" name="posts">
+                      <option value="new">New</option>
+                      <option value="old">Old</option>
+                    </select>
+                    <!-- <input type="submit" value="Submit" class="btn btn-follow" /> -->
+                  </div>
+                  <!-- Form Button -->
+                </form>
+              </div>
               <div class="post-card d-flex flex-column gap-4 align-items-start">
                 <div class="card-header d-flex align-items-center">
                   <div class="content d-flex gap-4 align-items-center w-100">
