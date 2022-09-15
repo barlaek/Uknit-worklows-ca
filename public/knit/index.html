@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uknit | Homepage</title>
+    <title>Uknit | Posts</title>
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
@@ -78,7 +78,7 @@
             <div class="users-card d-flex flex-column align-items-start">
               <div class="card-header d-flex align-items-center">
                 <div class="title-wrapper">
-                  <h5 class="mb-5">Filter post's and knitters</h5>
+                  <h5 class="mb-5">Most popular accounts</h5>
                 </div>
               </div>
               <div class="card-body">
@@ -205,7 +205,7 @@
                 </ul>
               </div>
             </div>
-            <div class="content-wrapper d-flex flex-column gap-7">
+            <div class="content-wrapper d-flex flex-column gap-7" id="postsContainer">
               <div class="post-card d-flex flex-column gap-4 align-items-start">
                 <div class="card-header d-flex align-items-center">
                   <div class="content d-flex gap-4 align-items-center w-100">
@@ -540,7 +540,6 @@
       </section>
     </main>
 
-    <script type="module" src="/src/js/components/selectUser.mjs"></script>
-    <script type="module" src="/src/js/index.mjs"></script>
+    <script type="module" src="/src/js/pages/posts.mjs"></script>
   </body>
 </html>
