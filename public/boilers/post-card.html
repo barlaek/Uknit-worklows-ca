@@ -8,9 +8,9 @@
   </head>
   <body>
     <section>
-      <div class="post-card d-flex flex-column gap-4 align-items-start">
-        <div class="card-header d-flex align-items-center">
-          <div class="content d-flex gap-4 align-items-center w-100">
+      <div class="card card-large d-flex flex-column gap-4 align-items-start">
+        <div class="card-header d-flex align-items-center mt-4">
+          <div class="content d-flex gap-4 align-items-center f-wrap w-100">
             <div class="avatar-img-wrapper-regular">
               <div>
                 <img src="/src/assets/profile-icon.svg" alt="" />
@@ -19,9 +19,7 @@
             <div class="avatar-name">
               <h4 class="mt-2">Robert D.B</h4>
             </div>
-          </div>
-          <div class="content d-flex justify-content-end w-100">
-            <button class="btn btn-follow">See Profile</button>
+            <button class="btn btn-small-primary">See Profile</button>
           </div>
         </div>
         <div class="card-body">
@@ -32,24 +30,28 @@
               magnam incidunt, alias doloremque consectetur consequuntur sunt. Pariatur.
             </p>
           </div>
-          <div class="content d-flex align-items-center gap-6 mt-4">
+          <div class="content d-flex f-wrap align-items-center gap-4 mt-4">
             <a href="">
               <div class="d-flex align-items-center gap-2">
-                <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
+                <img class="icon-extra-small" src="/src/assets/thumbs-up-line-icon.svg" alt="" />
                 <h5>Like</h5>
                 <span class="text-small color-primary">10</span>
               </div>
             </a>
             <a href="">
               <div class="d-flex align-items-center gap-2">
-                <img src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg" alt="" />
+                <img
+                  class="icon-extra-small"
+                  src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
+                  alt=""
+                />
                 <h5>Comment</h5>
                 <span class="text-small color-primary">2</span>
               </div>
             </a>
             <a href="">
               <div class="d-flex align-items-center gap-2">
-                <img src="/src/assets/next-svgrepo-com.svg" alt="" />
+                <img class="icon-extra-small" src="/src/assets/next-svgrepo-com.svg" alt="" />
                 <h5>Follow</h5>
               </div>
             </a>
@@ -70,15 +72,15 @@
                 <div class="form-error" id="postError"></div>
               </div>
               <!-- Form Button -->
-              <button type="submit" value="Post" class="btn btn-follow">Post</button>
+              <button type="submit" value="Post" class="btn btn-small-primary">Post</button>
             </form>
           </div>
         </div>
         <div class="card-footer">
           <h4>Comments</h4>
-          <div class="card">
+          <div class="card-no-padding">
             <div class="comment">
-              <div class="comment-content mt-2 border-radius">
+              <div class="comment-content px-3 mt-2 border-radius">
                 <div class="content d-flex align-items-center mb-4 gap-2">
                   <div class="avatar-img-wrapper-small">
                     <img src="/src/assets/profile-icon.svg" alt="" />
@@ -89,17 +91,21 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt
                   explicabo dolores nostrum nesciunt eaque ipsum recusandae illum quaerat! Culpa.
                 </p>
-                <div class="content d-flex align-items-center gap-6 mt-4">
+                <div class="content d-flex f-wrap align-items-center gap-4 mt-4">
                   <a href="">
                     <div class="d-flex align-items-center gap-2">
-                      <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
+                      <img
+                        class="icon-extra-small"
+                        src="/src/assets/thumbs-up-line-icon.svg"
+                        alt=""
+                      />
                       <h5>Like</h5>
                       <span class="text-small color-primary">10</span>
                     </div>
                   </a>
                   <a href="">
                     <div class="d-flex align-items-center gap-2">
-                      <img src="/src/assets/next-svgrepo-com.svg" alt="" />
+                      <img class="icon-extra-small" src="/src/assets/next-svgrepo-com.svg" alt="" />
                       <h5>Follow</h5>
                     </div>
                   </a>
@@ -109,7 +115,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="comment-content mt-2 border-radius">
+                <div class="comment-content mt-6 border-radius px-3">
                   <div class="content d-flex align-items-center mb-4 gap-2">
                     <div class="avatar-img-wrapper-small">
                       <img src="/src/assets/profile-icon.svg" alt="" />
@@ -120,10 +126,14 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt
                     explicabo dolores nostrum nesciunt eaque ipsum recusandae illum quaerat! Culpa.
                   </p>
-                  <div class="content d-flex align-items-center gap-6 mt-4">
+                  <div class="content d-flex f-wrap align-items-center gap-4 mt-4">
                     <a href="">
                       <div class="d-flex align-items-center gap-2">
-                        <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
+                        <img
+                          class="icon-extra-small"
+                          src="/src/assets/thumbs-up-line-icon.svg"
+                          alt=""
+                        />
                         <h5>Like</h5>
                         <span class="text-small color-primary">10</span>
                       </div>
@@ -141,7 +151,11 @@
                                 </a> -->
                     <a href="">
                       <div class="d-flex align-items-center gap-2">
-                        <img src="/src/assets/next-svgrepo-com.svg" alt="" />
+                        <img
+                          class="icon-extra-small"
+                          src="/src/assets/next-svgrepo-com.svg"
+                          alt=""
+                        />
                         <h5>Follow</h5>
                       </div>
                     </a>
@@ -163,7 +177,7 @@
                       <div class="form-error" id="postError"></div>
                     </div>
                     <!-- Form Button -->
-                    <button type="submit" value="Post" class="btn btn-follow">Reply</button>
+                    <button type="submit" value="Post" class="btn btn-small-primary">Reply</button>
                   </form>
                 </div>
               </div>

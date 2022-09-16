@@ -65,7 +65,9 @@
 // sides
 
 .px-1 {
-  padding: $sp1;
+  // padding: $sp1;
+  padding-left: $sp1;
+  padding-right: $sp1;
 }
 
 .px-2 {

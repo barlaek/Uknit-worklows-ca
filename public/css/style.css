@@ -52,7 +52,7 @@ section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.2em;
+  padding: 0 1.2rem;
   overflow: hidden;
 }
 
@@ -125,15 +125,25 @@ Typography styling classes
 
 */
 .display-1__dark {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   color: #1f1f1f;
 }
+@media screen and (max-width: 468px) {
+  .display-1__dark.display-1__dark {
+    font-size: 3.5rem;
+  }
+}
 
 .display-1__primary {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   color: #c96973;
+}
+@media screen and (max-width: 468px) {
+  .display-1__primary.display-1__primary {
+    font-size: 3.5rem;
+  }
 }
 
 h1,
@@ -315,22 +325,31 @@ h6 {
 .btn.btn-category:hover {
   background: white;
 }
-.btn.btn-follow {
+.btn.btn-small-primary {
   background-color: #c96973;
   color: #fafafa;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
-.btn.btn-follow:hover {
+.btn.btn-small-primary:hover {
   background: #ce7881;
 }
-.btn.btn-profile {
+.btn.btn-small-light {
   background-color: #fafafa;
   color: #1f1f1f;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
-.btn.btn-profile:hover {
+.btn.btn-small-light:hover {
+  background: #ce7881;
+}
+.btn.btn-small-dark {
+  background-color: #1f1f1f;
+  color: #fafafa;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.btn.btn-small-dark:hover {
   background: #ce7881;
 }
 
@@ -391,8 +410,8 @@ h6 {
 }
 
 .icon-extra-small {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
 }
 .icon-small {
   width: 18px;
@@ -415,6 +434,7 @@ h6 {
 .card {
   border-radius: 1rem;
   background-color: #fafafa;
+  padding: 0.75rem;
 }
 .card-small {
   border-radius: 1rem;
@@ -424,23 +444,25 @@ h6 {
   border-radius: 1rem;
   padding: 1.5rem;
 }
-.card img {
-  border-radius: 1rem;
+@media screen and (max-width: 468px) {
+  .card-large {
+    padding: 0.75rem;
+  }
 }
-
-.post-card {
+.card-no-padding {
   border-radius: 1rem;
   background-color: #fafafa;
-  padding: 1.5rem;
 }
-
-.users-card {
+.card-users {
   border-radius: 1rem;
   background-color: #fafafa;
-  padding: 1.5rem;
+  padding: 0.75rem;
   height: 400px;
   position: sticky;
   top: 0;
+}
+.card img {
+  border-radius: 1rem;
 }
 
 /*  
@@ -881,6 +903,10 @@ nav .content-wrapper .rotate {
   display: flex;
 }
 
+.f-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -1075,7 +1101,8 @@ nav .content-wrapper .rotate {
 }
 
 .px-1 {
-  padding: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .px-2 {

@@ -107,7 +107,7 @@
   }
 
   // Follow button
-  &.btn-follow {
+  &.btn-small-primary {
     @include set-background($primary-color);
     padding: $small-btn-padding;
     font-size: $font-size-sm;
@@ -116,8 +116,17 @@
     }
   }
 
-  &.btn-profile {
+  &.btn-small-light {
     @include set-background($light-color);
+    padding: $small-btn-padding;
+    font-size: $font-size-sm;
+    &:hover {
+      background: lighten($primary-color, 4%);
+    }
+  }
+
+  &.btn-small-dark {
+    @include set-background($dark-color);
     padding: $small-btn-padding;
     font-size: $font-size-sm;
     &:hover {

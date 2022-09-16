@@ -19,7 +19,7 @@
 .card {
   border-radius: $border-standard;
   background-color: $light-color;
-  // padding: $sp6;
+  padding: $sp3;
 
   &-small {
     border-radius: $border-standard;
@@ -29,25 +29,29 @@
   &-large {
     border-radius: $border-standard;
     padding: $sp6;
+
+    @media screen and (max-width: 468px) {
+      padding: $sp3;
+    }
+  }
+
+  &-no-padding {
+    border-radius: $border-standard;
+    background-color: $light-color;
+    // padding: $sp6;
+  }
+
+  &-users {
+    border-radius: $border-standard;
+    background-color: $light-color;
+    padding: $sp3;
+    height: 400px;
+    position: sticky;
+    top: 0;
+    // padding: $sp6;
   }
 
   & img {
     border-radius: $border-standard;
   }
-}
-
-.post-card {
-  border-radius: $border-standard;
-  background-color: $light-color;
-  padding: $sp6;
-}
-
-.users-card {
-  border-radius: $border-standard;
-  background-color: $light-color;
-  padding: $sp6;
-  height: 400px;
-  // position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
