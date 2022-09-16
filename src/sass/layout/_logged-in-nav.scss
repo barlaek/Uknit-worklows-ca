@@ -7,7 +7,6 @@ nav .content-wrapper {
   gap: $gap-5;
   display: flex;
   justify-content: end;
-  flex-wrap: wrap;
 
   & img {
     width: 32px;
@@ -26,5 +25,6 @@ nav .content-wrapper {
 @media screen and (max-width: 468px) {
   nav .content-wrapper {
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
