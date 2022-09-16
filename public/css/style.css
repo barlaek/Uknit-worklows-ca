@@ -243,6 +243,10 @@ h6 {
  - btn btn-warning
  - btn btn-info
  - btn btn-category
+ - btn-small-primary
+ - btn-small-light
+ - btn-small-dark
+ - btn-group
 */
 .btn {
   display: inline-block;
@@ -340,17 +344,11 @@ h6 {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
-.btn.btn-small-light:hover {
-  background: #ce7881;
-}
 .btn.btn-small-dark {
   background-color: #1f1f1f;
   color: #fafafa;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
-}
-.btn.btn-small-dark:hover {
-  background: #ce7881;
 }
 
 .btn-group {
@@ -364,6 +362,15 @@ h6 {
     justify-content: center;
   }
 }
+/* See below the avatars classes: 
+  - avatar-name-wrapper
+  - avatar-img-wrapper
+  - avatar-img-wrapper-extra-large
+  - avatar-img-wrapper-large
+  - avatar-img-wrapper-regular
+  - avatar-img-wrapper-small
+
+*/
 .avatar-img-wrapper {
   position: relative;
   border-radius: 100%;
@@ -409,25 +416,17 @@ h6 {
   border-radius: 100%;
 }
 
-.icon-extra-small {
-  width: 13px;
-  height: 13px;
-}
-.icon-small {
-  width: 18px;
-  height: 18px;
-}
-
-/*See below the card classes: 
+/* See below the card classes: 
  - post-card
  - card
  - card-small
  - card-large
+ - card-users
+ - card-no-padding
  - card-header
  - card-body
  - card-footer
  - card-img-wrapper
- - avatar-img-wrapper
  - card-img
 
 */
@@ -465,16 +464,22 @@ h6 {
   border-radius: 1rem;
 }
 
-/*  
+/* See below the FORM classes: 
  - form-wrapper
  - form-control
+ - form-group
+ - filtered-form
  - input
  - label
  - placeholder
  - option
  - select
+ - select-group
  - search
  - search-large
+ - search-post
+
+
 */
 form input[type=text],
 form input[type=email],
@@ -562,6 +567,19 @@ select {
   .filtered-form .select-group {
     width: 100%;
   }
+}
+
+/* See below the icons classes: 
+  - icon-extra-small
+  - icon-small
+*/
+.icon-extra-small {
+  width: 13px;
+  height: 13px;
+}
+.icon-small {
+  width: 18px;
+  height: 18px;
 }
 
 .main-nav {
@@ -838,8 +856,20 @@ nav .content-wrapper .rotate {
   padding: 1.5rem;
 }
 
-/* See below classes used on the knitters page: 
+/* See below classes used on the dashboard page: 
+ - container 
+ - content-wrapper 
+ - d-flex
+ - d-grid
+ - post-grid
  - avatar-name-wrapper
+ - dashboard-hero
+ - dashboard-hero-info
+ - avatar-img-wrapper-extra-large
+ - btn-small-primary
+ - btn-small-light
+ - icon-extra-small
+ - color-primary
 
 */
 .dashboard-hero {
@@ -1051,6 +1081,10 @@ nav .content-wrapper .rotate {
 /* See below the spacing classes: 
 
 */
+.no-padding {
+  padding-top: 0;
+}
+
 .p-1 {
   padding: 0.25rem;
 }

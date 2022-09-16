@@ -13,6 +13,10 @@
  - btn btn-warning
  - btn btn-info
  - btn btn-category
+ - btn-small-primary
+ - btn-small-light
+ - btn-small-dark
+ - btn-group
 */
 
 // Default button
@@ -106,7 +110,7 @@
     }
   }
 
-  // Follow button
+  // Follow small
   &.btn-small-primary {
     @include set-background($primary-color);
     padding: $small-btn-padding;
@@ -120,18 +124,18 @@
     @include set-background($light-color);
     padding: $small-btn-padding;
     font-size: $font-size-sm;
-    &:hover {
-      background: lighten($primary-color, 4%);
-    }
+    // &:hover {
+    //   background: lighten($primary-color, 4%);
+    // }
   }
 
   &.btn-small-dark {
     @include set-background($dark-color);
     padding: $small-btn-padding;
     font-size: $font-size-sm;
-    &:hover {
-      background: lighten($primary-color, 4%);
-    }
+    // &:hover {
+    //   background: lighten($primary-color, 4%);
+    // }
   }
   // &:hover {
   //   background: lighten($primary-color, 4%);

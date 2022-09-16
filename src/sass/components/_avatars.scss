@@ -1,5 +1,17 @@
 // === AVATARS GLOBAL STYLES ===
 
+// <<<-------------  Avatar Classes ------------>>>
+
+/* See below the avatars classes: 
+  - avatar-name-wrapper
+  - avatar-img-wrapper
+  - avatar-img-wrapper-extra-large
+  - avatar-img-wrapper-large
+  - avatar-img-wrapper-regular
+  - avatar-img-wrapper-small
+  
+*/
+
 .avatar-img-wrapper {
   position: relative;
   border-radius: 100%;
@@ -50,16 +62,5 @@
       height: $avatar-img-small;
       border-radius: 100%;
     }
-  }
-}
-
-.icon {
-  &-extra-small {
-    width: $icon-extra-small;
-    height: $icon-extra-small;
-  }
-  &-small {
-    width: $icon-small;
-    height: $icon-small;
   }
 }
