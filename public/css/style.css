@@ -688,33 +688,6 @@ nav .content-wrapper .rotate {
     flex-wrap: wrap;
   }
 }
-/* See below classes used on the homepage: 
- - container
- - title-wrapper
- - content-wrapper
- - content
- - content-header
- - content-body
- - content-footer
- - form-wrapper
- - list-wrapper
- - d-flex
- - d-grid
- - d-none
- - product-grid
- - card
- - card-img-wrapper
- - card-img
- - w-medium
- - w-100
- - text-large
- - text-small
- - btn btn-white
- - btn btn-primary
- - btn btn-secondary
- - box-shadow-sm
-
-*/
 .knit-bullet {
   height: 20px;
   width: 20px;
@@ -813,33 +786,6 @@ nav .content-wrapper .rotate {
     width: 90%;
   }
 }
-/* See below classes used on the knitters page: 
- - container
- - title-wrapper
- - content-wrapper
- - content
- - content-header
- - content-body
- - content-footer
- - form-wrapper
- - list-wrapper
- - d-flex
- - d-grid
- - d-none
- - product-grid
- - card
- - card-img-wrapper
- - card-img
- - w-medium
- - w-100
- - text-large
- - text-small
- - btn btn-white
- - btn btn-primary
- - btn btn-secondary
- - box-shadow-sm
-
-*/
 .post-section {
   padding-top: 0;
 }
@@ -856,22 +802,6 @@ nav .content-wrapper .rotate {
   padding: 1.5rem;
 }
 
-/* See below classes used on the dashboard page: 
- - container 
- - content-wrapper 
- - d-flex
- - d-grid
- - post-grid
- - avatar-name-wrapper
- - dashboard-hero
- - dashboard-hero-info
- - avatar-img-wrapper-extra-large
- - btn-small-primary
- - btn-small-light
- - icon-extra-small
- - color-primary
-
-*/
 .dashboard-hero {
   display: flex;
   flex-direction: column;
