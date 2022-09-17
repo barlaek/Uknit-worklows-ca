@@ -8,6 +8,11 @@
 
 // PADDING
 
+// No Padding
+.no-padding {
+  padding-top: 0;
+}
+
 // all around
 .p-1 {
   padding: $sp1;
@@ -65,7 +70,9 @@
 // sides
 
 .px-1 {
-  padding: $sp1;
+  // padding: $sp1;
+  padding-left: $sp1;
+  padding-right: $sp1;
 }
 
 .px-2 {
@@ -202,4 +209,16 @@
 
 .gap-4 {
   gap: $gap-4;
+}
+
+.gap-5 {
+  gap: $gap-5;
+}
+
+.gap-6 {
+  gap: $gap-6;
+}
+
+.gap-7 {
+  gap: $gap-7;
 }

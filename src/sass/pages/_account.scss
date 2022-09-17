@@ -1,3 +1,5 @@
+// === ACCOUNT PAGES STYLES LOG IN AND REGISTER ===
+
 .log-in-section {
   padding: 0;
   margin: 0;
@@ -21,16 +23,16 @@
   align-items: center;
 }
 
-.card-header {
+.form-card-header {
   padding-bottom: 2rem;
 }
 
-.card-body {
+.form-card-body {
   width: 500px;
   padding: 0 1.5rem;
 }
 
-.card-footer {
+.form-card-footer {
   width: 500px;
   padding: 0 1.5rem;
 }
@@ -59,15 +61,15 @@
     justify-content: start;
   }
 
-  .card-header {
+  .form-card-header {
     padding-top: 2rem;
   }
 
-  .card-body {
+  .form-card-body {
     width: 100%;
   }
 
-  .card-footer {
+  .form-card-footer {
     width: 100%;
   }
 

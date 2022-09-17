@@ -13,6 +13,10 @@
  - btn btn-warning
  - btn btn-info
  - btn btn-category
+ - btn-small-primary
+ - btn-small-light
+ - btn-small-dark
+ - btn-group
 */
 
 // Default button
@@ -105,6 +109,34 @@
       background: lighten($light-color, 4%);
     }
   }
+
+  // Follow small
+  &.btn-small-primary {
+    @include set-background($primary-color);
+    padding: $small-btn-padding;
+    font-size: $font-size-sm;
+    &:hover {
+      background: lighten($primary-color, 4%);
+    }
+  }
+
+  &.btn-small-light {
+    @include set-background($light-color);
+    padding: $small-btn-padding;
+    font-size: $font-size-sm;
+    // &:hover {
+    //   background: lighten($primary-color, 4%);
+    // }
+  }
+
+  &.btn-small-dark {
+    @include set-background($dark-color);
+    padding: $small-btn-padding;
+    font-size: $font-size-sm;
+    // &:hover {
+    //   background: lighten($primary-color, 4%);
+    // }
+  }
   // &:hover {
   //   background: lighten($primary-color, 4%);
   // }
@@ -114,9 +146,10 @@
 .btn-group {
   position: relative;
   display: inline-flex;
+  flex-wrap: wrap;
 }
 @media (max-width: 640px) {
   .btn-group {
-    flex-wrap: wrap;
+    justify-content: center;
   }
 }

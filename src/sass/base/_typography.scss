@@ -32,14 +32,22 @@ Typography styling classes
   font-size: $display-1-font-size;
   font-weight: 900;
   color: $dark-color;
-  // margin-bottom: $sp4;
+  @media screen and (max-width: 468px) {
+    &.display-1__dark {
+      font-size: $h1-font-size;
+    }
+  }
 }
 
 .display-1__primary {
   font-size: $display-1-font-size;
   font-weight: 900;
   color: $primary-color;
-  // margin-bottom: $sp4;
+  @media screen and (max-width: 468px) {
+    &.display-1__primary {
+      font-size: $h1-font-size;
+    }
+  }
 }
 //Regular headings
 h1,

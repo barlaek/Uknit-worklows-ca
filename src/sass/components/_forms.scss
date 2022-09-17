@@ -2,50 +2,117 @@
 
 // <<<-------------  Form Classes ------------>>>
 
-/*  
+/* See below the FORM classes: 
  - form-wrapper
  - form-control
+ - form-group
+ - filtered-form
  - input
  - label
  - placeholder
  - option
  - select
+ - select-group
+ - search
+ - search-large
+ - search-post
+
+ 
 */
-
-.search-large {
-  border: none;
-  border-radius: $border-standard;
-  outline-style: none;
-  cursor: auto;
-  box-shadow: $box-shadow-sm;
-
-  &:focus {
-    box-shadow: $box-shadow;
-    transition: $regular-transition;
-  }
-}
-
-// .search:focus {
-//   box-shadow: $box-shadow;
-//   transition: $regular-transition;
-// }
-
 form {
-
   input[type="text"],
   input[type="email"],
   input[type="password"],
   input[type="date"],
+  input[type="search"],
   select,
   textarea {
     display: block;
     width: 100%;
-    padding: $input-padding;
+    padding: $input-padding-standard;
     font: inherit;
-    // border: 1px solid #ccc;
+    cursor: auto;
     border: none;
     border-radius: $border-standard;
     outline-style: none;
     box-shadow: $box-shadow-sm;
+  }
+}
+
+.search {
+  &-large {
+    border: none;
+    padding: $input-padding-large !important;
+    outline-style: none;
+    cursor: auto;
+    box-shadow: $box-shadow-sm;
+
+    &:focus {
+      box-shadow: $box-shadow;
+      transition: $regular-transition;
+    }
+  }
+
+  &-post {
+    padding: $input-padding-standard !important;
+    box-shadow: none !important;
+    border: $border !important;
+  }
+
+  border: $border !important;
+  box-shadow: none !important;
+}
+
+select {
+  border: $border !important;
+  box-shadow: none !important;
+  padding: $input-padding-standard !important;
+  color: $primary-color;
+  font-weight: $font-weight-500 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='32' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 50%;
+
+  @media screen and (max-width: 600px) {
+    &.select-menu {
+      background-position-x: 95%;
+      background-position-y: 50%;
+    }
+  }
+}
+
+.form-wrapper .btn,
+.form-wrapper input {
+  font: inherit !important;
+}
+
+.filtered-form {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+
+  & .form-group {
+    width: 80%;
+  }
+
+  .select-group {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 600px) {
+    &.filtered-form {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    & .form-group {
+      width: 100%;
+    }
+
+    & .select-group {
+      width: 100%;
+    }
   }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logged In Navigation</title>
+  </head>
+  <body>
+    <header>
+      <!-- Primary Nav -->
+
+      <nav class="main-nav">
+        <div class="container">
+          <div class="d-flex justify-content-center mt-4">
+            <div class="nav-wrap d-flex justify-content-between">
+              <a class="logo z-10" href="/public/"
+                ><img src="/src/assets/logo.png" alt="Uknit logo"
+              /></a>
+              <button class="toggle-menu" id="toggleBtn">Menu</button>
+              <div class="collapse-nav justify-content-end gap-4">
+                <ul class="nav-ul gap-1">
+                  <li class="list-item"><a class="link" href="/public/">Home</a></li>
+                  <li class="list-item"><a class="link active" href="#">Knit's</a></li>
+                  <li class="list-item">
+                    <a class="link" href="/public/profile/dashboard/">Dashboard</a>
+                  </li>
+                  <li class="list-item"><a class="link" href="#">Invest</a></li>
+                </ul>
+                <div class="secondary-nav">
+                  <a href="/public/profile/log-in/"
+                    ><button class="btn btn-secondary">Login / Create account</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- /Primary Nav -->
+      <!-- Secondary Nav -->
+      <div class="container">
+        <nav>
+          <div class="content-wrapper py-3 align-items-center">
+            <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
+            <a href="#"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
+            <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
+            <a href="#"
+              ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
+            /></a>
+            <a href="#"
+              ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
+            /></a>
+            <a href="#"
+              ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
+            /></a>
+          </div>
+        </nav>
+      </div>
+      <!-- /Secondary Nav -->
+    </header>
+  </body>
+</html>

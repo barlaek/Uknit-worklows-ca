@@ -2,8 +2,13 @@
 
 // <<<-------------  Card Classes ------------>>>
 
-/*See below the card classes: 
+/* See below the card classes: 
+ - post-card
  - card
+ - card-small
+ - card-large
+ - card-users
+ - card-no-padding
  - card-header
  - card-body
  - card-footer
@@ -13,9 +18,41 @@
 */
 
 .card {
-  border-radius: $border-xl;
-}
-
-.card-img {
   border-radius: $border-standard;
+  background-color: $light-color;
+  padding: $sp3;
+
+  &-small {
+    border-radius: $border-standard;
+    padding: $sp3;
+  }
+
+  &-large {
+    border-radius: $border-standard;
+    padding: $sp6;
+
+    @media screen and (max-width: 468px) {
+      padding: $sp3;
+    }
+  }
+
+  &-no-padding {
+    border-radius: $border-standard;
+    background-color: $light-color;
+    // padding: $sp6;
+  }
+
+  &-users {
+    border-radius: $border-standard;
+    background-color: $light-color;
+    padding: $sp3;
+    height: 400px;
+    position: sticky;
+    top: 0;
+    // padding: $sp6;
+  }
+
+  & img {
+    border-radius: $border-standard;
+  }
 }
