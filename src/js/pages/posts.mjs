@@ -34,7 +34,6 @@ async function createPosts() {
 
     }
 
-
 }
 createPosts();
 
