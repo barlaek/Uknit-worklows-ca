@@ -22,9 +22,10 @@ $active-bg: $primary-color;
 $rem-size: 1rem;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-sm: $font-size-base * 0.9;
+$font-size-extra-sm: $font-size-base * 0.7;
 $font-size-lg: $font-size-base * 1.2;
 
-$display-1-font-size: $font-size-base * 5;
+$display-1-font-size: $font-size-base * 4;
 $display-2-font-size: $font-size-base * 4;
 
 $h1-font-size: $font-size-base * 3.5;
@@ -69,7 +70,7 @@ $regular-btn-padding: 1rem 2rem;
 $small-btn-padding: 0.5rem 1rem;
 $input-padding-standard: 1rem 2rem;
 $input-padding-large: 1.25rem 2.25rem;
-$container-padding: 0 1.2em;
+$container-padding: 0 1.2rem;
 // Cards
 
 // MARGINS
@@ -105,6 +106,14 @@ $regular-transition: all 0.3s ease-in;
 // <<<------------- IMAGE VARIABLES ------------>>>
 
 // Avatar Images
+$avatar-img-extra-large: 180px;
 $avatar-img-large: 120px;
 $avatar-img-regular: 64px;
 $avatar-img-small: 32px;
+
+//Icons
+$icon-extra-small: 13px;
+$icon-small: 18px;
+$icon-regular: 22px;
+$icon-large: 32px;
+$comment-icon: 13px;
