@@ -9,4 +9,5 @@ export const allPostsUrl = "api/v1/social/posts/";
 
 // DOM
 export const alertWrapper = document.querySelector('.alert-wrapper');
-export const postsContainer = document.querySelector('#postsContainer');
+export const postContainer = document.querySelector('#postContainer');
+export const postTemplate = document.querySelector('#postTemplate').content;

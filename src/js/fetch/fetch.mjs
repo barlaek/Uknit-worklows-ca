@@ -15,7 +15,7 @@ export async function loginFetch(url, body) {
             // Collect accessToken and send to local storage
             const accessToken = data.accessToken;
             localStorage.setItem('accessToken', accessToken);
-            window.location.href = "../../../public/posts.html";
+            window.location.href = "../../../public/knit/index.html";
         }
     }
     catch (error) {
@@ -39,5 +39,8 @@ export async function registerFetch(url, body) {
 export async function allPostsFetch(url, body) {
     const response = await fetch(url, body);
     const data = await response.json();
-    console.log(data);
+    if (response.ok) {
+        return data;
+    }
+    throw new Error(data.message);
 }
