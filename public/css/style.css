@@ -104,10 +104,6 @@ section {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-.text-center {
-  text-align: center;
-}
-
 /* See below typography style classes and typography color classes used so far in the project:
 
 Typography styling classes
@@ -319,6 +315,15 @@ h6 {
 .btn.btn-category:hover {
   background: white;
 }
+.btn.btn-follow {
+  background-color: #c96973;
+  color: #fafafa;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.btn.btn-follow:hover {
+  background: #ce7881;
+}
 
 .btn-group {
   position: relative;
@@ -331,20 +336,82 @@ h6 {
   }
 }
 /*See below the card classes: 
+ - post-card
  - card
+ - card-small
+ - card-large
  - card-header
  - card-body
  - card-footer
  - card-img-wrapper
+ - avatar-img-wrapper
  - card-img
 
 */
 .card {
-  border-radius: 1.5rem;
+  border-radius: 1rem;
+  background-color: #fafafa;
+}
+.card-small {
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+.card-large {
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.card img {
+  border-radius: 1rem;
 }
 
-.card-img {
+.post-card {
   border-radius: 1rem;
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
+
+.users-card {
+  border-radius: 1rem;
+  background-color: #fafafa;
+  padding: 1.5rem;
+  height: 400px;
+  position: sticky;
+  top: 0;
+}
+
+.avatar-img-wrapper {
+  position: relative;
+  border-radius: 100%;
+}
+.avatar-img-wrapper-large {
+  width: 120px;
+  height: 120px;
+}
+.avatar-img-wrapper-large img {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+.avatar-img-wrapper-regular {
+  width: 64px;
+  height: 64px;
+}
+.avatar-img-wrapper-regular img {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+.avatar-img-wrapper-small {
+  width: 32px;
+  height: 32px;
+}
+.avatar-img-wrapper-small img {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
 }
 
 /*  
@@ -355,10 +422,34 @@ h6 {
  - placeholder
  - option
  - select
+ - search
+ - search-large
 */
-.search-large {
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=date],
+form input[type=search],
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font: inherit;
+  cursor: auto;
   border: none;
   border-radius: 1rem;
+  outline-style: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.search {
+  border: 0.1rem solid rgb(205, 205, 205) !important;
+  box-shadow: none !important;
+}
+.search-large {
+  border: none;
+  padding: 1.25rem 2.25rem !important;
   outline-style: none;
   cursor: auto;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -368,20 +459,9 @@ h6 {
   transition: all 0.3s ease-in;
 }
 
-form input[type=text],
-form input[type=email],
-form input[type=password],
-form input[type=date],
-form select,
-form textarea {
-  display: block;
-  width: 100%;
-  padding: 1rem 2rem;
-  font: inherit;
-  border: none;
-  border-radius: 1rem;
-  outline-style: none;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+.form-wrapper .btn,
+.form-wrapper input {
+  font: inherit !important;
 }
 
 .main-nav {
@@ -567,16 +647,16 @@ nav .content-wrapper .rotate {
   align-items: center;
 }
 
-.card-header {
+.form-card-header {
   padding-bottom: 2rem;
 }
 
-.card-body {
+.form-card-body {
   width: 500px;
   padding: 0 1.5rem;
 }
 
-.card-footer {
+.form-card-footer {
   width: 500px;
   padding: 0 1.5rem;
 }
@@ -600,13 +680,13 @@ nav .content-wrapper .rotate {
   .account-card {
     justify-content: start;
   }
-  .card-header {
+  .form-card-header {
     padding-top: 2rem;
   }
-  .card-body {
+  .form-card-body {
     width: 100%;
   }
-  .card-footer {
+  .form-card-footer {
     width: 100%;
   }
   .alert-wrapper {
@@ -614,6 +694,49 @@ nav .content-wrapper .rotate {
     width: 90%;
   }
 }
+/* See below classes used on the knitters page: 
+ - container
+ - title-wrapper
+ - content-wrapper
+ - content
+ - content-header
+ - content-body
+ - content-footer
+ - form-wrapper
+ - list-wrapper
+ - d-flex
+ - d-grid
+ - d-none
+ - product-grid
+ - card
+ - card-img-wrapper
+ - card-img
+ - w-medium
+ - w-100
+ - text-large
+ - text-small
+ - btn btn-white
+ - btn btn-primary
+ - btn btn-secondary
+ - box-shadow-sm
+
+*/
+.post-section {
+  padding-top: 0;
+}
+
+.users-list {
+  position: relative;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.comment-content {
+  border: 0.1rem solid rgb(205, 205, 205);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
 /* See below the grid classes: 
  - d-flex
  - flex-column
@@ -664,9 +787,21 @@ nav .content-wrapper .rotate {
 
 /* See below the grid classes: 
  - d-grid
+ - post-grid
 */
 .d-grid {
   display: grid;
+}
+
+.post-grid {
+  grid-template-columns: 0.5fr 1fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* See below the sizing classes: 
@@ -943,6 +1078,18 @@ nav .content-wrapper .rotate {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.5rem;
+}
+
+.gap-6 {
+  gap: 1.75rem;
+}
+
+.gap-7 {
+  gap: 2rem;
+}
+
 /* See below the overlay classes: 
  - dark-overlay
 */
@@ -953,4 +1100,31 @@ nav .content-wrapper .rotate {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* See below the alignment classes: 
+ - text-center
+
+*/
+.text-center {
+  text-align: center;
+}
+
+/* See below the border classes:
+ - border-small
+ - border-standard
+ - border-large
+
+*/
+.border-small {
+  border: 0.1rem solid rgb(205, 205, 205);
+  border-radius: 0.5rem;
+}
+.border-standard {
+  border: 0.1rem solid rgb(205, 205, 205);
+  border-radius: 1rem;
+}
+.border-large {
+  border: 0.1rem solid rgb(205, 205, 205);
+  border-radius: 1.5rem;
 }
