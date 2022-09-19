@@ -97,6 +97,14 @@
   margin: 0 auto;
 }
 
+.m-left-auto {
+  margin-left: auto;
+}
+
+.m-right-auto {
+  margin-right: auto;
+}
+
 // all around
 .m-1 {
   margin: $sp1;
@@ -140,7 +148,7 @@
 }
 
 .mt-6 {
-  margin-top: $rem-size * 4;
+  margin-top: $sp6;
 }
 
 // bottom

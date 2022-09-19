@@ -89,7 +89,7 @@
                   <div class="d-flex flex-column gap-2" id="mostPopularContainer">
                     <template id="mostPopularTemplate">
                       <li class="card-small w-100 bg-white">
-                        <a href="" class="d-flex">
+                        <a href="" class="user d-flex">
                           <div class="card-header w-100">
                             <div class="content d-flex align-items-center gap-2">
                               <div class="avatar-img-wrapper-small">
@@ -136,27 +136,31 @@
               <div class="content-wrapper d-flex flex-column gap-4" id="postContainer">
                 <template id="postTemplate">
                   <div class="card card-large d-flex flex-column gap-4 align-items-start">
-                    <div class="card-header d-flex align-items-center mt-4">
+                    <div class="card-header d-flex align-items-center">
                       <div class="content d-flex gap-4 align-items-center f-wrap w-100">
                         <div class="avatar-img-wrapper-regular">
                           <div>
                             <img src="/src/assets/profile-icon.svg" alt="" />
                           </div>
                         </div>
-                        <div class="avatar-name">
+                        <div class="avatar-name m-right-auto">
                           <h4 class="mt-2" id="postAuthor"></h4>
                         </div>
                         <button class="btn btn-small-primary">See Profile</button>
                       </div>
                     </div>
-                    <h5 id="postTitle"></h5>
-                    <div class="post-media" id="postMedia"></div>
+
                     <div class="card-body">
-                      <div class="comment">
-                        <p class="text-small" id="postText">
-                        </p>
+                      <div class="post-title mt-2">
+                        <h5 id="postTitle"></h5>
                       </div>
-                      <div class="content d-flex f-wrap align-items-center gap-4 mt-4">
+                      <div class="post-content mb-4">
+                        <p class="text-small" id="postText"></p>
+                      </div>
+
+                      <div class="post-media" id="postMedia"></div>
+
+                      <div class="content d-flex f-wrap w-100 mt-6 gap-4">
                         <a href="">
                           <div class="d-flex align-items-center gap-2">
                             <img
@@ -181,7 +185,11 @@
                         </a>
                         <a href="">
                           <div class="d-flex align-items-center gap-2">
-                            <img class="icon-extra-small" src="/src/assets/next-svgrepo-com.svg" alt="" />
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/next-svgrepo-com.svg"
+                              alt=""
+                            />
                             <h5>Follow</h5>
                           </div>
                         </a>
