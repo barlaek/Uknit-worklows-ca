@@ -62,23 +62,7 @@
       <!-- /Secondary Nav -->
     </header>
     <main>
-      <section>
-        <div class="container">
-          <!-- Hero -->
-          <div class="content-wrapper d-flex justify-content-center">
-            <div class="content">
-              <div class="content-header">
-                <h1 class="display-1__dark text-center">
-                  Latest from our<br />
-                  <span class="display-1__primary">knitters</span>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <!-- /Hero -->
-        </div>
-      </section>
-      <section class="post-section">
+      <section class="post-section mt-5">
         <div class="container">
           <div class="post-grid d-grid">
             <div class="card-users d-flex flex-column align-items-start">
@@ -91,6 +75,7 @@
                 <div class="form-wrapper mb-3 w-100">
                   <form>
                     <input
+                      id="searchUsersInput"
                       class="search"
                       type="search"
                       inputmode="search"
@@ -101,117 +86,29 @@
               </div>
               <div class="card-footer">
                 <ul class="users-list">
-                  <li class="d-flex flex-column gap-2">
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
+                  <div class="d-flex flex-column gap-2" id="mostPopularContainer">
+                    <template id="mostPopularTemplate">
+                      <li class="card-small w-100 bg-white">
+                        <a href="" class="d-flex">
+                          <div class="card-header w-100">
+                            <div class="content d-flex align-items-center gap-2">
+                              <div class="avatar-img-wrapper-small">
+                                <img src="/src/assets/profile-icon.svg" alt="" />
+                              </div>
+                              <h6 id="userName"></h6>
                             </div>
-                            <h6>Tom E.William</h6>
                           </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>Robert D.B</h6>
+                          <div class="card-body d-flex ajustify-content-end">
+                            <button class="btn btn-small-primary">Follow</button>
                           </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 1</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 2</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 3</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 4</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 5</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                  </li>
+                        </a>
+                      </li>
+                    </template>
+                  </div>
                 </ul>
               </div>
             </div>
-            <div class="content-wrapper d-flex flex-column gap-7">
+            <div class="content-wrapper d-flex flex-column gap-4">
               <div class="form-wrapper d-flex">
                 <form method="GET" action="" id="searchPost" class="filtered-form w-100">
                   <!-- Form Post -->
@@ -225,7 +122,6 @@
                       minlength="3"
                       maxlength="300"
                     />
-
                     <div class="form-error" id="postError"></div>
                   </div>
                   <div class="select-group d-flex gap-4">
@@ -237,18 +133,28 @@
                   <!-- Form Button -->
                 </form>
               </div>
-              <div class="content-wrapper d-flex flex-column" id="postContainer">
+              <div class="content-wrapper d-flex flex-column gap-4" id="postContainer">
                 <template id="postTemplate">
                   <div class="card card-large d-flex flex-column gap-4 align-items-start">
                     <div class="card-header d-flex align-items-center mt-4">
-                      <h6 id="postTitle">Title</h6>
-                    </div>
-                    <div class="card-body">
-                      <div class="card-image" id="postMedia">
-                        MEDIA
+                      <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                        <div class="avatar-img-wrapper-regular">
+                          <div>
+                            <img src="/src/assets/profile-icon.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="avatar-name">
+                          <h4 class="mt-2" id="postAuthor"></h4>
+                        </div>
+                        <button class="btn btn-small-primary">See Profile</button>
                       </div>
-                      <div id="postText">
-                        BODY 
+                    </div>
+                    <h5 id="postTitle"></h5>
+                    <div class="post-media" id="postMedia"></div>
+                    <div class="card-body">
+                      <div class="comment">
+                        <p class="text-small" id="postText">
+                        </p>
                       </div>
                       <div class="content d-flex f-wrap align-items-center gap-4 mt-4">
                         <a href="">
@@ -259,7 +165,7 @@
                               alt=""
                             />
                             <h5>Like</h5>
-                            <span class="text-small color-primary">10</span>
+                            <span class="text-small color-primary" id="postReactionCount"></span>
                           </div>
                         </a>
                         <a href="">
@@ -270,20 +176,18 @@
                               alt=""
                             />
                             <h5>Comment</h5>
-                            <span class="text-small color-primary">2</span>
+                            <span class="text-small color-primary">0</span>
                           </div>
                         </a>
                         <a href="">
                           <div class="d-flex align-items-center gap-2">
-                            <img
-                              class="icon-extra-small"
-                              src="/src/assets/next-svgrepo-com.svg"
-                              alt=""
-                            />
+                            <img class="icon-extra-small" src="/src/assets/next-svgrepo-com.svg" alt="" />
                             <h5>Follow</h5>
                           </div>
                         </a>
                       </div>
+                    </div>
+                  </div>
                 </template>
               </div>
             </div>
