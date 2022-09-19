@@ -76,5 +76,4 @@ async function createUsers() {
         }
     })
 }
-createUsers();
-
+createUsers(); 
