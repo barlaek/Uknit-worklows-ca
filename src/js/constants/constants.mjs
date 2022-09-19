@@ -9,11 +9,9 @@ export const allUsersUrl = "api/v1/social/profiles";
 // DOM
 export const alertWrapper = document.querySelector('.alert-wrapper');
 export const postContainer = document.querySelector('#postContainer');
-export const postTemplate = document.querySelector('#postTemplate').content;
 export const postAuthor = document.querySelector('#postAuthor');
 export const postReactionCount = document.querySelector('#postReactionCount');
 export const mostPopularContainer = document.querySelector('#mostPopularContainer');
-export const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
 
 // search 
 export const searchUsersInput = document.getElementById('searchUsersInput');
