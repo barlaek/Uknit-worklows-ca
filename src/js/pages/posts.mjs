@@ -4,11 +4,12 @@ import { allPostsFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllPosts } from "../headers/headers.mjs";
 import { userFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllUsers } from "../headers/headers.mjs";
+
 // DOM
 import { mostPopularTemplate, postContainer } from "../constants/constants.mjs";
 import { postTemplate } from "../constants/constants.mjs";
 import { mostPopularContainer } from "../constants/constants.mjs";
-import { userName } from "../constants/constants.mjs";
+
 // Url's
 import { baseURL } from "../constants/constants.mjs";
 import { allPostsUrl } from "../constants/constants.mjs";
