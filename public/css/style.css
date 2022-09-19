@@ -936,6 +936,17 @@ nav .content-wrapper .rotate {
   }
 }
 
+.profile-hero-grid {
+  grid-template-columns: 0.5fr 1fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .profile-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* See below the sizing classes: 
  - w-large
  - w-medium

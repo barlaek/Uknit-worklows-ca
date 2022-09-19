@@ -20,3 +20,13 @@
     grid-template-columns: 1fr;
   }
 }
+
+.profile-hero-grid {
+  grid-template-columns: 0.5fr 1fr;
+  grid-auto-rows: auto;
+  gap: $rem-size;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
