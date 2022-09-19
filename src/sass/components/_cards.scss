@@ -2,16 +2,17 @@
 
 // <<<-------------  Card Classes ------------>>>
 
-/*See below the card classes: 
+/* See below the card classes: 
  - post-card
  - card
  - card-small
  - card-large
+ - card-users
+ - card-no-padding
  - card-header
  - card-body
  - card-footer
  - card-img-wrapper
- - avatar-img-wrapper
  - card-img
 
 */
@@ -19,7 +20,7 @@
 .card {
   border-radius: $border-standard;
   background-color: $light-color;
-  // padding: $sp6;
+  padding: $sp3;
 
   &-small {
     border-radius: $border-standard;
@@ -29,66 +30,29 @@
   &-large {
     border-radius: $border-standard;
     padding: $sp6;
+
+    @media screen and (max-width: 468px) {
+      padding: $sp3;
+    }
+  }
+
+  &-no-padding {
+    border-radius: $border-standard;
+    background-color: $light-color;
+    // padding: $sp6;
+  }
+
+  &-users {
+    border-radius: $border-standard;
+    background-color: $light-color;
+    padding: $sp3;
+    height: 400px;
+    position: sticky;
+    top: 0;
+    // padding: $sp6;
   }
 
   & img {
     border-radius: $border-standard;
-  }
-}
-
-.post-card {
-  border-radius: $border-standard;
-  background-color: $light-color;
-  padding: $sp6;
-}
-
-.users-card {
-  border-radius: $border-standard;
-  background-color: $light-color;
-  padding: $sp6;
-  height: 400px;
-  // position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.avatar-img-wrapper {
-  position: relative;
-  border-radius: 100%;
-
-  &-large {
-    width: $avatar-img-large;
-    height: $avatar-img-large;
-
-    & img {
-      position: absolute;
-      width: $avatar-img-large;
-      height: $avatar-img-large;
-      border-radius: 100%;
-    }
-  }
-
-  &-regular {
-    width: $avatar-img-regular;
-    height: $avatar-img-regular;
-
-    & img {
-      position: absolute;
-      width: $avatar-img-regular;
-      height: $avatar-img-regular;
-      border-radius: 100%;
-    }
-  }
-
-  &-small {
-    width: $avatar-img-small;
-    height: $avatar-img-small;
-
-    & img {
-      position: absolute;
-      width: $avatar-img-small;
-      height: $avatar-img-small;
-      border-radius: 100%;
-    }
   }
 }

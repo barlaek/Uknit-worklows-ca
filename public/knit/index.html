@@ -10,33 +10,39 @@
   <body>
     <header>
       <!-- Primary Nav -->
+
       <nav class="main-nav">
-        <div class="container d-flex justify-content-center">
-          <div class="nav-wrap d-flex justify-content-between">
-            <a class="logo z-10" href="/public/"
-              ><img src="/src/assets/logo.png" alt="Uknit logo"
-            /></a>
-            <button class="toggle-menu" id="toggleBtn">Menu</button>
-            <div class="collapse-nav justify-content-end gap-4">
-              <ul class="nav-ul gap-1">
-                <li class="list-item"><a class="link" href="/public/">Home</a></li>
-                <li class="list-item"><a class="link active" href="#">Knit's</a></li>
-                <li class="list-item"><a class="link" href="#">About us</a></li>
-                <li class="list-item"><a class="link" href="#">Invest</a></li>
-              </ul>
-              <div class="secondary-nav">
-                <a href="/public/profile/log-in/"
-                  ><button class="btn btn-secondary">Login / Create account</button></a
-                >
+        <div class="container">
+          <div class="d-flex justify-content-center mt-4">
+            <div class="nav-wrap d-flex justify-content-between">
+              <a class="logo z-10" href="/public/"
+                ><img src="/src/assets/logo.png" alt="Uknit logo"
+              /></a>
+              <button class="toggle-menu" id="toggleBtn">Menu</button>
+              <div class="collapse-nav justify-content-end gap-4">
+                <ul class="nav-ul gap-1">
+                  <li class="list-item"><a class="link" href="/public/">Home</a></li>
+                  <li class="list-item"><a class="link active" href="#">Knit's</a></li>
+                  <li class="list-item">
+                    <a class="link" href="/public/profile/dashboard/">Dashboard</a>
+                  </li>
+                  <li class="list-item"><a class="link" href="#">Invest</a></li>
+                </ul>
+                <div class="secondary-nav">
+                  <a href="/public/profile/log-in/"
+                    ><button class="btn btn-secondary">Login / Create account</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </nav>
+
       <!-- /Primary Nav -->
       <!-- Secondary Nav -->
-      <nav>
-        <div class="container">
+      <div class="container">
+        <nav>
           <div class="content-wrapper py-3 align-items-center">
             <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
             <a href="#"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
@@ -51,32 +57,16 @@
               ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
             /></a>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <!-- /Secondary Nav -->
     </header>
     <main>
-      <section>
-        <div class="container">
-          <!-- Hero -->
-          <div class="content-wrapper d-flex justify-content-center">
-            <div class="content">
-              <div class="content-header">
-                <h1 class="display-1__dark text-center">
-                  Latest from our<br />
-                  <span class="display-1__primary">knitters</span>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <!-- /Hero -->
-        </div>
-      </section>
-      <section class="post-section">
+      <section class="post-section mt-5">
         <div class="container">
           <div class="post-grid d-grid">
-            <div class="users-card d-flex flex-column align-items-start">
-              <div class="card-header d-flex align-items-center">
+            <div class="card-users d-flex flex-column align-items-start">
+              <div class="card-header d-flex align-items-center mt-4">
                 <div class="title-wrapper">
                   <h5 class="mb-5">Most popular accounts</h5>
                 </div>
@@ -88,7 +78,7 @@
                       class="search"
                       type="search"
                       inputmode="search"
-                      placeholder="Search post"
+                      placeholder="Search knitter"
                     />
                   </form>
                 </div>
@@ -103,11 +93,11 @@
                             <div class="avatar-img-wrapper-small">
                               <img src="/src/assets/profile-icon.svg" alt="" />
                             </div>
-                            <h6>Tom E. William</h6>
+                            <h6>Tom E.William</h6>
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -122,7 +112,7 @@
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -137,7 +127,7 @@
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -152,7 +142,7 @@
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -167,7 +157,7 @@
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -182,7 +172,7 @@
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -197,7 +187,7 @@
                           </div>
                         </div>
                         <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-follow">Follow</button>
+                          <button class="btn btn-small-primary">Follow</button>
                         </div>
                       </a>
                     </div>
@@ -205,340 +195,96 @@
                 </ul>
               </div>
             </div>
-            <div class="content-wrapper d-flex flex-column gap-7" id="postsContainer">
-              <div class="post-card d-flex flex-column gap-4 align-items-start">
-                <div class="card-header d-flex align-items-center">
-                  <div class="content d-flex gap-4 align-items-center w-100">
-                    <div class="avatar-img-wrapper-regular">
-                      <div>
-                        <img src="/src/assets/profile-icon.svg" alt="" />
-                      </div>
-                    </div>
-                    <div class="avatar-name">
-                      <h4 class="mt-2">Robert D.B</h4>
-                    </div>
+            <div class="content-wrapper d-flex flex-column gap-7">
+              <div class="form-wrapper d-flex">
+                <form method="GET" action="" id="searchPost" class="filtered-form w-100">
+                  <!-- Form Post -->
+                  <div class="form-group d-flex">
+                    <input
+                      class="search-post"
+                      id="search"
+                      type="text"
+                      name="post"
+                      placeholder="Search post"
+                      minlength="3"
+                      maxlength="300"
+                    />
+
+                    <div class="form-error" id="postError"></div>
                   </div>
-                  <div class="content d-flex justify-content-end w-100">
-                    <button class="btn btn-follow">See Profile</button>
+                  <div class="select-group d-flex gap-4">
+                    <select class="select-menu" id="filteredPosts" name="posts">
+                      <option value="new">New</option>
+                      <option value="old">Old</option>
+                    </select>
                   </div>
-                </div>
-                <div class="card-body">
-                  <div class="comment">
-                    <p class="text-small">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                      quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe eum
-                      perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur sunt.
-                      Pariatur.
-                    </p>
-                  </div>
-                  <div class="content d-flex align-items-center gap-6 mt-4">
-                    <a href="">
-                      <div class="d-flex align-items-center gap-2">
-                        <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
-                        <h5>Like</h5>
-                        <span class="text-small color-primary">10</span>
-                      </div>
-                    </a>
-                    <a href="">
-                      <div class="d-flex align-items-center gap-2">
-                        <img
-                          src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
-                          alt=""
-                        />
-                        <h5>Comment</h5>
-                        <span class="text-small color-primary">2</span>
-                      </div>
-                    </a>
-                    <a href="">
-                      <div class="d-flex align-items-center gap-2">
-                        <img src="/src/assets/next-svgrepo-com.svg" alt="" />
-                        <h5>Follow</h5>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="form-wrapper">
-                    <form method="POST" action="" id="postComment" class="post-form">
-                      <!-- Form Post -->
-                      <div class="form-group mb-4 mt-4">
-                        <input
-                          class="search"
-                          id="post"
-                          type="text"
-                          name="post"
-                          placeholder="Write a comment"
-                          minlength="3"
-                          maxlength="300"
-                        />
-                        <div class="form-error" id="postError"></div>
-                      </div>
-                      <!-- Form Button -->
-                      <button type="submit" value="Post" class="btn btn-follow">Post</button>
-                    </form>
-                  </div>
-                </div>
-                <div class="card-footer d-flex flex-column w-100 mt-4">
-                  <h4>Comments</h4>
-                  <div class="card">
-                    <div class="comment">
-                      <div class="comment-content mt-2 border-radius">
-                        <div class="content d-flex align-items-center mb-4 gap-2">
-                          <div class="avatar-img-wrapper-small">
+                  <!-- Form Button -->
+                </form>
+              </div>
+              <div class="content-wrapper d-flex flex-column" id="postContainer">
+                <template id="postTemplate">
+                  <div class="card card-large d-flex flex-column gap-4 align-items-start">
+                    <div class="card-header d-flex align-items-center mt-4">
+                      <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                        <div class="avatar-img-wrapper-regular">
+                          <div>
                             <img src="/src/assets/profile-icon.svg" alt="" />
                           </div>
-                          <h6>Tom E. William</h6>
                         </div>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                          deserunt explicabo dolores nostrum nesciunt eaque ipsum recusandae illum
-                          quaerat! Culpa.
+                        <div class="avatar-name">
+                          <h4 class="mt-2" id="postAuthor"></h4>
+                        </div>
+                        <button class="btn btn-small-primary">See Profile</button>
+                      </div>
+                    </div>
+                    <h5 id="postTitle"></h5>
+                    <div class="post-media" id="postMedia"></div>
+                    <div class="card-body">
+                      <div class="comment">
+                        <p class="text-small" id="postText">
                         </p>
-                        <div class="content d-flex align-items-center gap-6 mt-4">
-                          <a href="">
-                            <div class="d-flex align-items-center gap-2">
-                              <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
-                              <h5>Like</h5>
-                              <span class="text-small color-primary">10</span>
-                            </div>
-                          </a>
-                          <a href="">
-                            <div class="d-flex align-items-center gap-2">
-                              <img src="/src/assets/next-svgrepo-com.svg" alt="" />
-                              <h5>Follow</h5>
-                            </div>
-                          </a>
-                          <a href="">
-                            <div class="d-flex align-items-center gap-2">
-                              <h5>Profile</h5>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="comment-content mt-2 border-radius">
-                          <div class="content d-flex align-items-center mb-4 gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>Robert D.B</h6>
+                      </div>
+                      <div class="content d-flex f-wrap align-items-center gap-4 mt-4">
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/thumbs-up-line-icon.svg"
+                              alt=""
+                            />
+                            <h5>Like</h5>
+                            <span class="text-small color-primary" id="postReactionCount"></span>
                           </div>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                            deserunt explicabo dolores nostrum nesciunt eaque ipsum recusandae illum
-                            quaerat! Culpa.
-                          </p>
-                          <div class="content d-flex align-items-center gap-6 mt-4">
-                            <a href="">
-                              <div class="d-flex align-items-center gap-2">
-                                <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
-                                <h5>Like</h5>
-                                <span class="text-small color-primary">10</span>
-                              </div>
-                            </a>
-                            <!-- <a href="">
-                                  <div class="d-flex align-items-center gap-2">
-                                    <img
-                                      src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
-                                      alt=""
-                                    />
-                                    <h5>Reply</h5>
-                                    <span class="text-small color-primary">2</span>
-                                  </div>
-                                  
-                                </a> -->
-                            <a href="">
-                              <div class="d-flex align-items-center gap-2">
-                                <img src="/src/assets/next-svgrepo-com.svg" alt="" />
-                                <h5>Follow</h5>
-                              </div>
-                            </a>
+                        </a>
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
+                              alt=""
+                            />
+                            <h5>Comment</h5>
+                            <span class="text-small color-primary">0</span>
                           </div>
-                        </div>
-                        <div class="form-wrapper">
-                          <form method="POST" action="" id="postComment" class="post-form">
-                            <!-- Form Post -->
-                            <div class="form-group mb-4 mt-4">
-                              <input
-                                class="search"
-                                id="post"
-                                type="text"
-                                name="post"
-                                placeholder="Write a reply"
-                                minlength="3"
-                                maxlength="300"
-                              />
-                              <div class="form-error" id="postError"></div>
-                            </div>
-                            <!-- Form Button -->
-                            <button type="submit" value="Post" class="btn btn-follow">Reply</button>
-                          </form>
-                        </div>
+                        </a>
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img class="icon-extra-small" src="/src/assets/next-svgrepo-com.svg" alt="" />
+                            <h5>Follow</h5>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
-                </div>
+                </template>
               </div>
-                <div class="card-header d-flex align-items-center">
-                  <div class="content d-flex gap-4 align-items-center w-100">
-                    <div class="avatar-img-wrapper-regular">
-                      <div>
-                        <img src="/src/assets/profile-icon.svg" alt=""/>
-                      </div>
-                    </div>
-                    <div class="avatar-name">
-                      <h3 class="mt-2">Tom E. William</h3>
-                    </div>
-                  </div>
-                  <div class="content d-flex justify-content-end w-100">
-                    <button class="btn btn-follow">See Profile</button>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="comment">
-                    <p class="text-small">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                      quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe eum
-                      perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur sunt.
-                      Pariatur.
-                    </p>
-                  </div>
-                  <div class="content d-flex align-items-center gap-6 mt-4">
-                    <a href="">
-                      <div class="d-flex align-items-center gap-2">
-                        <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
-                        <h5>Like</h5>
-                        <span class="text-small color-primary">10</span>
-                      </div>
-                    </a>
-                    <a href="">
-                      <div class="d-flex align-items-center gap-2">
-                        <img
-                          src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
-                          alt=""
-                        />
-                        <h5>Comment</h5>
-                        <span class="text-small color-primary">2</span>
-                      </div>
-                    </a>
-                    <a href="">
-                      <div class="d-flex align-items-center gap-2">
-                        <img src="/src/assets/next-svgrepo-com.svg" alt="" />
-                        <h5>Follow</h5>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="form-wrapper">
-                    <form method="POST" action="" id="postComment" class="post-form">
-                      <!-- Form Post -->
-                      <div class="form-group mb-4 mt-4">
-                        <input
-                          class="search"
-                          id="post"
-                          type="text"
-                          name="post"
-                          placeholder="Write a comment"
-                          minlength="3"
-                          maxlength="300"
-                        />
-                        <div class="form-error" id="postError"></div>
-                      </div>
-                      <!-- Form Button -->
-                      <button type="submit" value="Post" class="btn btn-follow">Post</button>
-                    </form>
-                  </div>
-                </div>
-                <div class="card-footer d-flex flex-column w-100 mt-4">
-                  <h4>Comments</h4>
-                  <div class="card">
-                    <div class="comment">
-                      <div class="comment-content mt-2 border-radius">
-                        <div class="content d-flex align-items-center mb-4 gap-2">
-                          <div class="avatar-img-wrapper-small">
-                            <img src="/src/assets/profile-icon.svg" alt="" />
-                          </div>
-                          <h6>Robert D.B</h6>
-                        </div>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                          deserunt explicabo dolores nostrum nesciunt eaque ipsum recusandae illum
-                          quaerat! Culpa.
-                        </p>
-                        <div class="content d-flex align-items-center gap-6 mt-4">
-                          <a href="">
-                            <div class="d-flex align-items-center gap-2">
-                              <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
-                              <h5>Like</h5>
-                              <span class="text-small color-primary">10</span>
-                            </div>
-                          </a>
-                          <a href="">
-                            <div class="d-flex align-items-center gap-2">
-                              <img src="/src/assets/next-svgrepo-com.svg" alt="" />
-                              <h5>Follow</h5>
-                            </div>
-                          </a>
-                          <a href="">
-                            <div class="d-flex align-items-center gap-2">
-                              <h5>Profile</h5>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="comment-content mt-2 border-radius">
-                          <div class="content d-flex align-items-center mb-4 gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>Tom W. William</h6>
-                          </div>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                            deserunt explicabo dolores nostrum nesciunt eaque ipsum recusandae illum
-                            quaerat! Culpa.
-                          </p>
-                          <div class="content d-flex align-items-center gap-6 mt-4">
-                            <a href="">
-                              <div class="d-flex align-items-center gap-2">
-                                <img src="/src/assets/thumbs-up-line-icon.svg" alt="" />
-                                <h5>Like</h5>
-                                <span class="text-small color-primary">10</span>
-                              </div>
-                            </a>
-                            <a href="">
-                              <div class="d-flex align-items-center gap-2">
-                                <img src="/src/assets/next-svgrepo-com.svg" alt="" />
-                                <h5>Follow</h5>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="form-wrapper">
-                          <form method="POST" action="" id="postComment" class="post-form">
-                            <!-- Form Post -->
-                            <div class="form-group mb-4 mt-4">
-                              <input
-                                class="search"
-                                id="post"
-                                type="text"
-                                name="post"
-                                placeholder="Write a reply"
-                                minlength="3"
-                                maxlength="300"
-                              />
-                              <div class="form-error" id="postError"></div>
-                            </div>
-                            <!-- Form Button -->
-                            <button type="submit" value="Post" class="btn btn-follow">Reply</button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="#"><button class="btn btn-primary">See More</button></a>
             </div>
           </div>
+          <a href="#"><button class="btn btn-primary">See More</button></a>
         </div>
       </section>
     </main>
 
-    <script type="module" src="/src/js/pages/posts.mjs"></script>
+    <script type="module" src="../../src/js/pages/posts.mjs"></script>
   </body>
 </html>
