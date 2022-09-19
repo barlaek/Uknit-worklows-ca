@@ -26,9 +26,11 @@ async function createPosts() {
         const { postText, postCreated, postID, postMedia, postTag, postTitle } = resultArray[i];
 
         const postClone = document.importNode(postTemplate, true);
+        postClone.querySelector("#postAuthor").innerText = `${resultArray[i].author.name}`
         postClone.querySelector("#postTitle").innerText = `${resultArray[i].title}`;
         postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
         postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
+        postClone.querySelector("#postReactionCount").innerHTML = `${resultArray[i]._count.reactions}`
 
         postContainer.appendChild(postClone);
 
