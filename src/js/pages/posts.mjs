@@ -10,9 +10,9 @@ import { searchUsersInput } from "../constants/constants.mjs";
 // import { filterUsers } from "../components/search.mjs";
 
 // DOM
-import { mostPopularTemplate, postContainer } from "../constants/constants.mjs";
-import { postTemplate } from "../constants/constants.mjs";
-import { mostPopularContainer } from "../constants/constants.mjs";
+import { postContainer } from "../constants/constants.mjs";
+const postTemplate = document.querySelector('#postTemplate').content;
+const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
 
 // Url's
 import { baseURL } from "../constants/constants.mjs";
