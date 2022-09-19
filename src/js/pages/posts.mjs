@@ -29,7 +29,6 @@ export let accessToken = localStorage.getItem('accessToken');
 async function createPosts() {
     // Fetch with createHeader function as parameter
     const resultArray = await allPostsFetch(baseURL + allPostsUrl, createHeaderAllPosts(accessToken));
-    console.log(resultArray);
 
     for (let i = 0; i < resultArray.length; i++) {
 
@@ -52,7 +51,6 @@ createPosts();
 async function createUsers() {
     // Fetch with createHeader function as parameter
     const usersArray = await userFetch(baseURL + allUsersUrl, createHeaderAllUsers(accessToken));
-    console.log(usersArray);
 
     for (let i = 0; i < usersArray.length; i++) {
 
