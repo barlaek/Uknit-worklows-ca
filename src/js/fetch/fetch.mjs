@@ -44,3 +44,14 @@ export async function allPostsFetch(url, body) {
     }
     throw new Error(data.message);
 }
+
+// USERS FETCH
+
+export async function userFetch(url, body) {
+    const response = await fetch(url, body);
+    const data = await response.json();
+    if (response.ok) {
+        return data;
+    }
+    throw new Error(data.message);
+}

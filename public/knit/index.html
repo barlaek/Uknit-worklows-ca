@@ -85,22 +85,24 @@
               </div>
               <div class="card-footer">
                 <ul class="users-list">
-                  <div class="d-flex flex-column gap-2">
-                    <li class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
+                  <div class="d-flex flex-column gap-2" id="mostPopularContainer">
+                    <template id="mostPopularTemplate">
+                      <li class="card-small w-100 bg-white">
+                        <a href="" class="d-flex">
+                          <div class="card-header w-100">
+                            <div class="content d-flex align-items-center gap-2">
+                              <div class="avatar-img-wrapper-small">
+                                <img src="/src/assets/profile-icon.svg" alt="" />
+                              </div>
+                              <h6 id="userName"></h6>
                             </div>
-                            <h6>Tom E.William</h6>
                           </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </li>
+                          <div class="card-body d-flex ajustify-content-end">
+                            <button class="btn btn-small-primary">Follow</button>
+                          </div>
+                        </a>
+                      </li>
+                    </template>
                   </div>
                 </ul>
               </div>
