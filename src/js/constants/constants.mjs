@@ -14,3 +14,6 @@ export const postAuthor = document.querySelector('#postAuthor');
 export const postReactionCount = document.querySelector('#postReactionCount');
 export const mostPopularContainer = document.querySelector('#mostPopularContainer');
 export const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
+
+// search 
+export const searchUsersInput = document.getElementById('searchUsersInput');

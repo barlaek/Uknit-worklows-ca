@@ -5,6 +5,10 @@ import { createHeaderAllPosts } from "../headers/headers.mjs";
 import { userFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllUsers } from "../headers/headers.mjs";
 
+// search
+import { searchUsersInput } from "../constants/constants.mjs";
+// import { filterUsers } from "../components/search.mjs";
+
 // DOM
 import { mostPopularTemplate, postContainer } from "../constants/constants.mjs";
 import { postTemplate } from "../constants/constants.mjs";
@@ -56,5 +60,23 @@ async function createUsers() {
         userClone.querySelector("#userName").innerText = `${usersArray[i].name}`
         mostPopularContainer.appendChild(userClone);
     }
+    // search users
+    searchUsersInput.addEventListener('keyup', (event) => {
+        const inputValue = event.target.value.toLowerCase();
+        const filteredArray = usersArray.filter((usersArray) => {
+            if (usersArray.name.toLowerCase().startsWith(inputValue)) {
+                mostPopularContainer.innerHTML = "";
+                return usersArray;
+            }
+        });
+
+        for (let i = 0; i < filteredArray.length; i++) {
+
+            const userClone = document.importNode(mostPopularTemplate, true);
+            userClone.querySelector("#userName").innerText = `${filteredArray[i].name}`
+            mostPopularContainer.appendChild(userClone);
+        }
+    })
 }
 createUsers();
+
