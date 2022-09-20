@@ -461,11 +461,11 @@ h6 {
 .card-dashboard-nav {
   border-radius: 1rem;
   padding: 1.5rem;
-  height: 160px;
+  height: 180px;
 }
 @media screen and (max-width: 768px) {
   .card-dashboard-nav {
-    height: auto;
+    height: 100%;
   }
 }
 .card img {
