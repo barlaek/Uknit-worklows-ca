@@ -101,146 +101,41 @@
       </section>
       <section>
         <!-- Start aligned title used on some sections -->
-        <div class="container">
-          <div class="content-wrapper d-flex mb-5">
-            <div class="content-header">
-              <h2>2 Col Cards Grid Layout</h2>
-            </div>
-          </div>
-        </div>
-        <!-- 2 col grid styles for the post cards with search and other filters-->
+
         <div class="container">
           <div class="post-grid d-grid">
-            <div class="card-users d-flex flex-column align-items-start">
-              <div class="card-header d-flex align-items-center mt-4">
-                <div class="title-wrapper">
-                  <h5 class="mb-5">Dashboard</h5>
-                </div>
-              </div>
-              <div class="card-body">
-                <!-- <div class="form-wrapper mb-3 w-100">
-                  <form>
-                    <input
-                      class="search"
-                      type="search"
-                      inputmode="search"
-                      placeholder="Search knitter"
-                    />
-                  </form>
-                </div> -->
+            <div class="card card-dashboard-nav">
+              <div class="card-header">
+                <nav id="mainNavigation">
+                  <div class="nav-wrapper d-flex flex-column">
+                    <!-- nav header -->
+                    <div class="nav-header d-flex align-items-center justify-content-between">
+                      <div class="title-wrapper">
+                        <h5>Dashboard</h5>
+                      </div>
+
+                      <button class="nav-toggle open-menu"></button>
+                    </div>
+                    <!-- links -->
+                    <div class="links d-flex flex-column gap-1">
+                      <div class="dashboard-link mt-4">
+                        <a href="/public/profile/dashboard/" class="active">Posts</a>
+                      </div>
+                      <div class="dashboard-link">
+                        <a href="#">Profile</a>
+                      </div>
+                      <div class="dashboard-link">
+                        <a href="#">Products</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
               </div>
               <div class="card-footer">
-                <ul class="users-list">
-                  <li class="d-flex flex-column gap-2">
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>Tom E.William</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>Robert D.B</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 1</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 2</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 3</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 4</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card-small w-100 bg-white">
-                      <a href="" class="d-flex">
-                        <div class="card-header w-100">
-                          <div class="content d-flex align-items-center gap-2">
-                            <div class="avatar-img-wrapper-small">
-                              <img src="/src/assets/profile-icon.svg" alt="" />
-                            </div>
-                            <h6>User Nr. 5</h6>
-                          </div>
-                        </div>
-                        <div class="card-body d-flex ajustify-content-end">
-                          <button class="btn btn-small-primary">Follow</button>
-                        </div>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
+                <ul class="users-list"></ul>
               </div>
             </div>
+
             <div class="content-wrapper d-flex flex-column gap-7">
               <div class="form-wrapper d-flex">
                 <form method="GET" action="" id="searchPost" class="filtered-form w-100">
@@ -798,7 +693,7 @@
         </div>
       </section> -->
     </main>
-
+    <script type="module" src="/src/js/components/dashboardNavToggle.mjs"></script>
     <script type="module" src="../../src/js/pages/posts.mjs"></script>
   </body>
 </html>

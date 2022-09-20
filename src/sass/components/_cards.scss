@@ -21,6 +21,7 @@
   border-radius: $border-standard;
   background-color: $light-color;
   padding: $sp3;
+  // height: 100%;
 
   &-small {
     border-radius: $border-standard;
@@ -47,9 +48,19 @@
     background-color: $light-color;
     padding: $sp3;
     height: 400px;
-    position: sticky;
-    top: 0;
+
     // padding: $sp6;
+  }
+
+  &-dashboard-nav {
+    border-radius: $border-standard;
+    // background-color: $dark-color;
+    padding: $sp6;
+    height: 160px;
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+    }
   }
 
   & img {
