@@ -6,7 +6,7 @@ export const loginUrl = "api/v1/social/auth/login";
 export const allPostsUrl = "api/v1/social/posts/?_author=true&_comments=true&reactions=true";
 export const allUsersUrl = "api/v1/social/profiles";
 
-// DOM
+// -------------- DOM----------------- //
 export const alertWrapper = document.querySelector('.alert-wrapper');
 export const postContainer = document.querySelector('#postContainer');
 export const postAuthor = document.querySelector('#postAuthor');
@@ -15,3 +15,6 @@ export const mostPopularContainer = document.querySelector('#mostPopularContaine
 
 // search 
 export const searchUsersInput = document.getElementById('searchUsersInput');
+
+// sort
+export const sortSelect = document.querySelector('#sortPosts');
