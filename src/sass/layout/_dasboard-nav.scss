@@ -1,0 +1,45 @@
+.dashboard-link .active {
+  color: $dark-color;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-toggle {
+    display: flex;
+    background: transparent;
+    border-color: transparent;
+    transition: $regular-transition;
+    cursor: pointer;
+  }
+
+  .open-menu {
+    display: block;
+    background-image: url(/src/assets/mobile_menu.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    width: 3rem;
+    height: 3rem;
+  }
+  .close-menu {
+    display: block;
+    background-image: url(/src/assets/mobile_menu-close.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav-toggle:hover {
+    transform: rotate(180deg);
+  }
+
+  .links {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .show-links {
+    height: 100%;
+  }
+}

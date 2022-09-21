@@ -101,7 +101,7 @@
           <!-- /Hero -->
         </div>
       </section>
-
+      <section>
         <div class="container">
           <div class="post-grid d-grid">
             <div class="card card-dashboard-nav">
@@ -118,10 +118,10 @@
                     <!-- links -->
                     <div class="links d-flex flex-column gap-1">
                       <div class="dashboard-link mt-4">
-                        <a href="#" class="active">My Dashboard</a>
+                        <a href="/public/profile/dashboard/">My Dashboard</a>
                       </div>
                       <div class="dashboard-link">
-                        <a href="/public/profile/post/">Posts</a>
+                        <a href="#" class="active">Posts</a>
                       </div>
                       <div class="dashboard-link">
                         <a href="/public/profile/my-profile/">Profile</a>
@@ -135,27 +135,113 @@
               </div>
             </div>
 
-            <div class="content-wrapper d-flex flex-column ">           
-              <div class="content d-flex flex-column gap-4" id="dashboardPostContainer">              
+            <div class="content-wrapper d-flex flex-column gap-7">
+              <div class="form-wrapper d-flex">
+                <form method="GET" action="" id="searchPost" class="filtered-form w-100">
+                  <!-- Form Post -->
+                  <div class="form-group d-flex">
+                    <input
+                      class="search-post"
+                      id="search"
+                      type="text"
+                      name="post"
+                      placeholder="Search post"
+                      minlength="3"
+                      maxlength="300"
+                    />
+
+                    <div class="form-error" id="postError"></div>
+                  </div>
+                  <div class="select-group d-flex gap-4">
+                    <select class="select-menu" id="filteredPosts" name="posts">
+                      <option value="new">New</option>
+                      <option value="old">Old</option>
+                    </select>
+                  </div>
+                  <!-- Form Button -->
+                </form>
+              </div>
+
+              <!-- This is the container that holds the card with the id of dashboardPostContainer -->
+              <div class="content-wrapper d-flex flex-column gap-4" id="dashboardPostContainer">
+                <!-- Card starts here below you haver the template with the id of id="postTemplate", just wrap everything within the template -->
+                <!-- <template id="dashboardPostTemplate"> Wrap the card card-large here </template> -->
                 <div class="card card-large d-flex flex-column gap-4 align-items-start">
-                  <div class="card-header d-flex align-items-center">    
-                    <h4 class="mt-2">Here will be some dashboard content</h4>     
-                  </div>             
+                  <div class="card-header d-flex align-items-center">
+                    <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                      <div class="avatar-img-wrapper-regular">
+                        <div>
+                          <img src="/src/assets/profile-icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="avatar-name m-right-auto">
+                        <!-- Replace the <h4 class="mt-2">Robert D.B</h4> with <h4 class="mt-2" id="dashboardPostAuthor"></h4> -->
+                        <h4 class="mt-2">Robert D.B</h4>
+                      </div>
+                      <button class="btn btn-small-primary">See Profile</button>
+                    </div>
+                  </div>
                   <div class="card-body">
-                    <p class="text-small">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                      quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe
-                      eum perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur
-                      sunt. </p>
-                      <br>
-                      <p class="text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                      quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe
-                      eum perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur
-                      sunt. Pariatur.</p>
-                    </p>           
+                    <div class="post-title mt-2">
+                      <!-- Replace <h5 id="dashboardPostTitle">Some Title Here</h5> with <h5 id="dashboardPostTitle"></h5>-->
+                      <h5 id="dashboardPostTitle">Some Title Here</h5>
+                    </div>
+
+                    <div class="post-content mb-4">
+                      <!-- Replace <p class="text-small"> with <p class="text-small" id="dashboardPostText"></p> -->
+                      <p class="text-small">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
+                        quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe
+                        eum perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur
+                        sunt. Pariatur.
+                      </p>
+                    </div>
+                    <!-- Replace id="postMedia" with id="dashboardPostMedia" and fetch the post image -->
+                    <div class="post-media" id="postMedia">
+                      <img src="/src/assets/Images/sweater.jpg" alt="" />
+                    </div>
+
+                    <div class="content d-flex f-wrap w-100 mt-6 gap-4">
+                      <a href="">
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            class="icon-extra-small"
+                            src="/src/assets/thumbs-up-line-icon.svg"
+                            alt=""
+                          />
+                          <h5>Like</h5>
+                          <span class="text-small color-primary">10</span>
+                        </div>
+                      </a>
+                      <a href="">
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            class="icon-extra-small"
+                            src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
+                            alt=""
+                          />
+                          <h5>Comment</h5>
+                          <span class="text-small color-primary">2</span>
+                        </div>
+                      </a>
+                      <a href="">
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            class="icon-extra-small"
+                            src="/src/assets/next-svgrepo-com.svg"
+                            alt=""
+                          />
+                          <h5>Follow</h5>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>       
+              </div>
+
+              <div class="btn-group mt-4">
+                <a href="#"><button class="btn btn-primary">See More</button></a>
+              </div>
             </div>
           </div>
         </div>
