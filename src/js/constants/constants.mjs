@@ -15,6 +15,7 @@ export const mostPopularContainer = document.querySelector('#mostPopularContaine
 
 // search 
 export const searchUsersInput = document.getElementById('searchUsersInput');
+export const searchPosts = document.querySelector('#searchPosts');
 
 // sort
 export const sortSelect = document.querySelector('#sortPosts');
