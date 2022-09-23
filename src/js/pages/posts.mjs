@@ -16,6 +16,7 @@ import { sortSelect } from "../constants/constants.mjs";
 import { postContainer } from "../constants/constants.mjs";
 const postTemplate = document.querySelector('#postTemplate').content;
 const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
+import { likeButton } from "../constants/constants.mjs";
 
 // Url's
 import { baseURL } from "../constants/constants.mjs";

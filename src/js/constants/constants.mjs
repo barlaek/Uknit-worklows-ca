@@ -15,6 +15,7 @@ export const postAuthor = document.querySelector('#postAuthor');
 export const postReactionCount = document.querySelector('#postReactionCount');
 export const mostPopularContainer = document.querySelector('#mostPopularContainer');
 export const postAvatar = document.querySelector('#postAvatar');
+export const likeButton = document.querySelector('#likeButton');
 
 // Profile
 export const profileUsername = document.querySelector('#profileUsername');
