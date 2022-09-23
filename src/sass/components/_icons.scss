@@ -16,4 +16,19 @@
     width: $icon-small;
     height: $icon-small;
   }
+
+  &-regular {
+    width: $icon-regular;
+    height: $icon-regular;
+  }
+
+  &-large {
+    width: $icon-large;
+    height: $icon-large;
+  }
+
+  &-comment-icon {
+    width: $comment-icon;
+    height: $comment-icon;
+  }
 }
