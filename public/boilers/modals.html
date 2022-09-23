@@ -63,35 +63,27 @@
 
     <main>
       <section>
-        <button class="btn btn-primary">Open Modal</button>
-        <div class="modal" id="modal">
-          <div class="modal-header">
-            <div class="title-wrapper">
-              <h3>Modal Example</h3>
+        <div class="container">
+          <button data-modal-target="#modal" class="btn btn-primary">Open Modal</button>
+
+          <div class="modal" id="modal">
+            <div class="modal-header d-flex align-items-center justify-content-between">
+              <div class="title-wrapper">
+                <h3>Modal Example</h3>
+              </div>
+              <button data-close-button class="close-button">&times;</button>
             </div>
-            <button class="close-button">&times;</button>
-          </div>
-          <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aut unde recusandae,
-            accusamus quos dolore! Vero suscipit neque ratione velit.
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aut unde recusandae,
+              accusamus quos dolore! Vero suscipit neque ratione velit.
+            </div>
           </div>
         </div>
 
         <div id="modal-overlay"></div>
       </section>
-
-      <section>
-        <!-- Centered aligned title used on some sections -->
-        <div class="container">
-          <div class="content-wrapper d-flex justify-content-center">
-            <div class="title-wrapper">
-              <h1 class="display-1__dark text-center color-primary">Cards</h1>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <script src="/src/js/components/modals.mjs"></script>
+    <script type="module" src="/src/js/components/modals.mjs"></script>
   </body>
 </html>
