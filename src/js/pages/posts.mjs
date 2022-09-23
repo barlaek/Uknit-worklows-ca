@@ -7,7 +7,9 @@ import { createHeaderAllUsers } from "../headers/headers.mjs";
 
 // search
 import { searchUsersInput } from "../constants/constants.mjs";
-// import { filterUsers } from "../components/search.mjs";
+
+// filter
+import { sortSelect } from "../constants/constants.mjs";
 
 // DOM
 import { postContainer } from "../constants/constants.mjs";
@@ -25,10 +27,29 @@ toggleNav();
 // Collecting accessToken from localStorage
 export let accessToken = localStorage.getItem('accessToken');
 
+// Sorting
+function runSort() {
+    sortSelect.addEventListener('change', () => {
+        switch (sortSelect.value) {
+            case "new":
+                const createdDesc = "&sort=created&sortOrder=desc";
+                postContainer.innerHTML = "";
+                createPosts(createdDesc);
+                break;
+            case "old":
+                const createdAsc = "&sort=created&sortOrder=asc";
+                postContainer.innerHTML = "";
+                createPosts(createdAsc);
+                break;
+        }
+    })
+}
+runSort();
+
 // Function to fetch posts
-async function createPosts() {
+async function createPosts(sortUrl) {
     // Fetch with createHeader function as parameter
-    const resultArray = await allPostsFetch(baseURL + allPostsUrl, createHeaderAllPosts(accessToken));
+    const resultArray = await allPostsFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
 
     for (let i = 0; i < resultArray.length; i++) {
 
@@ -40,14 +61,12 @@ async function createPosts() {
         postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
         postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
         postClone.querySelector("#postReactionCount").innerHTML = `${resultArray[i]._count.reactions}`
-
         postContainer.appendChild(postClone);
     }
 }
 createPosts();
 
 // Function to fetch users
-
 async function createUsers() {
     // Fetch with createHeader function as parameter
     const usersArray = await userFetch(baseURL + allUsersUrl, createHeaderAllUsers(accessToken));
@@ -77,4 +96,3 @@ async function createUsers() {
     })
 }
 createUsers();
-
