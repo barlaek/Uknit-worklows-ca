@@ -62,6 +62,7 @@ async function createPosts(sortUrl) {
         postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
         postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
         postClone.querySelector("#postReactionCount").innerHTML = `${resultArray[i]._count.reactions}`
+        postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`
         postContainer.appendChild(postClone);
     }
 
@@ -70,7 +71,7 @@ async function createPosts(sortUrl) {
         searchPosts.addEventListener('keyup', (event) => {
             const inputValue = event.target.value.toLowerCase();
             const filteredPosts = resultArray.filter((resultArray) => {
-                if (resultArray.title.toLowerCase().startsWith(inputValue)) {
+                if (resultArray.title.toLowerCase().startsWith(inputValue) || resultArray.author.name.toLowerCase().startsWith(inputValue)) {
                     postContainer.innerHTML = "";
                     return resultArray;
                 }
@@ -83,6 +84,7 @@ async function createPosts(sortUrl) {
                 postClone.querySelector("#postMedia").innerHTML = `<img src="${filteredPosts[i].media}">`;
                 postClone.querySelector("#postText").innerHTML = `${filteredPosts[i].body}`;
                 postClone.querySelector("#postReactionCount").innerHTML = `${filteredPosts[i]._count.reactions}`
+                postClone.querySelector("#postAvatar").innerHTML = `<img src="${filteredPosts[i].author.avatar}">`
                 postContainer.appendChild(postClone);
             }
         })

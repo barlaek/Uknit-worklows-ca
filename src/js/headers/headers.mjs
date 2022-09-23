@@ -23,7 +23,20 @@ export function createHeaderAllPosts(accessToken) {
     }
 }
 
+
+// Get all users
 export function createHeaderAllUsers(accessToken) {
+    return {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': `Bearer ${accessToken}`
+        },
+    }
+}
+
+// Header user profile
+export function createProfileHeader(accessToken) {
     return {
         method: 'GET',
         headers: {
