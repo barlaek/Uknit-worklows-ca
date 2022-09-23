@@ -7,6 +7,7 @@ import { createHeaderAllUsers } from "../headers/headers.mjs";
 
 // search
 import { searchUsersInput } from "../constants/constants.mjs";
+import { searchPosts } from "../constants/constants.mjs";
 
 // filter
 import { sortSelect } from "../constants/constants.mjs";
@@ -15,6 +16,7 @@ import { sortSelect } from "../constants/constants.mjs";
 import { postContainer } from "../constants/constants.mjs";
 const postTemplate = document.querySelector('#postTemplate').content;
 const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
+import { likeButton } from "../constants/constants.mjs";
 
 // Url's
 import { baseURL } from "../constants/constants.mjs";
@@ -61,8 +63,34 @@ async function createPosts(sortUrl) {
         postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
         postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
         postClone.querySelector("#postReactionCount").innerHTML = `${resultArray[i]._count.reactions}`
+        postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`
         postContainer.appendChild(postClone);
     }
+
+    // Search
+    function postsSearch() {
+        searchPosts.addEventListener('keyup', (event) => {
+            const inputValue = event.target.value.toLowerCase();
+            const filteredPosts = resultArray.filter((resultArray) => {
+                if (resultArray.title.toLowerCase().startsWith(inputValue) || resultArray.author.name.toLowerCase().startsWith(inputValue)) {
+                    postContainer.innerHTML = "";
+                    return resultArray;
+                }
+            });
+            for (let i = 0; i < filteredPosts.length; i++) {
+
+                const postClone = document.importNode(postTemplate, true);
+                postClone.querySelector("#postAuthor").innerText = `${filteredPosts[i].author.name}`
+                postClone.querySelector("#postTitle").innerText = `${filteredPosts[i].title}`;
+                postClone.querySelector("#postMedia").innerHTML = `<img src="${filteredPosts[i].media}">`;
+                postClone.querySelector("#postText").innerHTML = `${filteredPosts[i].body}`;
+                postClone.querySelector("#postReactionCount").innerHTML = `${filteredPosts[i]._count.reactions}`
+                postClone.querySelector("#postAvatar").innerHTML = `<img src="${filteredPosts[i].author.avatar}">`
+                postContainer.appendChild(postClone);
+            }
+        })
+    }
+    postsSearch();
 }
 createPosts();
 
