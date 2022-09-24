@@ -49,7 +49,7 @@ function runSort() {
 runSort();
 
 // Function to fetch posts
-async function createPosts(sortUrl) {
+async function createPosts(sortUrl = "") {
     // Fetch with createHeader function as parameter
     const resultArray = await allPostsFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
     console.log(resultArray);
@@ -66,9 +66,6 @@ async function createPosts(sortUrl) {
         postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`
         postContainer.appendChild(postClone);
     }
-
-    like();
-
 
     // Search
     function postsSearch() {
