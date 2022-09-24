@@ -29,6 +29,7 @@
   cursor: pointer;
   font-size: $font-size-base;
   outline: none;
+  width: auto;
   border-radius: $border-standard;
   transition: all 0.3s ease-in;
 
@@ -137,6 +138,7 @@
     //   background: lighten($primary-color, 4%);
     // }
   }
+
   // &:hover {
   //   background: lighten($primary-color, 4%);
   // }
@@ -146,10 +148,11 @@
 .btn-group {
   position: relative;
   display: inline-flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 @media (max-width: 640px) {
   .btn-group {
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
