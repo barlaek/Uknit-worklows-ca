@@ -10,7 +10,6 @@
   <body>
     <header>
       <!-- Primary Nav -->
-
       <nav class="main-nav">
         <div class="container">
           <div class="d-flex justify-content-center mt-4">
@@ -114,8 +113,8 @@
                   <!-- Form Post -->
                   <div class="form-group d-flex">
                     <input
-                      class="search-post"
-                      id="search"
+                      class="search-large"
+                      id="searchPosts"
                       type="text"
                       name="post"
                       placeholder="Search post"
@@ -138,10 +137,8 @@
                   <div class="card card-large d-flex flex-column gap-4 align-items-start">
                     <div class="card-header d-flex align-items-center">
                       <div class="content d-flex gap-4 align-items-center f-wrap w-100">
-                        <div class="avatar-img-wrapper-regular">
-                          <div>
-                            <img src="/src/assets/profile-icon.svg" alt="" />
-                          </div>
+                        <div class="avatar-img-wrapper-regular" id="postAvatar">
+                            <img src="/src/assets/profile-icon.svg" alt=""/>
                         </div>
                         <div class="avatar-name m-right-auto">
                           <h4 class="mt-2" id="postAuthor"></h4>
@@ -162,7 +159,7 @@
 
                       <div class="content d-flex f-wrap w-100 mt-6 gap-4">
                         <a href="">
-                          <div class="d-flex align-items-center gap-2">
+                          <div class="d-flex align-items-center gap-2" id="likeButton">
                             <img
                               class="icon-extra-small"
                               src="/src/assets/thumbs-up-line-icon.svg"
@@ -206,7 +203,6 @@
         </div>
       </section>
     </main>
-
     <script type="module" src="../../src/js/pages/posts.mjs"></script>
   </body>
 </html>
