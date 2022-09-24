@@ -4,6 +4,7 @@ import { allPostsFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllPosts } from "../headers/headers.mjs";
 import { userFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllUsers } from "../headers/headers.mjs";
+import { like } from "../components/likeButton.mjs";
 
 // search
 import { searchUsersInput } from "../constants/constants.mjs";
@@ -16,7 +17,6 @@ import { sortSelect } from "../constants/constants.mjs";
 import { postContainer } from "../constants/constants.mjs";
 const postTemplate = document.querySelector('#postTemplate').content;
 const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
-import { likeButton } from "../constants/constants.mjs";
 
 // Url's
 import { baseURL } from "../constants/constants.mjs";
@@ -52,7 +52,7 @@ runSort();
 async function createPosts(sortUrl) {
     // Fetch with createHeader function as parameter
     const resultArray = await allPostsFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
-
+    console.log(resultArray);
     for (let i = 0; i < resultArray.length; i++) {
 
         // const { postText, postCreated, postID, postMedia, postTag, postTitle } = resultArray[i];
@@ -67,10 +67,8 @@ async function createPosts(sortUrl) {
         postContainer.appendChild(postClone);
     }
 
-    // Like
-    likeButton.addEventListener("click", () => {
-        console.log("yes");
-    })
+    like();
+
 
     // Search
     function postsSearch() {
