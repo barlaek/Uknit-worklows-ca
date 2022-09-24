@@ -257,6 +257,7 @@ h6 {
   cursor: pointer;
   font-size: 1rem;
   outline: none;
+  width: auto;
   border-radius: 1rem;
   transition: all 0.3s ease-in;
 }
@@ -354,11 +355,12 @@ h6 {
 .btn-group {
   position: relative;
   display: inline-flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 @media (max-width: 640px) {
   .btn-group {
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
@@ -494,6 +496,7 @@ form input[type=email],
 form input[type=password],
 form input[type=date],
 form input[type=search],
+form input[type=url],
 form select,
 form textarea {
   display: block;
@@ -589,12 +592,24 @@ select {
   width: 18px;
   height: 18px;
 }
+.icon-regular {
+  width: 24px;
+  height: 24px;
+}
+.icon-large {
+  width: 32px;
+  height: 32px;
+}
+.icon-comment-icon {
+  width: 13px;
+  height: 13px;
+}
 
 .modal {
   position: fixed;
-  width: 100%;
+  width: 92%;
   max-width: 600px;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 300ms ease-in-out;
@@ -632,6 +647,10 @@ select {
 #modal-overlay.active {
   pointer-events: all;
   opacity: 1;
+}
+
+.modal-body-form {
+  width: 100%;
 }
 
 .main-nav {
