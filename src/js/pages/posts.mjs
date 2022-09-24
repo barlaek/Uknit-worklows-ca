@@ -67,6 +67,11 @@ async function createPosts(sortUrl) {
         postContainer.appendChild(postClone);
     }
 
+    // Like
+    likeButton.addEventListener("click", () => {
+        console.log("yes");
+    })
+
     // Search
     function postsSearch() {
         searchPosts.addEventListener('keyup', (event) => {
