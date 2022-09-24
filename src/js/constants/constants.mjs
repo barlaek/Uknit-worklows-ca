@@ -5,6 +5,8 @@ export const registerUrl = "api/v1/social/auth/register";
 export const loginUrl = "api/v1/social/auth/login";
 export const allPostsUrl = "api/v1/social/posts/?_author=true&_comments=true&reactions=true";
 export const allUsersUrl = "api/v1/social/profiles";
+export const profileUrl = "api/v1/social/profiles/";
+export const profileExtUrl = "?_posts=true&_following=true&_followers=true";
 
 // -------------- DOM----------------- //
 export const alertWrapper = document.querySelector('.alert-wrapper');
@@ -12,9 +14,17 @@ export const postContainer = document.querySelector('#postContainer');
 export const postAuthor = document.querySelector('#postAuthor');
 export const postReactionCount = document.querySelector('#postReactionCount');
 export const mostPopularContainer = document.querySelector('#mostPopularContainer');
+export const postAvatar = document.querySelector('#postAvatar');
+export const likeButton = document.querySelector('#likeButton');
+
+// Profile
+export const profileUsername = document.querySelector('#profileUsername');
+export const followerCount = document.querySelector('#followerCount');
+export const followingCount = document.querySelector('#followingCount');
 
 // search 
 export const searchUsersInput = document.getElementById('searchUsersInput');
+export const searchPosts = document.querySelector('#searchPosts');
 
 // sort
 export const sortSelect = document.querySelector('#sortPosts');

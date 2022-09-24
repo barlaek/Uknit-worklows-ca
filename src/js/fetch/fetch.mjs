@@ -7,7 +7,7 @@ export async function loginFetch(url, body) {
         const data = await response.json();
         console.log(data);
 
-        // If user is rejected - preferably find a way to use status codes for this, not the token
+        // If user is rejected
         if (!response.ok) {
             alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
         }
@@ -15,6 +15,8 @@ export async function loginFetch(url, body) {
             // Collect accessToken and send to local storage
             const accessToken = data.accessToken;
             localStorage.setItem('accessToken', accessToken);
+            const username = data.name;
+            localStorage.setItem('username', username);
             window.location.href = "../../../public/knit/index.html";
         }
     }
@@ -48,6 +50,17 @@ export async function allPostsFetch(url, body) {
 // USERS FETCH
 
 export async function userFetch(url, body) {
+    const response = await fetch(url, body);
+    const data = await response.json();
+    if (response.ok) {
+        return data;
+    }
+    throw new Error(data.message);
+}
+
+// PROFILE FETCH
+
+export async function profileFetch(url, body) {
     const response = await fetch(url, body);
     const data = await response.json();
     if (response.ok) {
