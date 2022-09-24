@@ -590,6 +590,50 @@ select {
   height: 18px;
 }
 
+.modal {
+  position: fixed;
+  width: 100%;
+  max-width: 600px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 300ms ease-in-out;
+  z-index: 100;
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#modal-overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#modal-overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
 .main-nav {
   background-color: #c96973;
   position: relative;
@@ -620,7 +664,6 @@ select {
   top: 100px;
   height: 100vh;
   transition: 300ms;
-  background-color: #c96973;
 }
 
 .list-item {
