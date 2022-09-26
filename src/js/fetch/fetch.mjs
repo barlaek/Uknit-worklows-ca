@@ -36,31 +36,8 @@ export async function registerFetch(url, body) {
     throw new Error(data.message);
 }
 
-// ALL POSTS FETCH
-
-export async function allPostsFetch(url, body) {
-    const response = await fetch(url, body);
-    const data = await response.json();
-    if (response.ok) {
-        return data;
-    }
-    throw new Error(data.message);
-}
-
-// USERS FETCH
-
-export async function userFetch(url, body) {
-    const response = await fetch(url, body);
-    const data = await response.json();
-    if (response.ok) {
-        return data;
-    }
-    throw new Error(data.message);
-}
-
-// PROFILE FETCH
-
-export async function profileFetch(url, body) {
+// STANDARD FETCH
+export async function standardFetch(url, body) {
     const response = await fetch(url, body);
     const data = await response.json();
     if (response.ok) {

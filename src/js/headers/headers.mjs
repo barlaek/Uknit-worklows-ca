@@ -45,3 +45,14 @@ export function createProfileHeader(accessToken) {
         },
     }
 }
+
+// SAME HEADER AGAIN
+export function standardHeader(accessToken) {
+    return {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': `Bearer ${accessToken}`
+        },
+    }
+}
