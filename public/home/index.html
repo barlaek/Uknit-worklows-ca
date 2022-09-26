@@ -14,16 +14,20 @@
         <div class="container">
           <div class="d-flex justify-content-center mt-4">
             <div class="nav-wrap d-flex justify-content-between">
-              <a class="logo z-10" href="/public/"><img src="/src/assets/logo.png" alt="Uknit logo"/></a>
+              <a class="logo z-10" href="/public/home/"
+                ><img src="/src/assets/logo.png" alt="Uknit logo"
+              /></a>
               <button class="toggle-menu" id="toggleBtn">Menu</button>
               <div class="collapse-nav justify-content-end gap-4">
                 <ul class="nav-ul gap-1">
-                  <li class="list-item"><a class="link" href="#">Home</a></li>
+                  <li class="list-item"><a class="link" href="/public/home/">Home</a></li>
                   <li class="list-item"><a class="link" href="#">Team</a></li>
                   <li class="list-item"><a class="link" href="#">Invest</a></li>
                 </ul>
                 <div class="secondary-nav">
-                  <a href="/public/profile/log-in/"><button class="btn btn-secondary">Login / Create account</button></a>
+                  <a href="/public/profile/log-in/"
+                    ><button class="btn btn-secondary">Login / Create account</button></a
+                  >
                 </div>
               </div>
             </div>
@@ -32,18 +36,28 @@
       </nav>
       <!-- /Primary Nav -->
       <!-- Secondary Nav -->
-      <div class="container">
-        <nav>
+      <nav>
+        <div class="container">
           <div class="content-wrapper py-3 align-items-center">
-            <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
-            <a href="/public/home/index.html"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
+            <a href="/public/profile/create-post/"
+              ><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"
+            /></a>
+            <a href="/public/home/"
+              ><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon"
+            /></a>
             <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
-            <a href="#"><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"/></a>
-            <a href="#"><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"/></a>
-            <a href="../profile/dashboard/index.html"><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"/></a>
+            <a href="#"
+              ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
+            /></a>
+            <a href="#"
+              ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
+            /></a>
+            <a href="/public/profile/dashboard/"
+              ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
+            /></a>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
       <!-- /Secondary Nav -->
     </header>
     <main>
@@ -94,7 +108,7 @@
               </div>
             </div>
             <div class="content-wrapper d-flex flex-column gap-4">
-              <div class="form-wrapper d-flex">
+              <div class="form-wrapper d-flex f-wrap">
                 <form method="GET" action="" id="searchPost" class="filtered-form w-100">
                   <!-- Form Post -->
                   <div class="form-group d-flex">
@@ -121,10 +135,10 @@
               <div class="content-wrapper d-flex flex-column gap-4" id="postContainer">
                 <template id="postTemplate">
                   <div class="card card-large d-flex flex-column gap-4 align-items-start">
-                    <div class="card-header d-flex align-items-center">
+                    <div class="card-header d-flex f-wrap align-items-center">
                       <div class="content d-flex gap-4 align-items-center f-wrap w-100">
                         <div class="avatar-img-wrapper-regular" id="postAvatar">
-                            <img src="/src/assets/profile-icon.svg" alt=""/>
+                          <img src="/src/assets/profile-icon.svg" alt="" />
                         </div>
                         <div class="avatar-name m-right-auto">
                           <h4 class="mt-2" id="postAuthor"></h4>
@@ -140,15 +154,16 @@
                         <p class="text-small" id="postText"></p>
                       </div>
                       <div class="post-media" id="postMedia"></div>
-                      <div class="content d-flex f-wrap w-100 mt-6 gap-4">
-                          <div class="d-flex align-items-center gap-2" id="likeButton">
-                            <img
-                              class="icon-extra-small"
-                              src="/src/assets/thumbs-up-line-icon.svg"
-                              alt=""/>
-                            <h5>Like</h5>
-                            <span class="text-small color-primary" id="postReactionCount"></span>
-                          </div>
+                      <div class="content d-flex f-wrap align-items-center w-100 mt-6 gap-4">
+                        <div class="d-flex align-items-center gap-2" id="likeButton">
+                          <img
+                            class="icon-extra-small"
+                            src="/src/assets/thumbs-up-line-icon.svg"
+                            alt=""
+                          />
+                          <h5>Like</h5>
+                          <span class="text-small color-primary" id="postReactionCount"></span>
+                        </div>
                         <a href="">
                           <div class="d-flex align-items-center gap-2">
                             <img

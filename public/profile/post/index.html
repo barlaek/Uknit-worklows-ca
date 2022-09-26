@@ -131,7 +131,7 @@
                         <a href="/public/profile/my-profile/">Profile</a>
                       </div>
                       <div class="dashboard-link">
-                        <a href="/public/profile/products/">Products</a>
+                        <a href="/public/profile/create-post/">Create Post</a>
                       </div>
                     </div>
                   </div>
@@ -205,7 +205,7 @@
                       <img src="/src/assets/Images/sweater.jpg" alt="" />
                     </div>
 
-                    <div class="content d-flex f-wrap w-100 mt-6 gap-4">
+                    <div class="content d-flex f-wrap align-items-center w-100 mt-6 gap-4">
                       <a href="">
                         <div class="d-flex align-items-center gap-2">
                           <img
@@ -238,6 +238,19 @@
                           <h5>Follow</h5>
                         </div>
                       </a>
+                      <button
+                        data-modal-target="#editPost"
+                        class="btn btn-small-light d-flex align-items-center gap-2"
+                      >
+                        <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
+                        Edit Post
+                      </button>
+                      <!-- <a href="">
+                        <div class="d-flex align-items-center gap-2">
+                          <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
+                          <h5>Edit</h5>
+                        </div>
+                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -253,7 +266,7 @@
 
       <section class="modals">
         <div class="container">
-          <div class="modal" id="createPost">
+          <!-- <div class="modal" id="createPost">
             <div class="modal-header d-flex align-items-center justify-content-between">
               <div class="title-wrapper mb-4">
                 <h3>Create Post</h3>
@@ -264,7 +277,7 @@
               <div class="modal-body-form">
                 <div class="form-wrapper">
                   <form method="POST" action="#" id="postForm" class="form">
-                    <!-- Post Form Title -->
+                  
                     <div class="form-group mb-4">
                       <input
                         id="postTitle"
@@ -278,7 +291,7 @@
                       <div class="form-error" id="postTitleError"></div>
                     </div>
 
-                    <!-- Post Form Tag -->
+              
                     <div class="form-group mb-4">
                       <input
                         id="postTag"
@@ -291,7 +304,7 @@
                       <div class="form-error" id="tagError"></div>
                     </div>
 
-                    <!-- Post Form Body -->
+                 
                     <div class="form-group mb-4">
                       <textarea
                         id="postBody"
@@ -305,87 +318,90 @@
                       <div class="form-error" id="postBodyError"></div>
                     </div>
 
-                    <!-- Post Form Media -->
+               
                     <div class="form-group mb-4">
                       <input id="postMedia" type="url" name="media" placeholder="Image URL " />
                       <div class="form-error" id="postMediaError"></div>
                     </div>
 
-                    <!-- Post Form Button -->
+              
                     <button type="submit" value="Post" class="btn w-100">Post</button>
                   </form>
                 </div>
-                <!-- Form alert error-->
+            
                 <div class="alert-wrapper bg-danger mt-4 mb-4"></div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="container">
-          <div class="modal" id="editProfile">
+          <div class="modal" id="editPost">
             <div class="modal-header d-flex align-items-center justify-content-between">
               <div class="title-wrapper mb-4">
-                <h3>Edit Profile</h3>
+                <h3>Edit Post</h3>
               </div>
               <button data-close-button class="close-button">&times;</button>
             </div>
             <div class="modal-body">
-              <div class="modal-body-form">
-                <div class="form-wrapper">
-                  <form method="POST" action="#" id="editProfileForm" class="form">
-                    <!-- Form Edit Profile User Name -->
-                    <div class="form-group mb-4">
-                      <input
-                        id="newUserName"
-                        type="text"
-                        name="new-user"
-                        autocomplete="name"
-                        placeholder="New username"
-                        minlength="5"
-                        maxlength="50"
-                        pattern="[\p{L} \-\.]+"
-                        required
-                      />
-                      <div class="form-error" id="newUserNameError"></div>
-                    </div>
+              <div class="modal-body">
+                <div class="modal-body-form">
+                  <div class="form-wrapper">
+                    <form method="POST" action="#" id="postForm" class="form">
+                      <!-- Post Form Title -->
+                      <div class="form-group mb-4">
+                        <input
+                          id="postTitle"
+                          type="text"
+                          name="title"
+                          placeholder="Post title"
+                          minlength="3"
+                          maxlength="30"
+                          required
+                        />
+                        <div class="form-error" id="postTitleError"></div>
+                      </div>
 
-                    <!-- Form Edit Profile Email -->
-                    <div class="form-group mb-4">
-                      <input
-                        type="email"
-                        id="newEmail"
-                        name="new-email"
-                        placeholder="New email "
-                        minlength="3"
-                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                        maxlength="30"
-                        required
-                      />
-                      <div class="form-error" id="newEmailError"></div>
-                    </div>
+                      <!-- Post Form Tag -->
+                      <div class="form-group mb-4">
+                        <input
+                          id="postTag"
+                          type="text"
+                          name="tag"
+                          placeholder="Tag"
+                          minlength="3"
+                          maxlength="50"
+                        />
+                        <div class="form-error" id="tagError"></div>
+                      </div>
 
-                    <!-- Form Edit Profile Password -->
-                    <div class="form-group mb-4">
-                      <input
-                        type="password"
-                        id="newPassword"
-                        minlength="6"
-                        name="new-password"
-                        placeholder="New password"
-                        required
-                      />
-                      <div class="form-error" id="newPassError"></div>
-                    </div>
+                      <!-- Post Form Body -->
+                      <div class="form-group mb-4">
+                        <textarea
+                          id="postBody"
+                          name="post-body"
+                          placeholder="Post body"
+                          rows="5"
+                          minlength="3"
+                          maxlength="500"
+                          required
+                        ></textarea>
+                        <div class="form-error" id="postBodyError"></div>
+                      </div>
 
-                    <!-- Form Edit Profile Button -->
-                    <button type="submit" value="New Profile" class="btn w-100">
-                      Save Changes
-                    </button>
-                  </form>
+                      <!-- Post Form Media -->
+                      <div class="form-group mb-4">
+                        <input id="postMedia" type="url" name="media" placeholder="Image URL " />
+                        <div class="form-error" id="postMediaError"></div>
+                      </div>
+
+                      <!-- Post Form Button -->
+                      <button type="submit" value="Post" class="btn w-100">Save Changes</button>
+                    </form>
+                  </div>
+                  <!-- Form alert error-->
+                  <div class="alert-wrapper bg-danger mt-4 mb-4"></div>
                 </div>
-                <!-- Form alert error-->
-                <div class="alert-wrapper bg-danger mt-4 mb-4"></div>
               </div>
             </div>
           </div>
