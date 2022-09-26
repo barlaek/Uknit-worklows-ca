@@ -1,8 +1,9 @@
 
 
 export function like() {
-    const likeButton = document.querySelector('#likeButton');
+    const likeButton = document.querySelectorAll('[#likeButton]');
     likeButton.addEventListener("click", () => {
+        console.log("Like");
         likeFetch();
     })
 }

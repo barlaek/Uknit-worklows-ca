@@ -11,25 +11,20 @@
     <header>
       <!-- Primary Nav -->
       <nav class="main-nav">
-        <div class="container d-flex justify-content-center">
-          <div class="nav-wrap d-flex justify-content-between">
-            <a class="logo z-10" href="/public/"
-              ><img src="/src/assets/logo.png" alt="Uknit logo"
-            /></a>
-            <button class="toggle-menu" id="toggleBtn">Menu</button>
-            <div class="collapse-nav justify-content-end gap-4">
-              <ul class="nav-ul gap-1">
-                <li class="list-item"><a class="link" href="/public/">Home</a></li>
-                <li class="list-item"><a class="link" href="/public/knit/">Knit's</a></li>
-                <li class="list-item">
-                  <a class="link active" href="/public/profile/dashboard/">Dashboard</a>
-                </li>
-                <li class="list-item"><a class="link" href="#">Invest</a></li>
-              </ul>
-              <div class="secondary-nav">
-                <a href="/public/profile/log-in/"
-                  ><button class="btn btn-secondary">Login / Create account</button></a
-                >
+        <div class="container">
+          <div class="d-flex justify-content-center mt-4">
+            <div class="nav-wrap d-flex justify-content-between">
+              <a class="logo z-10" href="/public/"><img src="/src/assets/logo.png" alt="Uknit logo"/></a>
+              <button class="toggle-menu" id="toggleBtn">Menu</button>
+              <div class="collapse-nav justify-content-end gap-4">
+                <ul class="nav-ul gap-1">
+                  <li class="list-item"><a class="link" href="/public/">Home</a></li>
+                  <li class="list-item"><a class="link" href="#">Team</a></li>
+                  <li class="list-item"><a class="link" href="#">Invest</a></li>
+                </ul>
+                <div class="secondary-nav">
+                  <a href="/public/profile/log-in/"><button class="btn btn-secondary">Login / Create account</button></a>
+                </div>
               </div>
             </div>
           </div>
@@ -41,17 +36,11 @@
         <div class="container">
           <div class="content-wrapper py-3 align-items-center">
             <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
-            <a href="#"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
+            <a href="/public/knit/index.html"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
             <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
-            <a href="#"
-              ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
-            /></a>
-            <a href="#"
-              ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
-            /></a>
-            <a href="#"
-              ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
-            /></a>
+            <a href="#"><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"/></a>
+            <a href="#"><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"/></a>
+            <a href="/public/profile/dashboard/index.html"><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"/></a>
           </div>
         </div>
       </nav>
@@ -64,22 +53,16 @@
           <div class="profile-hero-grid d-grid">
             <div class="content-wrapper d-flex align-items-center justify-content-center gap-2">
               <div class="avatar-img-wrapper-extra-large">
-                <img src="/src/assets/profile-icon.svg" alt="" />
+                <img src="/src/assets/profile-icon.svg" alt=""/>
               </div>
             </div>
             <div class="content-wrapper dashboard-hero">
               <div class="avatar-name-wrapper gap-6">
-
-                <h2>@Robert D.B</h2>
-
+                <h2 id="profileUsername">@not.logged.in</h2>
                  <div class="btn-group d-flex align-items-center gap-4">
-                  <button data-modal-target="#createPost" class="btn btn-small-primary">
-                    Create Post
-                  </button>
                   <button data-modal-target="#editProfile" class="btn btn-small-light">
                     Edit Profile
                   </button>
-
                 </div>
               </div>
               <div class="content dashboard-hero-info mt-4">
@@ -99,7 +82,7 @@
                 </div>
                 <div class="d-flex flex-column align-items-center">
                   <h6 class="mb-1">Following</h6>
-                  <h6 id="followingCount" class="color-primary">1</h6>
+                  <h6 id="followingCount" class="color-primary"></h6>
                 </div>
               </div>
             </div>
@@ -305,15 +288,10 @@
             </div>
           </div>
         </div>
-
         <div id="modal-overlay"></div>
       </section>
-
     </main>
-
-    <script src="/src/js/components/modals.mjs"></script>
-    <script type="module" src="/src/js/components/dashboardNavToggle.mjs"></script>
-    <script type="module" src="../../src/js/pages/posts.mjs"></script>
-
+    <script type="module" src="/src/js/components/modals.mjs"></script>
+    <script type="module" src="../../../src/js/pages/profile.mjs"></script>
   </body>
 </html>
