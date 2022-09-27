@@ -1043,7 +1043,7 @@ nav .content-wrapper .rotate {
   grid-auto-rows: auto;
   gap: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .post-grid {
     grid-template-columns: 1fr;
   }
