@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uknit | Posts</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Primary Nav -->
+      <nav class="main-nav">
+        <div class="container">
+          <div class="d-flex justify-content-center mt-4">
+            <div class="nav-wrap d-flex justify-content-between">
+              <a class="logo z-10" href="/public/"><img src="/src/assets/logo.png" alt="Uknit logo"/></a>
+              <button class="toggle-menu" id="toggleBtn">Menu</button>
+              <div class="collapse-nav justify-content-end gap-4">
+                <ul class="nav-ul gap-1">
+                  <li class="list-item"><a class="link" href="#">Home</a></li>
+                  <li class="list-item"><a class="link" href="#">Team</a></li>
+                  <li class="list-item"><a class="link" href="#">Invest</a></li>
+                </ul>
+                <div class="secondary-nav">
+                  <a href="/public/profile/log-in/"><button class="btn btn-secondary">Login / Create account</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- /Primary Nav -->
+      <!-- Secondary Nav -->
+      <div class="container">
+        <nav>
+          <div class="content-wrapper py-3 align-items-center">
+            <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
+            <a href="/public/home/index.html"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
+            <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
+            <a href="#"><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"/></a>
+            <a href="#"><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"/></a>
+            <a href="../profile/dashboard/index.html"><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"/></a>
+          </div>
+        </nav>
+      </div>
+      <!-- /Secondary Nav -->
+    </header>
+    <main>
+      <section class="post-section mt-5">
+        <div class="container">
+          <div class="post-grid d-grid">
+            <div class="card-users d-flex flex-column align-items-start">
+              <div class="card-header d-flex align-items-center mt-4">
+                <div class="title-wrapper">
+                  <h5 class="mb-5">Most popular accounts</h5>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-wrapper mb-3 w-100">
+                  <form>
+                    <input
+                      id="searchUsersInput"
+                      class="search"
+                      type="search"
+                      inputmode="search"
+                      placeholder="Search knitter"
+                    />
+                  </form>
+                </div>
+              </div>
+              <div class="card-footer">
+                <ul class="users-list">
+                  <div class="d-flex flex-column gap-2" id="mostPopularContainer">
+                    <template id="mostPopularTemplate">
+                      <li class="card-small w-100 bg-white">
+                        <a href="" class="user d-flex">
+                          <div class="card-header w-100">
+                            <div class="content d-flex align-items-center gap-2">
+                              <div class="avatar-img-wrapper-small">
+                                <img src="/src/assets/profile-icon.svg" alt="" />
+                              </div>
+                              <h6 id="userName"></h6>
+                            </div>
+                          </div>
+                          <div class="card-body d-flex ajustify-content-end">
+                            <button class="btn btn-small-primary">Follow</button>
+                          </div>
+                        </a>
+                      </li>
+                    </template>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="content-wrapper d-flex flex-column gap-4">
+              <div class="form-wrapper d-flex">
+                <form method="GET" action="" id="searchPost" class="filtered-form w-100">
+                  <!-- Form Post -->
+                  <div class="form-group d-flex">
+                    <input
+                      class="search-large"
+                      id="searchPosts"
+                      type="text"
+                      name="post"
+                      placeholder="Search post"
+                      minlength="3"
+                      maxlength="300"
+                    />
+                    <div class="form-error" id="postError"></div>
+                  </div>
+                  <div class="select-group d-flex gap-4">
+                    <select class="select-menu" id="sortPosts" name="sortPosts">
+                      <option value="new">New/Old</option>
+                      <option value="old">Old/New</option>
+                    </select>
+                  </div>
+                  <!-- Form Button -->
+                </form>
+              </div>
+              <div class="content-wrapper d-flex flex-column gap-4" id="postContainer">
+                <template id="postTemplate">
+                  <div class="card card-large d-flex flex-column gap-4 align-items-start">
+                    <div class="card-header d-flex align-items-center">
+                      <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                        <div class="avatar-img-wrapper-regular" id="postAvatar">
+                            <img src="/src/assets/profile-icon.svg" alt=""/>
+                        </div>
+                        <div class="avatar-name m-right-auto">
+                          <h4 class="mt-2" id="postAuthor"></h4>
+                        </div>
+                        <div id="viewPostButton">
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="post-title mt-2">
+                        <h5 id="postTitle"></h5>
+                      </div>
+                      <div class="post-content mb-4">
+                        <p class="text-small" id="postText"></p>
+                      </div>
+                      <div class="post-media" id="postMedia"></div>
+                      <div class="content d-flex f-wrap w-100 mt-6 gap-4">
+                          <div class="d-flex align-items-center gap-2" id="likeButton">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/thumbs-up-line-icon.svg"
+                              alt=""/>
+                            <h5>Like</h5>
+                            <span class="text-small color-primary" id="postReactionCount"></span>
+                          </div>
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
+                              alt=""
+                            />
+                            <h5>Comment</h5>
+                            <span class="text-small color-primary">0</span>
+                          </div>
+                        </a>
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/next-svgrepo-com.svg"
+                              alt=""
+                            />
+                            <h5>Follow</h5>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+              <div class="btn-group mt-4">
+                <a href="#"><button class="btn btn-primary">See More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="../../src/js/pages/posts.mjs"></script>
+  </body>
+</html>
