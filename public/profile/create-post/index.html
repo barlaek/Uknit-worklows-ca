@@ -11,25 +11,24 @@
     <header>
       <!-- Primary Nav -->
       <nav class="main-nav">
-        <div class="container d-flex justify-content-center">
-          <div class="nav-wrap d-flex justify-content-between">
-            <a class="logo z-10" href="/public/"
-              ><img src="/src/assets/logo.png" alt="Uknit logo"
-            /></a>
-            <button class="toggle-menu" id="toggleBtn">Menu</button>
-            <div class="collapse-nav justify-content-end gap-4">
-              <ul class="nav-ul gap-1">
-                <li class="list-item"><a class="link" href="/public/">Home</a></li>
-                <li class="list-item"><a class="link" href="/public/knit/">Knit's</a></li>
-                <li class="list-item">
-                  <a class="link active" href="/public/profile/dashboard/">Dashboard</a>
-                </li>
-                <li class="list-item"><a class="link" href="#">Invest</a></li>
-              </ul>
-              <div class="secondary-nav">
-                <a href="/public/profile/log-in/"
-                  ><button class="btn btn-secondary">Login / Create account</button></a
-                >
+        <div class="container">
+          <div class="d-flex justify-content-center mt-4">
+            <div class="nav-wrap d-flex justify-content-between">
+              <a class="logo z-10" href="/public/home/"
+                ><img src="/src/assets/logo.png" alt="Uknit logo"
+              /></a>
+              <button class="toggle-menu" id="toggleBtn">Menu</button>
+              <div class="collapse-nav justify-content-end gap-4">
+                <ul class="nav-ul gap-1">
+                  <li class="list-item"><a class="link" href="/public/home/">Home</a></li>
+                  <li class="list-item"><a class="link" href="#">Team</a></li>
+                  <li class="list-item"><a class="link" href="#">Invest</a></li>
+                </ul>
+                <div class="secondary-nav">
+                  <a href="/public/profile/log-in/"
+                    ><button class="btn btn-secondary">Login / Create account</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -40,8 +39,12 @@
       <nav>
         <div class="container">
           <div class="content-wrapper py-3 align-items-center">
-            <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
-            <a href="#"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon" /></a>
+            <a href="/public/profile/create-post/"
+              ><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"
+            /></a>
+            <a href="/public/home/"
+              ><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon"
+            /></a>
             <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
             <a href="#"
               ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
@@ -49,7 +52,7 @@
             <a href="#"
               ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
             /></a>
-            <a href="#"
+            <a href="/public/profile/dashboard/"
               ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
             /></a>
           </div>
@@ -70,14 +73,14 @@
             <div class="content-wrapper dashboard-hero">
               <div class="avatar-name-wrapper gap-6">
                 <h2>@username</h2>
-                 <div class="btn-group d-flex align-items-center gap-4">
+                <!-- <div class="btn-group d-flex align-items-center gap-4">
                   <button data-modal-target="#createPost" class="btn btn-small-primary">
                     Create Post
                   </button>
                   <button data-modal-target="#editProfile" class="btn btn-small-light">
                     Edit Profile
                   </button>
-                </div>
+                </div> -->
               </div>
               <div class="content dashboard-hero-info mt-4">
                 <div class="d-flex flex-column align-items-center">
@@ -107,62 +110,110 @@
       <section>
         <div class="container">
           <div class="post-grid d-grid">
+            <!-- Dashboard navigation content -->
             <div class="card card-dashboard-nav">
+              <!-- Dashboard card -->
               <div class="card-header">
+                <!-- Dashboard-nav -->
                 <nav id="mainNavigation">
                   <div class="nav-wrapper d-flex flex-column">
-                    <!-- dashboard-nav header -->
+                    <!-- Dashboard-nav header -->
                     <div class="nav-header d-flex align-items-center justify-content-between">
                       <div class="title-wrapper">
                         <h5>Dashboard</h5>
                       </div>
                       <button class="nav-toggle open-menu"></button>
                     </div>
-                    <!-- links -->
+                    <!-- /Dashboard-nav header -->
+
+                    <!-- Dashboard-nav links -->
                     <div class="links d-flex flex-column gap-1">
                       <div class="dashboard-link mt-4">
                         <a href="/public/profile/dashboard/">My Dashboard</a>
                       </div>
+
                       <div class="dashboard-link">
-                        <a href="/public/profile/post/">Posts</a>
-                      </div>
-                      <div class="dashboard-link">
-                        <a href="/public/profile/my-profile/">Profile</a>
-                      </div>
-                      <div class="dashboard-link">
-                        <a href="#" class="active">Products</a>
+                        <a href="#" class="active">Create Post</a>
                       </div>
                     </div>
+                    <!--/Dashboard-nav links -->
                   </div>
                 </nav>
+                <!-- /Dashboard-nav -->
               </div>
+              <!-- /Dashboard card -->
             </div>
-             <div class="content-wrapper d-flex flex-column ">           
-              <div class="content d-flex flex-column gap-4" id="dashboardPostContainer">              
+            <!-- /Dashboard navigation content -->
+            <div class="content-wrapper d-flex flex-column">
+              <div class="content d-flex flex-column gap-4" id="dashboardPostContainer">
                 <div class="card card-large d-flex flex-column gap-4 align-items-start">
-                  <div class="card-header d-flex align-items-center">    
-                    <h4 class="mt-2">Here will be some products content</h4>     
-                  </div>             
+                  <div class="card-header d-flex align-items-center">
+                    <h4 class="mt-2">Create a new post</h4>
+                  </div>
                   <div class="card-body">
-                    <p class="text-small">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                      quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe
-                      eum perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur
-                      sunt. </p>
-                      <br>
-                      <p class="text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                      quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe
-                      eum perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur
-                      sunt. Pariatur.</p>
-                    </p>           
+                    <div class="form-wrapper">
+                      <form method="POST" action="#" id="postForm" class="form">
+                        <!-- Post Form Title -->
+                        <div class="form-group mb-4">
+                          <input
+                            id="postTitle"
+                            type="text"
+                            name="title"
+                            placeholder="Post title"
+                            minlength="3"
+                            maxlength="30"
+                            required
+                          />
+                          <div class="form-error" id="postTitleError"></div>
+                        </div>
+
+                        <!-- Post Form Tag -->
+                        <div class="form-group mb-4">
+                          <input
+                            id="postTag"
+                            type="text"
+                            name="tag"
+                            placeholder="Tag"
+                            minlength="3"
+                            maxlength="50"
+                          />
+                          <div class="form-error" id="tagError"></div>
+                        </div>
+
+                        <!-- Post Form Body -->
+                        <div class="form-group mb-4">
+                          <textarea
+                            id="postBody"
+                            name="post-body"
+                            placeholder="Post body"
+                            rows="5"
+                            minlength="3"
+                            maxlength="500"
+                            required
+                          ></textarea>
+                          <div class="form-error" id="postBodyError"></div>
+                        </div>
+
+                        <!-- Post Form Media -->
+                        <div class="form-group mb-4">
+                          <input id="postMedia" type="url" name="media" placeholder="Image URL " />
+                          <div class="form-error" id="postMediaError"></div>
+                        </div>
+
+                        <!-- Post Form Button -->
+                        <button type="submit" value="Post" class="btn w-100">Post</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
-              </div>       
+              </div>
             </div>
           </div>
         </div>
       </section>
-       <section class="modals">
+
+      <!-- Modals are hidden here -->
+      <!-- <section class="modals">
         <div class="container">
           <div class="modal" id="createPost">
             <div class="modal-header d-flex align-items-center justify-content-between">
@@ -175,7 +226,6 @@
               <div class="modal-body-form">
                 <div class="form-wrapper">
                   <form method="POST" action="#" id="postForm" class="form">
-                    <!-- Post Form Title -->
                     <div class="form-group mb-4">
                       <input
                         id="postTitle"
@@ -188,7 +238,7 @@
                       />
                       <div class="form-error" id="postTitleError"></div>
                     </div>
-                    <!-- Post Form Tag -->
+
                     <div class="form-group mb-4">
                       <input
                         id="postTag"
@@ -200,7 +250,7 @@
                       />
                       <div class="form-error" id="tagError"></div>
                     </div>
-                    <!-- Post Form Body -->
+
                     <div class="form-group mb-4">
                       <textarea
                         id="postBody"
@@ -213,16 +263,16 @@
                       ></textarea>
                       <div class="form-error" id="postBodyError"></div>
                     </div>
-                    <!-- Post Form Media -->
+
                     <div class="form-group mb-4">
                       <input id="postMedia" type="url" name="media" placeholder="Image URL " />
                       <div class="form-error" id="postMediaError"></div>
                     </div>
-                    <!-- Post Form Button -->
+
                     <button type="submit" value="Post" class="btn w-100">Post</button>
                   </form>
                 </div>
-                <!-- Form alert error-->
+
                 <div class="alert-wrapper bg-danger mt-4 mb-4"></div>
               </div>
             </div>
@@ -240,7 +290,6 @@
               <div class="modal-body-form">
                 <div class="form-wrapper">
                   <form method="POST" action="#" id="editProfileForm" class="form">
-                    <!-- Form Edit Profile User Name -->
                     <div class="form-group mb-4">
                       <input
                         id="newUserName"
@@ -256,7 +305,6 @@
                       <div class="form-error" id="newUserNameError"></div>
                     </div>
 
-                    <!-- Form Edit Profile Email -->
                     <div class="form-group mb-4">
                       <input
                         type="email"
@@ -271,7 +319,6 @@
                       <div class="form-error" id="newEmailError"></div>
                     </div>
 
-                    <!-- Form Edit Profile Password -->
                     <div class="form-group mb-4">
                       <input
                         type="password"
@@ -284,24 +331,22 @@
                       <div class="form-error" id="newPassError"></div>
                     </div>
 
-                    <!-- Form Edit Profile Button -->
                     <button type="submit" value="New Profile" class="btn w-100">
                       Save Changes
                     </button>
                   </form>
                 </div>
-                <!-- Form alert error-->
+
                 <div class="alert-wrapper bg-danger mt-4 mb-4"></div>
               </div>
             </div>
           </div>
         </div>
-
         <div id="modal-overlay"></div>
-      </section>
+      </section> -->
     </main>
-    <script src="/src/js/components/modals.mjs"></script>
-    <script type="module" src="/src/js/components/dashboardNavToggle.mjs"></script>
+
+    <script type="module" src="../../../src/js/pages/profile.mjs"></script>
     <script type="module" src="../../src/js/pages/posts.mjs"></script>
   </body>
 </html>
