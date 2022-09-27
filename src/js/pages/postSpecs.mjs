@@ -1,0 +1,37 @@
+import { baseURL } from "../constants/constants.mjs";
+import { postContainer } from "../constants/constants.mjs";
+
+import { standardFetch } from "../fetch/fetch.mjs";
+import { standardHeader } from "../headers/headers.mjs";
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id")
+
+const postSpecUrl = baseURL + "api/v1/social/posts/" + id + "?_author=true&_comments=true&_reactions=true";
+const postTemplate = document.querySelector('#postTemplate').content;
+
+async function createPostSpec() {
+    const accessToken = localStorage.getItem('accessToken');
+    const results = await standardFetch(postSpecUrl, standardHeader(accessToken))
+    const postClone = document.importNode(postTemplate, true);
+
+    // Reaction count
+    const reactionCount = () => {
+        if (results.reactions[0]) {
+            return results.reactions[0].count;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    postClone.querySelector("#postAuthor").innerText = `${results.author.name}`;
+    postClone.querySelector("#postTitle").innerText = `${results.title}`;
+    postClone.querySelector("#postMedia").innerHTML = `<img src="${results.media}">`;
+    postClone.querySelector("#postText").innerHTML = `${results.body}`;
+    postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
+    postClone.querySelector("#postAvatar").innerHTML = `<img src="${results.author.avatar}">`;
+    postContainer.appendChild(postClone);
+}
+createPostSpec();

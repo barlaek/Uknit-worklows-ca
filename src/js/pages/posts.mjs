@@ -1,8 +1,7 @@
 // Functions
 import { toggleNav } from "../components/toggleNav.mjs";
-import { allPostsFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllPosts } from "../headers/headers.mjs";
-import { userFetch } from "../fetch/fetch.mjs";
+import { standardFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllUsers } from "../headers/headers.mjs";
 import { like } from "../components/likeButton.mjs";
 
@@ -15,7 +14,7 @@ import { sortSelect } from "../constants/constants.mjs";
 
 // DOM
 import { postContainer } from "../constants/constants.mjs";
-const postTemplate = document.querySelector('#postTemplate').content;
+export const postTemplate = document.querySelector('#postTemplate').content;
 const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
 
 // Url's
@@ -51,7 +50,7 @@ runSort();
 // Function to fetch posts
 async function createPosts(sortUrl = "") {
     // Fetch with createHeader function as parameter
-    const resultArray = await allPostsFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
+    const resultArray = await standardFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
     console.log(resultArray);
     for (let i = 0; i < resultArray.length; i++) {
 
@@ -67,12 +66,13 @@ async function createPosts(sortUrl = "") {
         }
 
         const postClone = document.importNode(postTemplate, true);
-        postClone.querySelector("#postAuthor").innerText = `${resultArray[i].author.name}`
+        postClone.querySelector("#postAuthor").innerText = `${resultArray[i].author.name}`;
         postClone.querySelector("#postTitle").innerText = `${resultArray[i].title}`;
         postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
         postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
-        postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`
-        postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`
+        postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
+        postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`;
+        postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${resultArray[i].id}" class="btn btn-small-primary">View Post</a>`;
         postContainer.appendChild(postClone);
     }
 
@@ -106,7 +106,7 @@ createPosts();
 // Function to fetch users
 async function createUsers() {
     // Fetch with createHeader function as parameter
-    const usersArray = await userFetch(baseURL + allUsersUrl, createHeaderAllUsers(accessToken));
+    const usersArray = await standardFetch(baseURL + allUsersUrl, createHeaderAllUsers(accessToken));
 
     for (let i = 0; i < usersArray.length; i++) {
 
