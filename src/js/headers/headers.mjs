@@ -11,6 +11,18 @@ export function createBody(values) {
     }
 }
 
+// Edit profile PUT fetch
+export function editProfileBody(values, accessToken) {
+    return {
+        method: 'PUT',
+        body: JSON.stringify({ ...values }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': `Bearer ${accessToken}`
+        },
+    }
+}
+
 
 // Get all posts
 export function createHeaderAllPosts(accessToken) {
