@@ -12,15 +12,19 @@ import { baseURL, profileUrl, profileExtUrl } from "../constants/constants.mjs";
 // DOM
 import { profileUsername, followerCount, followingCount, avatarImageWrap } from "../constants/constants.mjs";
 
+// Declaring variable to use it later with collected value
+let accessToken;
+
 async function createProfile() {
     const username = localStorage.getItem('username');
-    const accessToken = localStorage.getItem('accessToken');
+    accessToken = localStorage.getItem('accessToken');
     // Fetch with createHeader function as parameter
     const profileData = await standardFetch(baseURL + profileUrl + username + profileExtUrl, createProfileHeader(accessToken));
     profileUsername.innerText = profileData.name;
     followerCount.innerText = profileData._count.followers;
     followingCount.innerText = profileData._count.following;
 
+    // 
     function buildAvatar() {
         if (profileData.avatar) {
             return profileData.avatar;
@@ -52,3 +56,20 @@ editProfileForm.addEventListener("submit", async (event) => {
     createProfile();
 })
 
+// CREATE POST 
+import { postForm, submitPostUrl } from "../constants/constants.mjs";
+import { standardPOSTHeader } from "../headers/headers.mjs";
+
+function submitPost(event) {
+    event.preventDefault();
+    // creates new object from FormData on submit 
+    const data = new FormData(event.target);
+    const values = Object.fromEntries(data.entries());
+    // Run async function that sends fetch request 
+    // Parameters are imported url and imported function that creates the body
+    console.log(values);
+    standardFetch(baseURL + submitPostUrl, standardPOSTHeader(values, accessToken));
+}
+
+// addEventListener on submit of loginForm
+postForm.addEventListener('submit', submitPost);

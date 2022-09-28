@@ -7,6 +7,7 @@ export const allPostsUrl = "api/v1/social/posts/?_author=true&_comments=true&_re
 export const allUsersUrl = "api/v1/social/profiles";
 export const profileUrl = "api/v1/social/profiles/";
 export const profileExtUrl = "?_posts=true&_following=true&_followers=true";
+export const submitPostUrl = "api/v1/social/posts";
 
 // -------------- DOM----------------- //
 export const alertWrapper = document.querySelector('.alert-wrapper');
@@ -22,6 +23,7 @@ export const avatarImageWrap = document.querySelector('#avatarImageWrap');
 export const profileUsername = document.querySelector('#profileUsername');
 export const followerCount = document.querySelector('#followerCount');
 export const followingCount = document.querySelector('#followingCount');
+export const postForm = document.querySelector('#postForm');
 
 // search 
 export const searchUsersInput = document.getElementById('searchUsersInput');
