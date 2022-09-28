@@ -684,6 +684,7 @@ select {
   top: 100px;
   height: 100vh;
   transition: 300ms;
+  background-color: #c96973;
 }
 
 .list-item {
