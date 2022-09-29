@@ -26,6 +26,10 @@
   &-small {
     border-radius: $border-standard;
     padding: $sp3;
+
+    @media screen and (max-width: 468px) {
+      flex-wrap: wrap;
+    }
   }
 
   &-large {
@@ -48,6 +52,10 @@
     background-color: $light-color;
     padding: $sp3;
     height: 400px;
+
+    @media screen and (max-width: 468px) {
+      flex-wrap: wrap;
+    }
 
     // padding: $sp6;
   }

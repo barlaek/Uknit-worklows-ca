@@ -16,6 +16,51 @@
   }
 }
 
+// POST SECTION
+
+.post-section {
+  padding-top: $sp0;
+}
+
+.users-list {
+  position: relative;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.user {
+  @media screen and (max-width: 468px) {
+    &.user {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    &.content {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.comment-content {
+  border: $border;
+  border-radius: $border-small;
+  padding: $sp6;
+}
+
+.post-media {
+  width: 100%;
+  height: 300px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+  }
+}
+
 // PRODUCT GRID SECTION
 .product-grid {
   grid-template-columns: repeat(4, 1fr);
