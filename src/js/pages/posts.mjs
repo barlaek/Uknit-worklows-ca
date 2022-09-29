@@ -14,7 +14,7 @@ import { sortSelect } from "../constants/constants.mjs";
 
 // DOM
 import { postContainer } from "../constants/constants.mjs";
-export const postTemplate = document.querySelector('#postTemplate').content;
+const postTemplate = document.querySelector('#postTemplate').content;
 const mostPopularTemplate = document.querySelector('#mostPopularTemplate').content;
 
 // Url's
