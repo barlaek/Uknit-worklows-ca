@@ -725,6 +725,7 @@ select {
     z-index: 10;
     justify-content: space-between;
     height: unset;
+    background-color: transparent;
   }
   .nav-icon-wrapper {
     justify-content: flex-end;
@@ -908,11 +909,17 @@ nav .content-wrapper .rotate {
   overflow-y: auto;
 }
 
-@media screen and (max-width: 368px) {
-  .user.user {
+@media screen and (max-width: 468px) {
+  .card-small * {
     flex-wrap: wrap;
     gap: 1rem;
+    word-break: break-all;
   }
+}
+
+.post-content {
+  word-break: break-all;
+  margin: 0 auto;
 }
 
 .comment-content {
