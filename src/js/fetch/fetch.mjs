@@ -41,7 +41,6 @@ export async function standardFetch(url, body) {
     const response = await fetch(url, body);
     const data = await response.json();
     if (response.ok) {
-        console.log(data);
         return data;
     }
     throw new Error(data.message);

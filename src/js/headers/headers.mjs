@@ -68,3 +68,15 @@ export function standardHeader(accessToken) {
         },
     }
 }
+
+// SAME HEADER AGAIN!!! 
+export function standardPOSTHeader(values, accessToken) {
+    return {
+        method: 'POST',
+        body: JSON.stringify({ ...values }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': `Bearer ${accessToken}`
+        },
+    }
+}

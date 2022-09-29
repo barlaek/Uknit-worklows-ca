@@ -1,1 +1,51 @@
 // === KNITTERS PAGE STYLES ===
+<<<<<<< HEAD
+=======
+
+// KNIT POST GRID SECTION
+
+.post-section {
+  padding-top: $sp0;
+}
+
+.users-list {
+  position: relative;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.card-small * {
+  @media screen and (max-width: 468px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+    word-break: break-all;
+  }
+}
+
+.post-content {
+  word-break: break-all;
+  // overflow-wrap: break-word;
+  margin: 0 auto;
+}
+
+.comment-content {
+  border: $border;
+  border-radius: $border-small;
+  padding: $sp6;
+}
+
+.post-media {
+  width: 100%;
+  max-height: 500px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    max-height: 500px;
+  }
+}
+>>>>>>> Robert-JS-Test
