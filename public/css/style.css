@@ -923,7 +923,7 @@ nav .content-wrapper .rotate {
 
 .post-media {
   width: 100%;
-  height: 300px;
+  max-height: 500px;
 }
 .post-media img {
   width: 100%;
@@ -932,6 +932,7 @@ nav .content-wrapper .rotate {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  max-height: 500px;
 }
 
 .dashboard-hero {

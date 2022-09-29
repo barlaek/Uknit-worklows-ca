@@ -51,9 +51,7 @@ runSort();
 async function createPosts(sortUrl = "") {
     // Fetch with createHeader function as parameter
     const resultArray = await standardFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
-    console.log(resultArray);
     for (let i = 0; i < resultArray.length; i++) {
-
         // const { postText, postCreated, postID, postMedia, postTag, postTitle } = resultArray[i];
 
         const reactionCount = () => {
@@ -73,6 +71,11 @@ async function createPosts(sortUrl = "") {
         postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
         postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`;
         postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${resultArray[i].id}" class="btn btn-small-primary">View Post</a>`;
+
+        const username = localStorage.getItem("username");
+        if (resultArray[i].author.name === username) {
+            postClone.querySelector("#editPost").classList.remove("d-none");
+        }
         postContainer.appendChild(postClone);
     }
 

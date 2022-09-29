@@ -164,135 +164,72 @@
             <!-- /Dashboard navigation content -->
 
             <!-- Dashboard post content -->
-            <div class="content-wrapper d-flex flex-column gap-7">
-              <!-- Form wrapper -->
-              <div class="form-wrapper d-flex">
-                <!-- Post form -->
-                <form method="GET" action="" id="searchPost" class="filtered-form w-100">
-                  <!-- Search post input -->
-                  <div class="form-group d-flex">
-                    <input
-                      class="search-post"
-                      id="search"
-                      type="text"
-                      name="post"
-                      placeholder="Search post"
-                      minlength="3"
-                      maxlength="300"
-                    />
-                    <div class="form-error" id="postError"></div>
-                  </div>
-                  <!-- /Search post input -->
-                  <!-- Select post -->
-                  <div class="select-group d-flex gap-4">
-                    <select class="select-menu" id="filteredPosts" name="posts">
-                      <option value="new">New</option>
-                      <option value="old">Old</option>
-                    </select>
-                  </div>
-                  <!-- /Select post -->
-                </form>
-                <!-- /Post form -->
-              </div>
-              <!-- /Form wrapper -->
-
-              <!-- Post -->
+            <div class="content-wrapper d-flex flex-column gap-7" id="postContainer">
               <!-- This is the wrapper that holds the card with the id of dashboardPostContainer -->
               <div class="content-wrapper d-flex flex-column gap-4" id="dashboardPostContainer">
                 <!-- Card starts here below you haver the template with the id of id="postTemplate", just wrap everything within the template -->
-                <!-- <template id="dashboardPostTemplate"> Wrap the card card-large here </template> -->
-                <!-- Card large -->
-                <div class="card card-large d-flex flex-column gap-4 align-items-start">
-                  <!-- Card header that includes content width avatar img, avatar name and see profile button -->
-                  <div class="card-header d-flex align-items-center">
-                    <div class="content d-flex gap-4 align-items-center f-wrap w-100">
-                      <div class="avatar-img-wrapper-regular">
-                        <div>
-                          <img src="/src/assets/profile-icon.svg" alt="Post profile image" />
+                <template id="postTemplate">
+                  <div class="card card-large d-flex flex-column gap-4 align-items-start">
+                    <div class="card-header d-flex f-wrap align-items-center">
+                      <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                        <div class="avatar-img-wrapper-regular" id="postAvatar">
+                          <img src="/src/assets/profile-icon.svg" alt="" />
+                        </div>
+                        <div class="avatar-name m-right-auto">
+                          <h4 class="mt-2" id="postAuthor"></h4>
+                        </div>
+                        <div id="viewPostButton">
                         </div>
                       </div>
-
-                      <div class="avatar-name m-right-auto">
-                        <!-- Replace the <h4 class="mt-2">Robert D.B</h4> with <h4 class="mt-2" id="dashboardPostAuthor"></h4> -->
-                        <h4 class="mt-2">Robert D.B</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="post-title mt-2">
+                        <h5 id="postTitle"></h5>
                       </div>
-
-                      <button class="btn btn-small-primary">See Profile</button>
-                    </div>
-                  </div>
-                  <!-- /Card header -->
-                  <!-- Card body that includes post title, post content, post media and links -->
-                  <div class="card-body">
-                    <div class="post-title mt-2">
-                      <!-- Replace <h5 id="dashboardPostTitle">Some Title Here</h5> with <h5 id="dashboardPostTitle"></h5>-->
-                      <h5 id="dashboardPostTitle">Some Title Here</h5>
-                    </div>
-
-                    <div class="post-content mb-4">
-                      <!-- Replace <p class="text-small"> with <p class="text-small" id="dashboardPostText"></p> -->
-                      <p class="text-small">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eveniet,
-                        quod ad possimus dignissimos aliquid veritatis? Aperiam eius placeat saepe
-                        eum perspiciatis, magnam incidunt, alias doloremque consectetur consequuntur
-                        sunt. Pariatur.
-                      </p>
-                    </div>
-                    <!-- Replace id="postMedia" with id="dashboardPostMedia" and fetch the post image -->
-                    <div class="post-media" id="postMedia">
-                      <img src="/src/assets/Images/sweater.jpg" alt="" />
-                    </div>
-
-                    <div class="content d-flex f-wrap align-items-center w-100 mt-6 gap-4">
-                      <a href="">
-                        <div class="d-flex align-items-center gap-2">
+                      <div class="post-content mb-4">
+                        <p class="text-small" id="postText"></p>
+                      </div>
+                      <div class="post-media" id="postMedia"></div>
+                      <div class="content d-flex f-wrap align-items-center w-100 mt-6 gap-4">
+                        <div class="d-flex align-items-center gap-2" id="likeButton">
                           <img
                             class="icon-extra-small"
                             src="/src/assets/thumbs-up-line-icon.svg"
                             alt=""
                           />
                           <h5>Like</h5>
-                          <span class="text-small color-primary">10</span>
+                          <span class="text-small color-primary" id="postReactionCount"></span>
                         </div>
-                      </a>
-                      <a href="">
-                        <div class="d-flex align-items-center gap-2">
-                          <img
-                            class="icon-extra-small"
-                            src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
-                            alt=""
-                          />
-                          <h5>Comment</h5>
-                          <span class="text-small color-primary">2</span>
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/comment-bubble-with-three-squares-svgrepo-com.svg"
+                              alt=""
+                            />
+                            <h5>Comment</h5>
+                            <span class="text-small color-primary">0</span>
+                          </div>
+                        </a>
+                        <a href="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              class="icon-extra-small"
+                              src="/src/assets/next-svgrepo-com.svg"
+                              alt=""/>
+                            <h5>Follow</h5>
+                          </div>
+                        </a>
+                        <div id="editPost" class="d-none">
+                          <button data-modal-target="#editPost" class="btn btn-small-light d-flex align-items-center gap-2">
+                            <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
+                            Edit Post
+                          </button>
                         </div>
-                      </a>
-                      <a href="">
-                        <div class="d-flex align-items-center gap-2">
-                          <img
-                            class="icon-extra-small"
-                            src="/src/assets/next-svgrepo-com.svg"
-                            alt=""
-                          />
-                          <h5>Follow</h5>
-                        </div>
-                      </a>
-                      <button
-                        data-modal-target="#editPost"
-                        class="btn btn-small-light d-flex align-items-center gap-2"
-                      >
-                        <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
-                        Edit Post
-                      </button>
-                      <!-- <a href="">
-                        <div class="d-flex align-items-center gap-2">
-                          <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
-                          <h5>Edit</h5>
-                        </div>
-                      </a> -->
+                      </div>
                     </div>
                   </div>
-                  <!-- /Card body -->
-                </div>
-                <!-- /Card large -->
+                </template>
               </div>
               <!-- /Post -->
 

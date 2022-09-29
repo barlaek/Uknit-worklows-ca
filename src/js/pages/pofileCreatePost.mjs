@@ -52,7 +52,25 @@ editProfileForm.addEventListener("submit", async (event) => {
     const name = localStorage.getItem("username");
     const accessToken = localStorage.getItem("accessToken");
     const results = await standardFetch(baseURL + `api/v1/social/profiles/${name}/media`, editProfileBody(values, accessToken));
-    let userAvatarImage = results.avatar;
-    // localStorage.setItem('userAvatarImage', userAvatarImage);
-    location.reload();
+    userAvatarImage = results.avatar;
+    createProfile();
 })
+
+// CREATE POST 
+import { postForm, submitPostUrl } from "../constants/constants.mjs";
+import { standardPOSTHeader } from "../headers/headers.mjs";
+
+function submitPost(event) {
+    event.preventDefault();
+    // creates new object from FormData on submit 
+    const data = new FormData(event.target);
+    const values = Object.fromEntries(data.entries());
+    // Run async function that sends fetch request 
+    // Parameters are imported url and imported function that creates the body
+    console.log(values);
+    standardFetch(baseURL + submitPostUrl, standardPOSTHeader(values, accessToken));
+    postForm.reset()
+}
+
+// addEventListener on submit of loginForm
+postForm.addEventListener('submit', submitPost);
