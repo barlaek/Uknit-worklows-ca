@@ -30,11 +30,11 @@
               <div class="form-card-body">
                 <div class="form-wrapper">
                   <form method="POST" action="https://nf-api.onrender.com/api/v1/social/auth/register" id="signUpForm" class="form">
-                    <!-- Form Email -->
+                    <!-- Form Username -->
                     <div class="form-group mb-4">
-                      <!-- <label for="email" class="form-label">Email</label> -->
                       <input
                         id="name"
+                        title="Username must only contain characters, letters or underlines"
                         type="text"
                         name="name"
                         placeholder="Username"
@@ -52,6 +52,7 @@
                       <input
                         type="email"
                         id="email"
+                        title="Only @(noroff).stud.no emails"
                         minlength="8"
                         maxlength="40"
                         class="form-control"
