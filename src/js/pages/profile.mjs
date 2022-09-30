@@ -4,6 +4,8 @@ import { toggleNav } from "../components/toggleNav.mjs";
 import { createProfileHeader } from "../headers/headers.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllPosts } from "../headers/headers.mjs";
+import {logOut} from "../components/logout.mjs";
+logOut();
 dashBoard();
 toggleNav();
 

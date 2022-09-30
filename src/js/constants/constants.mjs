@@ -18,6 +18,7 @@ export const mostPopularContainer = document.querySelector('#mostPopularContaine
 export const postAvatar = document.querySelector('#postAvatar');
 export const editSubmit = document.querySelector('#editSubmit');
 export const avatarImageWrap = document.querySelector('#avatarImageWrap');
+export const logoutButton = document.querySelector('#logoutButton');
 
 // Profile
 export const profileUsername = document.querySelector('#profileUsername');
