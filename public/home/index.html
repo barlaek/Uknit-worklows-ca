@@ -14,7 +14,7 @@
         <div class="container">
           <div class="d-flex justify-content-center mt-4">
             <div class="nav-wrap d-flex justify-content-between">
-              <a class="logo z-10" href="/public/home/">LOGO</a>
+              <a class="logo z-10" href="/public/home/">LOGO 1</a>
               <button class="toggle-menu" id="toggleBtn">Menu</button>
               <div class="collapse-nav justify-content-end gap-4">
                 <ul class="nav-ul gap-1">
@@ -86,7 +86,7 @@
                       <li class="card-small w-100 bg-white">
                         <a href="" class="user d-flex">
                           <div class="card-header w-100">
-                            <div class="content d-flex align-items-center gap-2">
+                            <div class="content d-flex align-items-center gap-2 f-wrap">
                               <div class="avatar-img-wrapper-small">
                                 <img src="/src/assets/profile-icon.svg" alt="" />
                               </div>
@@ -139,8 +139,7 @@
                         <div class="avatar-name m-right-auto">
                           <h4 class="mt-2" id="postAuthor"></h4>
                         </div>
-                        <div id="viewPostButton">
-                        </div>
+                        <div id="viewPostButton"></div>
                       </div>
                     </div>
                     <div class="card-body">
@@ -148,7 +147,7 @@
                         <h5 id="postTitle"></h5>
                       </div>
                       <div class="post-content mb-4">
-                        <p class="text-small" id="postText"></p>
+                        <p class="text-small" id="postText">></p>
                       </div>
                       <div class="post-media" id="postMedia"></div>
                       <div class="content d-flex f-wrap align-items-center w-100 mt-6 gap-4">
@@ -177,12 +176,16 @@
                             <img
                               class="icon-extra-small"
                               src="/src/assets/next-svgrepo-com.svg"
-                              alt=""/>
+                              alt=""
+                            />
                             <h5>Follow</h5>
                           </div>
                         </a>
                         <div id="editPost" class="d-none">
-                          <button data-modal-target="#editPost" class="btn btn-small-light d-flex align-items-center gap-2">
+                          <button
+                            data-modal-target="#editPost"
+                            class="btn btn-small-light d-flex align-items-center gap-2"
+                          >
                             <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
                             Edit Post
                           </button>

@@ -12,13 +12,18 @@
   overflow-y: auto;
 }
 
-.user {
-  @media screen and (max-width: 368px) {
-    &.user {
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+.card-small * {
+  @media screen and (max-width: 468px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+    word-break: break-all;
   }
+}
+
+.post-content {
+  word-break: break-all;
+  // overflow-wrap: break-word;
+  margin: 0 auto;
 }
 
 .comment-content {

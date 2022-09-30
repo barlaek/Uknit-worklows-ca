@@ -442,6 +442,11 @@ h6 {
   border-radius: 1rem;
   padding: 0.75rem;
 }
+@media screen and (max-width: 468px) {
+  .card-small {
+    flex-wrap: wrap;
+  }
+}
 .card-large {
   border-radius: 1rem;
   padding: 1.5rem;
@@ -460,6 +465,11 @@ h6 {
   background-color: #fafafa;
   padding: 0.75rem;
   height: 400px;
+}
+@media screen and (max-width: 468px) {
+  .card-users {
+    flex-wrap: wrap;
+  }
 }
 .card-dashboard-nav {
   border-radius: 1rem;
@@ -725,6 +735,7 @@ select {
     z-index: 10;
     justify-content: space-between;
     height: unset;
+    background-color: transparent;
   }
   .nav-icon-wrapper {
     justify-content: flex-end;
@@ -758,6 +769,7 @@ nav .content-wrapper .rotate {
   nav .content-wrapper {
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 .dashboard-link .active {
@@ -810,6 +822,45 @@ nav .content-wrapper .rotate {
 .form-wrapper .btn,
 .form-wrapper input {
   font-size: 1.2rem;
+}
+
+.post-section {
+  padding-top: 0;
+}
+
+.users-list {
+  position: relative;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 468px) {
+  .user.user {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .user.content {
+    flex-wrap: wrap;
+  }
+}
+
+.comment-content {
+  border: 0.1rem solid rgb(205, 205, 205);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.post-media {
+  width: 100%;
+  height: 300px;
+}
+.post-media img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
 }
 
 .product-grid {
@@ -908,11 +959,17 @@ nav .content-wrapper .rotate {
   overflow-y: auto;
 }
 
-@media screen and (max-width: 368px) {
-  .user.user {
+@media screen and (max-width: 468px) {
+  .card-small * {
     flex-wrap: wrap;
     gap: 1rem;
+    word-break: break-all;
   }
+}
+
+.post-content {
+  word-break: break-all;
+  margin: 0 auto;
 }
 
 .comment-content {

@@ -34,6 +34,9 @@
       <!-- Secondary Nav -->
       <nav>
         <div class="container">
+         
+
+        <div class="container">
           <div class="content-wrapper py-3 align-items-center">
             <a href="/public/profile/create-post/"
               ><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"
@@ -48,7 +51,7 @@
             <a href="#"
               ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
             /></a>
-            <a href="#"
+            <a href="/public/profile/dashboard/"
               ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
             /></a>
           </div>
@@ -64,7 +67,7 @@
             <!-- Hero grid image -->
             <div class="content-wrapper d-flex align-items-center justify-content-center gap-2">
               <div class="avatar-img-wrapper-extra-large" id="avatarImageWrap">
-                <img src="/src/assets/profile-icon.svg" alt=""/>
+                <img src="/src/assets/profile-icon.svg" alt="" />
               </div>
               <!-- Image wrapper -->
             </div>
@@ -82,6 +85,7 @@
                   <button data-modal-target="#editProfile" class="btn btn-small-light">
                     Edit Profile
                   </button>
+                  <button class="btn btn-small-primary">Log Out</button>
                 </div>
                 <!-- /Buttons -->
               </div>
@@ -160,12 +164,12 @@
             <!-- /Dashboard navigation content -->
 
             <!-- Dashboard post content -->
-            <div class="content-wrapper d-flex flex-column gap-7" id="postContainer">
+            <div class="content-wrapper d-flex flex-column" id="postContainer">
               <!-- This is the wrapper that holds the card with the id of dashboardPostContainer -->
               <div class="content-wrapper d-flex flex-column gap-4" id="dashboardPostContainer">
                 <!-- Card starts here below you haver the template with the id of id="postTemplate", just wrap everything within the template -->
                 <template id="postTemplate">
-                  <div class="card card-large d-flex flex-column gap-4 align-items-start">
+                  <div class="card card-large d-flex flex-column mb-5 align-items-start">
                     <div class="card-header d-flex f-wrap align-items-center">
                       <div class="content d-flex gap-4 align-items-center f-wrap w-100">
                         <div class="avatar-img-wrapper-regular" id="postAvatar">
@@ -174,8 +178,7 @@
                         <div class="avatar-name m-right-auto">
                           <h4 class="mt-2" id="postAuthor"></h4>
                         </div>
-                        <div id="viewPostButton">
-                        </div>
+                        <div id="viewPostButton"></div>
                       </div>
                     </div>
                     <div class="card-body">
@@ -212,12 +215,16 @@
                             <img
                               class="icon-extra-small"
                               src="/src/assets/next-svgrepo-com.svg"
-                              alt=""/>
+                              alt=""
+                            />
                             <h5>Follow</h5>
                           </div>
                         </a>
                         <div id="editPost" class="d-none">
-                          <button data-modal-target="#editPost" class="btn btn-small-light d-flex align-items-center gap-2">
+                          <button
+                            data-modal-target="#editPost"
+                            class="btn btn-small-light d-flex align-items-center gap-2"
+                          >
                             <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
                             Edit Post
                           </button>
@@ -269,7 +276,9 @@
                       <div class="form-error" id="newUserNameError"></div>
                     </div>
                     <!-- Form Edit Profile Button -->
-                    <button type="submit" value="" id="editSubmit" class="btn w-100">Save Changes</button>
+                    <button type="submit" value="" id="editSubmit" class="btn w-100">
+                      Save Changes
+                    </button>
                   </form>
                   <!-- /Form -->
                 </div>
