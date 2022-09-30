@@ -5,6 +5,6 @@ export function logOut() {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('username');
         localStorage.removeItem('userAvatarImage');
-        location.href = "../../profile/log-in/index.html";
+        location.href = "../../../public/";
     })
 }

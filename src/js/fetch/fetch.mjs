@@ -17,7 +17,7 @@ export async function loginFetch(url, body) {
             localStorage.setItem('accessToken', accessToken);
             const username = data.name;
             localStorage.setItem('username', username);
-            window.location.href = "../../../public/home/index.html";
+            window.location.href = "../../../public/home/";
         }
     }
     catch (error) {
