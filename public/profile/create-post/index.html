@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uknit | Profile</title>
+
+    <title>Uknit | Create Post</title>
+
+    <title>Uknit | Create Post</title>
+
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
@@ -23,7 +27,9 @@
                   <li class="list-item"><a class="link" href="#">Invest</a></li>
                 </ul>
                 <div class="secondary-nav">
-                  <a href="/public/profile/log-in/"><button class="btn btn-secondary">Login / Create account</button></a>
+                  <a href="/public/profile/log-in/"
+                    ><button class="btn btn-secondary">Login / Create account</button></a
+                  >
                 </div>
               </div>
             </div>
@@ -35,12 +41,22 @@
       <nav>
         <div class="container">
           <div class="content-wrapper py-3 align-items-center">
-            <a href="/public/profile/create-post/"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"/></a>
-            <a href="/public/home/"><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon"/></a>
+            <a href="/public/profile/create-post/"
+              ><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"
+            /></a>
+            <a href="/public/home/"
+              ><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon"
+            /></a>
             <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
-            <a href="#"><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"/></a>
-            <a href="#"><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"/></a>
-            <a href="#"><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"/></a>
+            <a href="#"
+              ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
+            /></a>
+            <a href="#"
+              ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
+            /></a>
+            <a href="#"
+              ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
+            /></a>
           </div>
         </div>
       </nav>
@@ -54,7 +70,7 @@
             <!-- Hero grid image -->
             <div class="content-wrapper d-flex align-items-center justify-content-center gap-2">
               <div class="avatar-img-wrapper-extra-large" id="avatarImageWrap">
-                <img src="/src/assets/profile-icon.svg" alt=""/>
+                <img src="/src/assets/profile-icon.svg" alt="" />
               </div>
               <!-- Image wrapper -->
             </div>
@@ -162,10 +178,11 @@
                             placeholder="Post title"
                             minlength="3"
                             maxlength="30"
-                            required/>
+                            required
+                          />
                           <div class="form-error" id="postTitleError"></div>
                         </div>
-                
+
                         <!-- Post Form Tag -->
                         <div class="form-group mb-4">
                           <input
@@ -174,10 +191,11 @@
                             name="tag"
                             placeholder="Tag"
                             minlength="3"
-                            maxlength="50"/>
+                            maxlength="50"
+                          />
                           <div class="form-error" id="tagError"></div>
                         </div>
-                
+
                         <!-- Post Form Body -->
                         <div class="form-group mb-4">
                           <textarea
@@ -187,7 +205,8 @@
                             rows="5"
                             minlength="3"
                             maxlength="500"
-                            required></textarea>
+                            required
+                          ></textarea>
                           <div class="form-error" id="postBodyError"></div>
                         </div>
                         <!-- Post Form Media -->
@@ -201,7 +220,6 @@
                     </div>
                   </div>
                 </div>
-                
               </div>
               <!-- /Post -->
             </div>
@@ -244,7 +262,9 @@
                       <div class="form-error" id="newUserNameError"></div>
                     </div>
                     <!-- Form Edit Profile Button -->
-                    <button type="submit" value="" id="editSubmit" class="btn w-100">Save Changes</button>
+                    <button type="submit" value="" id="editSubmit" class="btn w-100">
+                      Save Changes
+                    </button>
                   </form>
                   <!-- /Form -->
                 </div>
