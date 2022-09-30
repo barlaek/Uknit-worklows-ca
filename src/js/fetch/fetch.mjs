@@ -7,16 +7,6 @@ export async function loginFetch(url, body) {
     const data = await response.json();
     console.log(data);
 
-    // If user is rejected
-    if (!response.ok) {
-      alertWrapper.innerHTML = `<h6>${data.message}</h6>`;
-    } else {
-      // Collect accessToken and send to local storage
-      const accessToken = data.accessToken;
-      localStorage.setItem("accessToken", accessToken);
-      const username = data.name;
-      localStorage.setItem("username", username);
-      window.location.href = "../../../public/home/index.html";
     }
   } catch (error) {
     console.log(error);

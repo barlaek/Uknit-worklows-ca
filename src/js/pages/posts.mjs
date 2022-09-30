@@ -22,8 +22,9 @@ import { baseURL } from "../constants/constants.mjs";
 import { allPostsUrl } from "../constants/constants.mjs";
 import { allUsersUrl } from "../constants/constants.mjs";
 
-// Function for collapsing nav
+// Running functions
 toggleNav();
+
 
 // Collecting accessToken from localStorage
 export let accessToken = localStorage.getItem("accessToken");
