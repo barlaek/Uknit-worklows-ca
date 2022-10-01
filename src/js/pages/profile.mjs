@@ -57,7 +57,7 @@ editProfileForm.addEventListener("submit", async (event) => {
     const name = localStorage.getItem("username");
     const accessToken = localStorage.getItem("accessToken");
     const results = await standardFetch(baseURL + `api/v1/social/profiles/${name}/media`, editProfileBody(values, accessToken));
-    let userAvatarImage = results.avatar;
+    
     // localStorage.setItem('userAvatarImage', userAvatarImage);
     location.reload();
 })
