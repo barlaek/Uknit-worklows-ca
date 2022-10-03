@@ -3,7 +3,6 @@ import { toggleNav } from "../components/toggleNav.mjs";
 import { createHeaderAllPosts } from "../headers/headers.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllUsers } from "../headers/headers.mjs";
-import { like } from "../components/likeButton.mjs";
 
 // search
 import { searchUsersInput } from "../constants/constants.mjs";
@@ -18,13 +17,13 @@ const postTemplate = document.querySelector("#postTemplate").content;
 const mostPopularTemplate = document.querySelector("#mostPopularTemplate").content;
 
 // Url's
-import { baseURL } from "../constants/constants.mjs";
-import { allPostsUrl } from "../constants/constants.mjs";
-import { allUsersUrl } from "../constants/constants.mjs";
+import { baseURL, allPostsUrl, allUsersUrl } from "../constants/constants.mjs";
 
 // Running functions
 toggleNav();
 
+// Declaring variables
+let username;
 
 // Collecting accessToken from localStorage
 export let accessToken = localStorage.getItem("accessToken");
@@ -72,16 +71,13 @@ async function createPosts(sortUrl = "") {
     postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
     postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
     postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
-    postClone.querySelector(
-      "#postAvatar"
-    ).innerHTML = `<img src="${resultArray[i].author.avatar}">`;
-    postClone.querySelector(
-      "#viewPostButton"
-    ).innerHTML = `<a href="../post-specs/post-specs.html?id=${resultArray[i].id}" class="btn btn-small-primary">View Post</a>`;
+    postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`;
+    postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${resultArray[i].id}" class="btn btn-small-primary">View Post</a>`;
+    postClone.querySelector("#commentCount").innerHTML = `${resultArray[i]._count.comments}`;
 
-    const username = localStorage.getItem("username");
+    username = localStorage.getItem("username");
     if (resultArray[i].author.name === username) {
-      postClone.querySelector("#editPost").classList.remove("d-none");
+      postClone.querySelector("#followDiv").classList.add("d-none");
     }
     postContainer.appendChild(postClone);
   }
@@ -105,12 +101,12 @@ async function createPosts(sortUrl = "") {
         postClone.querySelector("#postTitle").innerText = `${filteredPosts[i].title}`;
         postClone.querySelector("#postMedia").innerHTML = `<img src="${filteredPosts[i].media}">`;
         postClone.querySelector("#postText").innerHTML = `${filteredPosts[i].body}`;
-        postClone.querySelector(
-          "#postReactionCount"
-        ).innerHTML = `${filteredPosts[i]._count.reactions}`;
-        postClone.querySelector(
-          "#postAvatar"
-        ).innerHTML = `<img src="${filteredPosts[i].author.avatar}">`;
+        postClone.querySelector("#postReactionCount").innerHTML = `${filteredPosts[i]._count.reactions}`;
+        postClone.querySelector("#postAvatar").innerHTML = `<img src="${filteredPosts[i].author.avatar}">`;
+        postClone.querySelector("#commentCount").innerHTML = `${filteredPosts[i]._count.comments}`;
+        if (filteredPosts[i].author.name === username) {
+          postClone.querySelector("#followDiv").classList.add("d-none");
+        }
         postContainer.appendChild(postClone);
       }
     });
@@ -147,3 +143,41 @@ async function createUsers() {
   });
 }
 createUsers();
+
+
+// LIKE 
+
+// import { headerStandard } from "../headers/headers.mjs";
+// import {likeFetch} from "../fetch/fetch.mjs";
+
+// async function like() {
+//   const method = 'PUT';
+//   const id = 15;
+//   const likeUrl = baseURL + `api/v1/social/posts/${id}/react/👍`;
+//   console.log(accessToken);
+//   console.log(likeUrl);
+//   const results = await likeFetch(likeUrl, headerStandard(accessToken));
+//   console.log(results);
+// }
+// like();
+
+
+async function Fetch() {
+  const body = {
+    method: 'PUT',
+    headers: {
+        'Authorization': `Bearer ${accessToken}`
+    },
+}
+  const id = 15;
+  const url = baseURL + `api/v1/social/posts/${id}/react/👍`;
+  console.log(url)
+  const response = await fetch(url, body);
+  console.log(response);
+  const data = await response.json();
+  if (response.ok) {
+    return data;
+  }
+  throw new Error("Error in Fetch");
+}
+Fetch();

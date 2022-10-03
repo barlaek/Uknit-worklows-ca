@@ -32,6 +32,13 @@ async function createPostSpec() {
     postClone.querySelector("#postText").innerHTML = `${results.body}`;
     postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
     postClone.querySelector("#postAvatar").innerHTML = `<img src="${results.author.avatar}">`;
+    const username = localStorage.getItem("username");
+    if (results.author.name === username) {
+      postClone.querySelector("#editPost").classList.remove("d-none");
+    }
+    if (results.author.name === username) {
+      postClone.querySelector("#followDiv").classList.add("d-none");
+    }
     postContainer.appendChild(postClone);
 }
 createPostSpec();

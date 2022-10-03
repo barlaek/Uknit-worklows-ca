@@ -80,3 +80,14 @@ export function standardPOSTHeader(values, accessToken) {
         },
     }
 }
+
+// Good header
+export function headerStandard(accessToken) {
+    return {
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'Authorization': `Bearer ${accessToken}`
+        },
+    }
+}

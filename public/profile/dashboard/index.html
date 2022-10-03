@@ -159,12 +159,10 @@
               <!-- /Dashboard card -->
             </div>
             <!-- /Dashboard navigation content -->
-
             <!-- Dashboard post content -->
             <div class="content-wrapper d-flex flex-column" id="postContainer">
-              <!-- This is the wrapper that holds the card with the id of dashboardPostContainer -->
               <div class="content-wrapper d-flex flex-column gap-4" id="dashboardPostContainer">
-                <!-- Card starts here below you haver the template with the id of id="postTemplate", just wrap everything within the template -->
+                <!-- Card starts here -->
                 <template id="postTemplate">
                   <div class="card card-large d-flex flex-column mb-5 align-items-start">
                     <div class="card-header d-flex f-wrap align-items-center">
@@ -204,24 +202,22 @@
                               alt=""
                             />
                             <h5>Comment</h5>
-                            <span class="text-small color-primary">0</span>
+                            <span id="commentCount" class="text-small color-primary">0</span>
                           </div>
                         </a>
-                        <a href="">
+                        <div id="followDiv">
                           <div class="d-flex align-items-center gap-2">
                             <img
                               class="icon-extra-small"
                               src="/src/assets/next-svgrepo-com.svg"
-                              alt=""
-                            />
+                              alt=""/>
                             <h5>Follow</h5>
                           </div>
-                        </a>
+                        </div>
                         <div id="editPost" class="d-none">
                           <button
                             data-modal-target="#editPost"
-                            class="btn btn-small-light d-flex align-items-center gap-2"
-                          >
+                            class="btn btn-small-light d-flex align-items-center gap-2">
                             <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
                             Edit Post
                           </button>
@@ -290,7 +286,6 @@
           <!-- /Modal -->
         </div>
         <!--/Edit profile modal -->
-
         <!-- Modals overlay -->
         <div id="modal-overlay"></div>
         <!-- Modals overlay -->

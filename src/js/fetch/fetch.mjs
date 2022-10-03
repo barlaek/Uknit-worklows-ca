@@ -45,3 +45,13 @@ export async function standardFetch(url, body) {
   }
   throw new Error(data.message);
 }
+
+// LIKE FETCH
+// export async function likeFetch(url, body) {
+//   const response = await fetch(url, body);
+//   const data = await response.json();
+//   if (response.ok) {
+//     return data;
+//   }
+//   throw new Error("Error in Fetch");
+// }

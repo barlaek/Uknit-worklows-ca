@@ -16,6 +16,12 @@ import { baseURL, profileUrl, profileExtUrl, allPostsUrl } from "../constants/co
 import { profileUsername, followerCount, followingCount, avatarImageWrap, postContainer } from "../constants/constants.mjs";
 const postTemplate = document.querySelector('#postTemplate').content;
 
+// modals
+import { modalListeners, openModal, closeModal } from "../components/modals.mjs";
+import { editProfileBody } from "../headers/headers.mjs";
+modalListeners(openModal, closeModal);
+
+
 // Declaring variable to use it later with collected value
 let accessToken;
 let username;
@@ -42,25 +48,6 @@ async function createProfile() {
     avatarImageWrap.innerHTML = `<img src="${buildAvatar()}" alt=""/>`;
 }
 createProfile();
-
-// modals
-import { modalListeners, openModal, closeModal } from "../components/modals.mjs";
-import { editProfileBody } from "../headers/headers.mjs";
-modalListeners(openModal, closeModal);
-
-const editProfileForm = document.querySelector('#editProfileForm');
-
-editProfileForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const data = new FormData(event.target);
-    const values = Object.fromEntries(data.entries());
-    const name = localStorage.getItem("username");
-    const accessToken = localStorage.getItem("accessToken");
-    const results = await standardFetch(baseURL + `api/v1/social/profiles/${name}/media`, editProfileBody(values, accessToken));
-    
-    // localStorage.setItem('userAvatarImage', userAvatarImage);
-    location.reload();
-})
 
 // Fetching user posts 
 async function createPosts() {
@@ -92,7 +79,28 @@ async function createPosts() {
         postClone.querySelector("#postAvatar").innerHTML = `<img src="${ownPostsArray[i].author.avatar}">`;
         postClone.querySelector("#viewPostButton").innerHTML = `<a href="/public/post-specs/post-specs.html?id=${ownPostsArray[i].id}" class="btn btn-small-primary">View Post</a>`;
         postClone.querySelector("#editPost").classList.remove("d-none");
+
+        if (ownPostsArray[i].author.name === username) {
+            postClone.querySelector('#followDiv').classList.add("d-none");
+        }
+        
         postContainer.appendChild(postClone);
     }
 }
 createPosts();
+
+
+
+const editProfileForm = document.querySelector('#editProfileForm');
+
+editProfileForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const values = Object.fromEntries(data.entries());
+    const name = localStorage.getItem("username");
+    const accessToken = localStorage.getItem("accessToken");
+    await standardFetch(baseURL + `api/v1/social/profiles/${name}/media`, editProfileBody(values, accessToken));
+    // localStorage.setItem('userAvatarImage', userAvatarImage);
+    location.reload();
+})
+
