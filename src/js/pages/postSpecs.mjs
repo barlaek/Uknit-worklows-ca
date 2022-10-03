@@ -15,7 +15,6 @@ async function createPostSpec() {
     const accessToken = localStorage.getItem('accessToken');
     const results = await standardFetch(postSpecUrl, standardHeader(accessToken))
     const postClone = document.importNode(postTemplate, true);
-
     // Reaction count
     const reactionCount = () => {
         if (results.reactions[0]) {
@@ -25,7 +24,6 @@ async function createPostSpec() {
             return 0;
         }
     }
-
     postClone.querySelector("#postAuthor").innerText = `${results.author.name}`;
     postClone.querySelector("#postTitle").innerText = `${results.title}`;
     postClone.querySelector("#postMedia").innerHTML = `<img src="${results.media}">`;
