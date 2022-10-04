@@ -967,6 +967,11 @@ nav .content-wrapper .rotate {
   }
 }
 
+.post-content {
+  word-break: break-all;
+  margin: 0 auto;
+}
+
 .comment-content {
   border: 0.1rem solid rgb(205, 205, 205);
   border-radius: 0.5rem;
