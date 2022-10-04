@@ -130,6 +130,15 @@
     // }
   }
 
+  &.btn-small-light-no-padding {
+    @include set-background($light-color);
+    padding: 0;
+    font-size: $font-size-sm;
+    // &:hover {
+    //   background: lighten($primary-color, 4%);
+    // }
+  }
+
   &.btn-small-dark {
     @include set-background($dark-color);
     padding: $small-btn-padding;
