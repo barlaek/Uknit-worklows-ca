@@ -352,6 +352,11 @@ h6 {
   font-size: 0.9rem;
 }
 
+#likeButton,
+#followDiv {
+  cursor: pointer;
+}
+
 .btn-group {
   position: relative;
   display: inline-flex;
