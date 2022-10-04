@@ -117,6 +117,76 @@
               </div>
             </div>
           </template>
+          <div class="modal" id="editPostModal">
+            <div class="modal-header d-flex align-items-center justify-content-between">
+              <div class="title-wrapper">
+                <h3>Edit Post</h3>
+              </div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="form-wrapper">
+                <form method="PUT" action="submit" id="editPostForm" class="form">
+                  <!-- Edit Post Form Title -->
+                  <div class="form-group mb-4">
+                    <input
+                      id="postTitle"
+                      type="text"
+                      name="title"
+                      placeholder="Post title"
+                      minlength="3"
+                      maxlength="30"
+                      required
+                    />
+                    <div class="form-error" id="postTitleError"></div>
+                  </div>
+
+                  <!-- Edit Post Form Tag -->
+                  <div class="form-group mb-4">
+                    <input
+                      id="postTag"
+                      type="text"
+                      name="tag"
+                      placeholder="Tag"
+                      minlength="3"
+                      maxlength="50"
+                    />
+                    <div class="form-error" id="tagError"></div>
+                  </div>
+
+                  <!-- Edit Post Form Body -->
+                  <div class="form-group mb-4">
+                    <textarea
+                      id="postBody"
+                      name="body"
+                      placeholder="Post body"
+                      rows="5"
+                      minlength="3"
+                      maxlength="500"
+                      required
+                    ></textarea>
+                    <div class="form-error" id="postBodyError"></div>
+                  </div>
+                  <!-- Edit Post Form Media -->
+                  <div class="form-group mb-4">
+                    <input id="postMedia" type="url" name="media" placeholder="Image URL " />
+                    <div class="form-error" id="postMediaError"></div>
+                  </div>
+                  <!-- Form Edit Post Button -->
+                  <button type="submit" value="" id="editSubmit" class="btn w-100">
+                    Save Changes
+                  </button>
+                </form>
+                <!-- /Form -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modals overlay -->
+        <div id="modal-overlay" class=""></div>
+        <!-- Modals overlay -->
+      </section>
+    </main>
         </div>
       </section>
     </main>

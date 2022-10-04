@@ -4,6 +4,8 @@ import { postContainer } from "../constants/constants.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
 import { standardHeader } from "../headers/headers.mjs";
 
+import { closeModal, modalFunction } from "../components/modals.mjs";
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id")
@@ -38,5 +40,12 @@ async function createPostSpec() {
       postClone.querySelector("#followDiv").classList.add("d-none");
     }
     postContainer.appendChild(postClone);
+
+    const editButton = document.querySelector("#editPost");
+    editButton.addEventListener('click', () => {
+        modalFunction();
+    })
+    
 }
 createPostSpec();
+

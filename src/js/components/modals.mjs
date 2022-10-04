@@ -30,3 +30,15 @@ export function closeModal(modal) {
   modal.classList.remove("active");
   modalOverlay.classList.remove("active");
 }
+
+
+export function modalFunction() {
+  const overlay = document.querySelector("#modal-overlay")
+      const editPostModal = document.querySelector('#editPostModal');
+      overlay.classList.add('active');
+      overlay.addEventListener('click', () => {
+          overlay.classList.remove('active');
+          editPostModal.classList.remove('active');
+      })
+      editPostModal.classList.add('active');
+}
