@@ -144,6 +144,11 @@
   // }
 }
 
+#likeButton,
+#followDiv {
+  cursor: pointer;
+}
+
 // Button group wrapper
 .btn-group {
   position: relative;
