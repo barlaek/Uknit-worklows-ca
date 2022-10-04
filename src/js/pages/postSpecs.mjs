@@ -5,6 +5,7 @@ import { standardFetch } from "../fetch/fetch.mjs";
 import { standardHeader } from "../headers/headers.mjs";
 
 import { closeModal, modalFunction } from "../components/modals.mjs";
+import { insertValueAsPlaceholder } from "../components/editPost.mjs";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -16,6 +17,7 @@ const postTemplate = document.querySelector('#postTemplate').content;
 async function createPostSpec() {
     const accessToken = localStorage.getItem('accessToken');
     const results = await standardFetch(postSpecUrl, standardHeader(accessToken))
+    const {title, body, tags, media} = results;
     const postClone = document.importNode(postTemplate, true);
     // Reaction count
     const reactionCount = () => {
@@ -43,6 +45,7 @@ async function createPostSpec() {
 
     const editButton = document.querySelector("#editPost");
     editButton.addEventListener('click', () => {
+        insertValueAsPlaceholder(title, tags, body, media);
         modalFunction();
     })
     
