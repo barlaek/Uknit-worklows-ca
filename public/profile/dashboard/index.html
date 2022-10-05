@@ -4,24 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uknit | Profile</title>
+    <title>Profile | Dashboard</title>
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
     <header>
       <!-- Primary Nav -->
-      <nav class="main-nav">
+      <nav class="main-nav d-flex align-items-center">
         <div class="container">
-          <div class="d-flex justify-content-center mt-4">
-            <div class="nav-wrap d-flex justify-content-between">
-              <a class="logo" href="/public/home/">LOGO</a>
-              <button class="toggle-menu" id="toggleBtn">Menu</button>
-              <div class="collapse-nav justify-content-end gap-4">
-                <ul class="nav-ul gap-1">
-                  <li class="list-item"><a class="link" href="#">Team</a></li>
-                  <li class="list-item"><a class="link" href="#">Invest</a></li>
-                </ul>
-              </div>
+          <div class="nav-wrap d-flex justify-content-between">
+            <a class="logo" href="/public/home/">LOGO</a>
+            <button class="toggle-menu" id="toggleBtn">Menu</button>
+            <div class="collapse-nav gap-4">
+              <ul class="nav-ul gap-1">
+                <li class="list-item"><a class="link" href="#">Team</a></li>
+                <li class="list-item last"><a class="link" href="#">Invest</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -29,9 +27,6 @@
       <!-- /Primary Nav -->
       <!-- Secondary Nav -->
       <nav>
-        <div class="container">
-         
-
         <div class="container">
           <div class="content-wrapper py-3 align-items-center">
             <a href="/public/profile/create-post/"
@@ -209,14 +204,16 @@
                             <img
                               class="icon-extra-small"
                               src="/src/assets/next-svgrepo-com.svg"
-                              alt=""/>
+                              alt=""
+                            />
                             <h5>Follow</h5>
                           </div>
                         </div>
                         <div id="editPost" class="d-none">
                           <button
                             data-modal-target="#editPost"
-                            class="btn btn-small-light d-flex align-items-center gap-2">
+                            class="btn btn-small-light d-flex align-items-center gap-2"
+                          >
                             <img class="icon-extra-small" src="/src/assets/settings.svg" alt="" />
                             Edit Post
                           </button>

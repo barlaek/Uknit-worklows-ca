@@ -41,6 +41,10 @@
   background-color: $primary-color;
 }
 
+.logo a {
+  color: $light-color;
+}
+
 .list-item {
   display: block;
   text-align: center;
@@ -57,6 +61,11 @@
 .link {
   display: block;
   padding: 16px;
+}
+
+.link,
+.last {
+  padding-right: 0;
 }
 
 .secondary-nav {

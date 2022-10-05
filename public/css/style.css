@@ -708,6 +708,10 @@ select {
   background-color: #c96973;
 }
 
+.logo a {
+  color: #fafafa;
+}
+
 .list-item {
   display: block;
   text-align: center;
@@ -720,6 +724,11 @@ select {
 .link {
   display: block;
   padding: 16px;
+}
+
+.link,
+.last {
+  padding-right: 0;
 }
 
 .secondary-nav {
