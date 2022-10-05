@@ -4,90 +4,137 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uknit | Post Details</title>
+    <title>Post Details</title>
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
     <header>
-      <!-- Primary Nav -->
-      <nav class="main-nav">
+     <!-- Primary Nav -->
+      <nav class="main-nav d-flex align-items-center">
         <div class="container">
-          <div class="d-flex justify-content-center mt-4">
-            <div class="nav-wrap d-flex justify-content-between">
-              <a class="logo" href="/public/home/">LOGO</a>
-              <button class="toggle-menu" id="toggleBtn">Menu</button>
-              <div class="collapse-nav justify-content-end gap-4">
-                <ul class="nav-ul gap-1">
-                  <li class="list-item"><a class="link" href="#">Team</a></li>
-                  <li class="list-item"><a class="link" href="#">Invest</a></li>
-                </ul>
-              </div>
+          <!-- ======================= -->
+          <!-- Primary navigation logo, links and toggle wrapper -->
+          <div class="nav-wrap d-flex justify-content-between">
+            <!-- Primary navigation logo -->
+            <a class="logo" href="/public/home/">LOGO</a>
+            <!-- /Primary navigation logo -->
+
+            <!-- Primary navigation toggle menu button -->
+            <button class="btn btn-small-light toggle-menu" id="toggleBtn">Menu</button>
+            <!-- /Primary navigation toggle menu button -->
+
+            <!-- Primary navigation collapse links -->
+            <div class="collapse-nav justify-content-end">
+              <!-- Primary navigation links list -->
+              <ul class="nav-ul">
+                <li class="list-item"><a class="link" href="#">Team</a></li>
+                <li class="list-item last"><a class="link" href="#">Invest</a></li>
+              </ul>
+              <!-- Primary navigation links list -->
             </div>
+            <!-- /Primary navigation collapse links -->
           </div>
+          <!-- /Primary navigation logo, links and toggle wrapper -->
+          <!-- ======================= -->
         </div>
       </nav>
       <!-- /Primary Nav -->
-      <!-- Secondary Nav -->
-      <div class="container">
+
+      <!-- Secondary Nav -->  
         <nav>
-          <div class="content-wrapper py-3 align-items-center">
-            <a href="/public/profile/create-post/"
-              ><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"
-            /></a>
-            <a href="/public/home/"
-              ><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon"
-            /></a>
-            <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
-            <a href="#"
-              ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
-            /></a>
-            <a href="#"
-              ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
-            /></a>
-            <a href="/public/profile/dashboard/"
-              ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
-            /></a>
+          <div class="container">
+            <!-- ======================= -->
+             <!-- Secondary navigation icon links wrapper -->
+            <div class="content-wrapper py-3 align-items-center">
+              <a href="/public/profile/create-post/"
+                ><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon"
+              /></a>
+              <a href="/public/home/"
+                ><img class="d-flex" src="/src/assets/home-icon.svg" alt="Icon"
+              /></a>
+              <a href="#"><img class="d-flex" src="/src/assets/search-icon.svg" alt="Icon" /></a>
+              <a href="#"
+                ><img class="d-flex rotate" src="/src/assets/message-icon.svg" alt="Icon"
+              /></a>
+              <a href="#"
+                ><img class="d-flex" src="/src/assets/notification-icon.svg" alt="Icon"
+              /></a>
+              <a href="/public/profile/dashboard/"
+                ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
+              /></a>
+            </div>
+             <!-- /Secondary navigation icon links wrapper -->
+             <!-- ======================= -->
           </div>
-        </nav>
-      </div>
+        </nav> 
       <!-- /Secondary Nav -->
     </header>
     <main>
       <section class="post-section mt-5">
         <div class="container justify-content-center d-flex" id="postContainer">
+          <!-- ======================= -->
+          <!-- View post template -->
           <template id="postSpecsTemplate">
+            <!-- Post card -->
             <div class="card card-large d-flex flex-column gap-4 w-large w-100">
+              <!-- Card header that includes avatar name, image and delete button -->
               <div class="card-header d-flex align-items-center">
+                <!-- Content  -->
                 <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                  <!-- Avatar image wrapper -->
                   <div class="avatar-img-wrapper-regular" id="postAvatar">
+                    <!-- Avatar image -->
                     <img src="/src/assets/profile-icon.svg" alt="" />
+                    <!-- /Avatar image -->
                   </div>
+                  <!-- /Avatar image wrapper -->
+                  <!-- Avatar name -->
                   <div class="avatar-name m-right-auto">
                     <h4 class="mt-2" id="postAuthor"></h4>
                   </div>
+                  <!-- /Avatar name -->
+                  <!-- Delete post button -->
                   <div id="deletePost" class="d-none">
                     <button class="btn btn-small-primary">Delete Post</button>
                   </div>
+                  <!-- /Delete post button -->
                 </div>
+                <!-- /Content -->
               </div>
+              <!-- /Card header that includes avatar name, image and delete button -->
+
+              <!-- Card Body that includes post title, post content, post image and icon buttons -->
               <div class="card-body">
+                <!-- Post title -->
                 <div class="post-title mt-2">
                   <h5 id="postTitle"></h5>
                 </div>
+                <!-- /Post title -->
+
+                <!-- Post content -->
                 <div class="post-content mb-4">
                   <p class="text-small" id="postText"></p>
                 </div>
+                <!-- /Post content -->
+
+                <!-- Post media -->
                 <div class="post-media" id="postMedia"></div>
+                <!-- /Post media -->
+
+                <!-- Card icon buttons wrapper -->
                 <div class="content d-flex align-items-center f-wrap w-100 mt-6 gap-4">
+                  <!-- Like reactions wrapper -->
                   <div class="d-flex align-items-center gap-2" id="likeButton">
                     <img
                       class="icon-extra-small"
                       src="/src/assets/thumbs-up-line-icon.svg"
                       alt=""
-                    />
+                    />              
                     <h5>Like</h5>
                     <span class="text-small color-primary" id="postReactionCount"></span>
                   </div>
+                  <!-- /Like reactions wrapper -->
+                  <!-- Comment wrapper -->
                   <div>
                     <div class="d-flex align-items-center  gap-2">
                       <img
@@ -98,6 +145,8 @@
                       <span id="commentCount" class="text-small color-primary">0</span>
                     </div>
                   </div>
+                  <!-- /Comment wrapper -->
+                  <!-- Follow wrapper -->
                   <div id="followDiv">
                     <div class="d-flex align-items-center gap-2">
                       <img
@@ -107,6 +156,8 @@
                       <h5>Follow</h5>
                     </div>
                   </div>
+                  <!-- /Follow wrapper -->
+                  <!-- Edit post button -->
                   <div id="editPost" class="d-none ">
                     <button
                       data-modal-target="#editPost"
@@ -115,21 +166,40 @@
                       Edit Post
                     </button>
                   </div>
+                  <!-- /Edit post button -->
                 </div>
+                 <!-- /Card icon buttons wrapper -->
               </div>
+               <!-- /Card Body that includes post title, post content, post image and icon buttons -->
             </div>
+            <!-- /Post card -->
           </template>
+           <!-- /View post template -->
+           <!-- ======================= -->
+
+           <!-- ======================= -->
+           <!-- Edit post modal -->
           <div class="modal" id="editPostModal">
+            <!-- Modal header that includes modal title and close button -->
             <div class="modal-header d-flex align-items-center justify-content-between">
+              <!-- Modal title -->
               <div class="title-wrapper">
                 <h3>Edit Post</h3>
               </div>
+              <!-- /Modal title -->
+              <!-- Modal close button -->
               <button data-close-button class="close-button">&times;</button>
+              <!-- Modal close button -->
             </div>
+             <!-- /Modal header that includes modal title and close button -->
+
+             <!-- Modal body that includes the edit post form and save changes button-->
             <div class="modal-body">
+              <!-- Form wrapper -->
               <div class="form-wrapper">
+                <!-- Form -->
                 <form method="PUT" action="submit" id="editPostForm" class="form">
-                  <!-- Edit Post Form Title -->
+                  <!-- Edit post title input -->
                   <div class="form-group mb-4">
                     <input
                       id="postTitle"
@@ -142,8 +212,9 @@
                     />
                     <div class="form-error" id="postTitleError"></div>
                   </div>
+                  <!-- /Edit post title input -->
 
-                  <!-- Edit Post Form Tag -->
+                  <!-- Edit post tag input -->
                   <div class="form-group mb-4">
                     <input
                       id="postTag"
@@ -155,8 +226,9 @@
                     />
                     <div class="form-error" id="tagError"></div>
                   </div>
+                  <!-- /Edit post tag input -->
 
-                  <!-- Edit Post Form Body -->
+                  <!-- Edit post body input -->
                   <div class="form-group mb-4">
                     <textarea
                       id="postBody"
@@ -169,28 +241,38 @@
                     ></textarea>
                     <div class="form-error" id="postBodyError"></div>
                   </div>
-                  <!-- Edit Post Form Media -->
+                  <!-- /Edit post body input -->
+
+                  <!-- Edit post media input -->
                   <div class="form-group mb-4">
                     <input id="postMedia" type="url" name="media" placeholder="Image URL " />
                     <div class="form-error" id="postMediaError"></div>
                   </div>
-                  <!-- Form Edit Post Button -->
+                  <!-- /Edit post media input -->
+
+                  <!-- Edit post save changes button -->
                   <button type="submit" value="" id="editSubmit" class="btn w-100">
                     Save Changes
                   </button>
+                  <!-- /Edit post save changes button -->
                 </form>
                 <!-- /Form -->
               </div>
+              <!-- /Form wrapper -->
             </div>
+            <!-- /Modal body that includes the edit post form and save changes button-->
           </div>
+          <!-- /Edit post modal -->
+          <!-- ======================= -->
         </div>
-        <!-- Modals overlay -->
+
+        <!-- ======================= -->
+        <!-- Modal overlay -->
         <div id="modal-overlay" class=""></div>
-        <!-- Modals overlay -->
+        <!-- Modal overlay -->
+        <!-- ======================= -->
       </section>
     </main>
-        </div>
-      </section>
     </main>
     <script type="module" src="../../src/js/pages/postSpecs.mjs"></script>
   </body>

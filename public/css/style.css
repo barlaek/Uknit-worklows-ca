@@ -1037,7 +1037,7 @@ nav .content-wrapper .rotate {
   width: 120px;
 }
 @media screen and (max-width: 768px) {
-  .avatar-name-wrapper.avatar-name-wrapper {
+  .avatar-name-wrapper.avatar-name-wrapper * {
     align-items: center;
     justify-content: center;
     text-align: center;

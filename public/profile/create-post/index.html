@@ -4,34 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Create Post</title>
-
+    <title>Profile | Create Post</title>
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
     <header>
       <!-- Primary Nav -->
-      <nav class="main-nav">
+      <nav class="main-nav d-flex align-items-center">
         <div class="container">
-          <div class="d-flex justify-content-center mt-4">
-            <div class="nav-wrap d-flex justify-content-between">
-              <a class="logo" href="/public/home/">LOGO</a>
-              <button class="toggle-menu" id="toggleBtn">Menu</button>
-              <div class="collapse-nav justify-content-end gap-4">
-                <ul class="nav-ul gap-1">
-                  <li class="list-item"><a class="link" href="#">Team</a></li>
-                  <li class="list-item"><a class="link" href="#">Invest</a></li>
-                </ul>
-              </div>
+          <!-- ======================= -->
+          <!-- Primary navigation logo, links and toggle wrapper -->
+          <div class="nav-wrap d-flex justify-content-between">
+            <!-- Primary navigation logo -->
+            <a class="logo" href="/public/home/">LOGO</a>
+            <!-- /Primary navigation logo -->
+
+            <!-- Primary navigation toggle menu button -->
+            <button class="btn btn-small-light toggle-menu" id="toggleBtn">Menu</button>
+            <!-- /Primary navigation toggle menu button -->
+
+            <!-- Primary navigation collapse links -->
+            <div class="collapse-nav justify-content-end">
+              <!-- Primary navigation links list -->
+              <ul class="nav-ul">
+                <li class="list-item"><a class="link" href="#">Team</a></li>
+                <li class="list-item last"><a class="link" href="#">Invest</a></li>
+              </ul>
+              <!-- Primary navigation links list -->
             </div>
+            <!-- /Primary navigation collapse links -->
           </div>
+          <!-- /Primary navigation logo, links and toggle wrapper -->
+          <!-- ======================= -->
         </div>
       </nav>
       <!-- /Primary Nav -->
+
       <!-- Secondary Nav -->
       <nav>
         <div class="container">
+          <!-- ======================= -->
+          <!-- Secondary navigation icon links wrapper -->
           <div class="content-wrapper py-3 align-items-center">
             <a href="#"><img class="d-flex" src="/src/assets/create-icon.svg" alt="Icon" /></a>
             <a href="/public/home/"
@@ -48,6 +61,8 @@
               ><img class="hover-icon d-flex" src="/src/assets/profile-icon.svg" alt="Icon"
             /></a>
           </div>
+          <!-- /Secondary navigation icon links wrapper -->
+          <!-- ======================= -->
         </div>
       </nav>
       <!-- /Secondary Nav -->
@@ -55,18 +70,22 @@
     <main>
       <section>
         <div class="container">
+          <!-- ======================= -->
           <!-- Hero grid -->
           <div class="profile-hero-grid d-grid">
-            <!-- Hero grid image -->
+            <!-- Hero grid header -->
             <div class="content-wrapper d-flex align-items-center justify-content-center gap-2">
+              <!-- Hero grid avatar image wrapper -->
               <div class="avatar-img-wrapper-extra-large" id="avatarImageWrap">
+                <!-- Avatar image -->
                 <img src="/src/assets/profile-icon.svg" alt="" />
+                <!-- Avatar image -->
               </div>
-              <!-- Image wrapper -->
+              <!-- /Hero grid avatar image wrapper -->
             </div>
-            <!-- /Hero grid image -->
+            <!-- /Hero grid header -->
 
-            <!-- Hero grid content wrapper -->
+            <!-- Hero grid body -->
             <div class="content-wrapper dashboard-hero">
               <!-- Hero grid avatar name and buttons wrapper -->
               <div class="avatar-name-wrapper gap-6">
@@ -85,8 +104,10 @@
 
               <!-- Hero grid rating and following content -->
               <div class="content dashboard-hero-info mt-4">
+                <!-- Rating stars -->
                 <div class="d-flex flex-column align-items-center">
                   <h6 class="text-center mb-1">Rating</h6>
+                  <!-- Stars -->
                   <div class="d-flex">
                     <img class="icon-extra-small" src="/src/assets/star-full.svg" alt="" />
                     <img class="icon-extra-small" src="/src/assets/star-full.svg" alt="" />
@@ -94,25 +115,33 @@
                     <img class="icon-extra-small" src="/src/assets/star-full.svg" alt="" />
                     <img class="icon-extra-small" src="/src/assets/star-empty.svg" alt="" />
                   </div>
+                  <!-- /Stars -->
                 </div>
+                <!-- /Rating stars -->
+                <!-- Followers -->
                 <div class="d-flex flex-column align-items-center">
                   <h6 class="mb-1">Followers</h6>
                   <h6 id="followerCount" class="color-primary"></h6>
                 </div>
+                <!-- /Followers -->
+                <!-- Following -->
                 <div class="d-flex flex-column align-items-center">
                   <h6 class="mb-1">Following</h6>
                   <h6 id="followingCount" class="color-primary"></h6>
                 </div>
+                <!-- Following -->
               </div>
               <!-- Hero grid rating and following content -->
             </div>
-            <!-- /Hero grid content wrapper -->
+            <!-- /Hero grid body -->
           </div>
           <!-- /Hero grid -->
+          <!-- ======================= -->
         </div>
       </section>
       <section>
         <div class="container">
+          <!-- ======================= -->
           <!-- Grid -->
           <div class="post-grid d-grid">
             <!-- Dashboard navigation content -->
@@ -147,19 +176,25 @@
               <!-- /Dashboard card -->
             </div>
             <!-- /Dashboard navigation content -->
-            <!-- Dashboard post content -->
+
+            <!-- Create post form content -->
             <div class="content-wrapper d-flex flex-column gap-7">
-              <!-- Post -->
-              <!-- This is the wrapper that holds the card with the id of dashboardPostContainer -->
+              <!-- Form card wrapper -->
               <div class="content-wrapper d-flex flex-column gap-4" id="dashboardPostContainer">
+                <!-- Form card -->
                 <div class="card card-large d-flex flex-column gap-4 align-items-start">
+                  <!-- Form card header -->
                   <div class="card-header d-flex align-items-center">
                     <h4 class="mt-2">Create a new post</h4>
                   </div>
+                  <!-- Form card header -->
+                  <!-- Form card body -->
                   <div class="card-body">
+                    <!-- Form wrapper -->
                     <div class="form-wrapper">
+                      <!-- Form -->
                       <form method="POST" action="submit" id="postForm" class="form">
-                        <!-- Post Form Title -->
+                        <!-- Post title input -->
                         <div class="form-group mb-4">
                           <input
                             id="postTitle"
@@ -172,8 +207,9 @@
                           />
                           <div class="form-error" id="postTitleError"></div>
                         </div>
+                        <!-- /Post title input -->
 
-                        <!-- Post Form Tag -->
+                        <!-- Post tag input -->
                         <div class="form-group mb-4">
                           <input
                             id="postTag"
@@ -185,8 +221,9 @@
                           />
                           <div class="form-error" id="tagError"></div>
                         </div>
+                        <!-- /Post tag input -->
 
-                        <!-- Post Form Body -->
+                        <!-- Post body input -->
                         <div class="form-group mb-4">
                           <textarea
                             id="postBody"
@@ -199,35 +236,51 @@
                           ></textarea>
                           <div class="form-error" id="postBodyError"></div>
                         </div>
-                        <!-- Post Form Media -->
+                        <!-- /Post body input -->
+
+                        <!-- Post media input -->
                         <div class="form-group mb-4">
                           <input id="postMedia" type="url" name="media" placeholder="Image URL " />
                           <div class="form-error" id="postMediaError"></div>
                         </div>
-                        <!-- Post Form Button -->
+                        <!-- /Post media input -->
+
+                        <!-- Post button -->
                         <button type="submit" value="Post" class="btn w-100">Post</button>
+                        <!-- /Post button -->
                       </form>
+                      <!-- /Form -->
                     </div>
+                    <!-- /Form wrapper -->
                   </div>
+                  <!-- /Form card body -->
                 </div>
+                <!-- /Form card -->
               </div>
-              <!-- /Post -->
+              <!-- /Form card wrapper -->
             </div>
-            <!-- /Dashboard post content -->
+            <!-- /Create post form content -->
           </div>
           <!-- /Grid -->
+          <!-- ======================= -->
         </div>
       </section>
+
       <section class="modals">
-        <!-- Edit post modal -->
         <div class="container">
+          <!-- ======================= -->
+          <!-- Edit profile modal -->
           <div class="modal" id="editProfile">
             <!-- Modal header that includes title and close button -->
             <div class="modal-header d-flex align-items-center justify-content-between">
+              <!-- Modal title wrapper -->
               <div class="title-wrapper mb-4">
                 <h3>Edit Profile</h3>
               </div>
+              <!-- /Modal title wrapper -->
+              <!-- Modal close button -->
               <button data-close-button class="close-button">&times;</button>
+              <!-- /Modal close button -->
             </div>
             <!-- /Modal header that includes title and close button -->
             <!-- Modal body that includes the edit profile form and the save changes button -->
@@ -236,10 +289,10 @@
               <div class="modal-body-form">
                 <!-- Form wrapper -->
                 <div class="form-wrapper">
+                  <!-- Form -->
                   <form method="POST" action="submit" id="editProfileForm" class="form">
-                    <!-- Form Edit Avatar -->
+                    <!-- Edit avatar image input -->
                     <div class="form-group mb-4">
-                      <label class="ml-3" for="avatarInput">Avatar image</label>
                       <input
                         id="avatar"
                         type="url"
@@ -251,28 +304,33 @@
                       />
                       <div class="form-error" id="newUserNameError"></div>
                     </div>
-                    <!-- Form Edit Profile Button -->
+                    <!-- /Edit avatar input -->
+                    <!-- Edit profile button -->
                     <button type="submit" value="" id="editSubmit" class="btn w-100">
                       Save Changes
                     </button>
+                    <!-- /Edit profile button -->
                   </form>
                   <!-- /Form -->
                 </div>
                 <!-- /Form wrapper -->
                 <!-- Form alert error-->
                 <div class="alert-wrapper bg-danger mt-4 mb-4"></div>
+                <!-- /Form alert error-->
               </div>
               <!-- /Edit profile form -->
             </div>
             <!-- /Modal body that includes the edit profile form and the save changes button -->
           </div>
-          <!-- /Modal -->
+          <!-- /Edit profile modal -->
+          <!-- ======================= -->
         </div>
-        <!--/Edit profile modal -->
 
-        <!-- Modals overlay -->
+        <!-- ======================= -->
+        <!-- Modal overlay -->
         <div id="modal-overlay"></div>
-        <!-- Modals overlay -->
+        <!-- Modal overlay -->
+        <!-- ======================= -->
       </section>
     </main>
     <script type="module" src="../../../src/js/pages/pofileCreatePost.mjs"></script>
