@@ -10,31 +10,51 @@
   <body>
     <main>
       <section class="log-in-section">
+        <!-- ======================= -->
+        <!-- Grid -->
         <div class="account-grid w-100">
+          <!-- Info content -->
           <div class="content bg-primary d-flex flex-column justify-content-between w-100 p-5">
+            <!-- Brand logo -->
             <div class="brand">
               <a class="logo color-light" href="/public/">LOGO</a>
             </div>
+            <!-- /Brand logo -->
+
+            <!-- Bottom text -->
             <div class="add">
               <h3 class="color-light">Sign In.</h3>
               <p>Please Sign In into your account to see the content</p>
             </div>
+            <!-- /Bottom text -->
           </div>
+          <!-- /Info content -->
+
+          <!-- Form content -->
           <div class="content">
+            <!-- Account form card  -->
             <div class="account-card bg-secondary mb-4">
+              <!-- Account form header -->
               <div class="form-card-header">
+                <!-- Title wrapper -->
                 <div class="title-wrapper d-flex justify-content-center">
                   <h2 class="color-primary">Sign In</h2>
                 </div>
+                <!-- /Title wrapper -->
               </div>
+              <!-- /Account form card header -->
+
+              <!-- Account form card body -->
               <div class="form-card-body">
+                <!-- Form wrapper -->
                 <div class="form-wrapper">
+                  <!-- Form -->
                   <form
                     action="https://nf-api.onrender.com/api/v1/social/auth/login"
                     class="form"
                     id="loginForm"
                   >
-                    <!-- Form Email -->
+                    <!-- Account form email input -->
                     <div class="form-group mb-4">
                       <input
                         type="email"
@@ -48,8 +68,9 @@
                       />
                       <div class="form-error" id="emailError"></div>
                     </div>
+                    <!-- /Account form email input -->
 
-                    <!-- Form Password -->
+                    <!-- Account form password input -->
                     <div class="form-group mb-4">
                       <input
                         type="password"
@@ -61,20 +82,35 @@
                         required
                       />
                     </div>
-                    <!-- Form Button -->
+                    <!-- /Account form password input -->
+
+                    <!-- Account form password button -->
                     <button type="submit" value="Login" class="btn w-100">Log In</button>
+                    <!-- /Account form password button -->
                   </form>
+                  <!-- /Form -->
                 </div>
+                <!-- /Form wrapper -->
               </div>
-              <!-- Form alert error -->
+              <!-- /Account form card body -->
+
+              <!-- Account form alert error -->
               <div class="alert-wrapper mt-4 mb-4"></div>
+              <!-- /Account form alert error -->
+
+              <!-- Account form create account option text -->
               <p class="text-small mt-2">
                 Don't have an account?
                 <a href="/public/profile/sign-up/">Create account</a>
               </p>
+              <!-- /Account form create account option text -->
             </div>
+            <!-- /Account form card  -->
           </div>
+          <!-- /Form content -->
         </div>
+        <!-- Grid -->
+        <!-- ======================= -->
       </section>
     </main>
 

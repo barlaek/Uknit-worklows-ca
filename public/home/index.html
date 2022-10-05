@@ -72,16 +72,28 @@
     <main>
       <section class="post-section mt-5">
         <div class="container">
+          <!-- ======================= -->
+          <!-- Grid -->
           <div class="post-grid d-grid">
+            <!-- Users card -->
             <div class="card-users d-flex flex-column align-items-start">
+              <!-- Users card header that includes the card title -->
               <div class="card-header d-flex align-items-center mt-4">
+                <!-- Card title -->
                 <div class="title-wrapper">
                   <h5 class="mb-5">Most popular accounts</h5>
                 </div>
+                <!-- /Card title -->
               </div>
+              <!-- /Users card header that includes the card title -->
+
+              <!-- Users card body that includes the search user input -->
               <div class="card-body">
+                <!-- Form wrapper -->
                 <div class="form-wrapper mb-3 w-100">
+                  <!-- Form -->
                   <form>
+                    <!-- Search input -->
                     <input
                       id="searchUsersInput"
                       class="search"
@@ -89,37 +101,72 @@
                       inputmode="search"
                       placeholder="Search knitter"
                     />
+                    <!-- /Search input -->
                   </form>
+                  <!-- /Form -->
                 </div>
+                <!-- /Form wrapper -->
               </div>
+              <!-- /Users card body that includes the search user input -->
+
+              <!-- Users card footer that includes the users list -->
               <div class="card-footer">
+                <!-- Users list -->
                 <ul class="users-list">
+                  <!-- Users list wrapper -->
                   <div class="d-flex flex-column gap-2" id="mostPopularContainer">
+                    <!-- Users list template -->
                     <template id="mostPopularTemplate">
+                      <!-- Single user card list -->
                       <li class="card-small w-100 bg-white">
+                        <!-- /User link card  -->
                         <a href="" class="user d-flex">
+                          <!-- User link card header -->
                           <div class="card-header w-100">
+                            <!-- Content -->
                             <div class="content d-flex align-items-center gap-2">
+                              <!-- Avatar image wrapper -->
                               <div class="avatar-img-wrapper-small">
                                 <img src="/src/assets/profile-icon.svg" alt="" />
                               </div>
+                              <!-- /Avatar image wrapper -->
+                              <!-- User name -->
                               <h6 id="userName"></h6>
+                              <!-- /User name -->
                             </div>
+                            <!-- /Content -->
                           </div>
+                          <!-- /User link card header  -->
+
+                          <!-- User link card body -->
                           <div class="card-body d-flex ajustify-content-end">
+                            <!-- Follow button -->
                             <button class="btn btn-small-primary">Follow</button>
+                            <!-- /Follow button -->
                           </div>
+                          <!-- /User link card body -->
                         </a>
+                        <!-- /User link card -->
                       </li>
+                      <!-- /Single user card list -->
                     </template>
+                    <!-- /Users list template -->
                   </div>
+                  <!-- /Users list wrapper -->
                 </ul>
+                <!-- /Users list -->
               </div>
+              <!-- /Users card footer that includes the users list -->
             </div>
+            <!-- /Users card -->
+
+            <!-- Post and search filters wrapper -->
             <div class="content-wrapper d-flex flex-column gap-4">
+              <!-- Search filters form wrapper -->
               <div class="form-wrapper d-flex f-wrap">
+                <!-- Form -->
                 <form method="GET" action="" id="searchPost" class="filtered-form w-100">
-                  <!-- Form Post -->
+                  <!-- Search post input -->
                   <div class="form-group d-flex">
                     <input
                       class="search-large"
@@ -132,38 +179,73 @@
                     />
                     <div class="form-error" id="postError"></div>
                   </div>
+                  <!-- /Search post input -->
+
+                  <!-- Select form input -->
                   <div class="select-group d-flex gap-4">
                     <select class="select-menu" id="sortPosts" name="sortPosts">
                       <option value="new">New/Old</option>
                       <option value="old">Old/New</option>
                     </select>
                   </div>
+                  <!-- /Select form input -->
                   <!-- Form Button -->
                 </form>
+                <!-- /Form -->
               </div>
+              <!-- /Search filters form wrapper -->
+
+              <!-- Post card wrapper -->
               <div class="content-wrapper d-flex flex-column gap-4" id="postContainer">
+                <!-- Post card template -->
                 <template id="postTemplate">
+                  <!-- Post card -->
                   <div class="card card-large d-flex flex-column gap-4 align-items-start">
+                    <!-- Post card header that includes avatar image, avatar name and view post button -->
                     <div class="card-header d-flex f-wrap align-items-center">
+                      <!-- Content -->
                       <div class="content d-flex gap-4 align-items-center f-wrap w-100">
+                        <!-- Avatar image wrapper -->
                         <div class="avatar-img-wrapper-regular" id="postAvatar">
                           <img src="/src/assets/profile-icon.svg" alt="" />
                         </div>
+                        <!-- /Avatar image wrapper -->
+
+                        <!-- Avatar name -->
                         <div class="avatar-name m-right-auto">
                           <h4 class="mt-2" id="postAuthor"></h4>
                         </div>
+                        <!-- /Avatar name -->
+
+                        <!-- View post button -->
                         <div id="viewPostButton"></div>
+                        <!-- /View post button -->
                       </div>
+                      <!-- /Content -->
                     </div>
+                    <!-- /Post card header that includes avatar image, avatar name and view post button -->
+
+                    <!-- Post card body that includes the post title, post content, post media and icon buttons -->
                     <div class="card-body">
+                      <!-- Post title -->
                       <div class="post-title mt-2">
                         <h5 id="postTitle"></h5>
                       </div>
+                      <!-- /Post title -->
+
+                      <!-- Post content -->
                       <div class="post-content mb-4">
                         <p class="text-small" id="postText"></p>
                       </div>
+                      <!-- /Post content -->
+
+                      <!-- Post media -->
                       <div class="post-media" id="postMedia"></div>
+                      <!-- /Post media -->
+
+                      <!-- Post icon buttons wrapper -->
                       <div class="content d-flex f-wrap align-items-center w-100 mt-6 gap-4">
+                        <!-- Reactions button wrapper -->
                         <div class="d-flex align-items-center gap-2" id="likeButton">
                           <img
                             class="icon-extra-small"
@@ -173,6 +255,9 @@
                           <h5>Like</h5>
                           <span class="text-small color-primary" id="postReactionCount"></span>
                         </div>
+                        <!-- /Reactions button wrapper -->
+
+                        <!-- Comment icon button wrapper -->
                         <a href="">
                           <div class="d-flex align-items-center gap-2">
                             <img
@@ -184,6 +269,9 @@
                             <span id="commentCount" class="text-small color-primary">0</span>
                           </div>
                         </a>
+                        <!-- /Comment icon button wrapper -->
+
+                        <!-- Follow icon button wrapper -->
                         <div id="followDiv">
                           <div class="d-flex align-items-center gap-2">
                             <img
@@ -194,6 +282,9 @@
                             <h5>Follow</h5>
                           </div>
                         </div>
+                        <!-- /Follow icon button wrapper -->
+
+                        <!-- Edit post icon button wrapper -->
                         <div id="editPost" class="d-none">
                           <button
                             data-modal-target="#editPost"
@@ -203,16 +294,28 @@
                             Edit Post
                           </button>
                         </div>
+                        <!-- Edit post icon button wrapper -->
                       </div>
+                      <!-- /Post icon buttons wrapper -->
                     </div>
+                    <!-- /Post card body that includes the post title, post content, post media and icon buttons -->
                   </div>
+                  <!-- /Post card -->
                 </template>
+                <!--/Post card template -->
               </div>
+              <!-- /Post card wrapper -->
+
+              <!-- See more button -->
               <div class="btn-group mt-4">
                 <a href="#"><button class="btn btn-primary">See More</button></a>
               </div>
+              <!-- /See more button -->
             </div>
+            <!-- /Post and search filters wrapper -->
           </div>
+          <!-- /Grid -->
+          <!-- ======================= -->
         </div>
       </section>
     </main>
