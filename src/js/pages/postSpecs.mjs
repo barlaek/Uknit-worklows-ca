@@ -2,7 +2,7 @@ import { baseURL, submitPostUrl } from "../constants/constants.mjs";
 import { postContainer } from "../constants/constants.mjs";
 
 import { standardFetch } from "../fetch/fetch.mjs";
-import { editProfileBody, likeHeader, standardHeader } from "../headers/headers.mjs";
+import { deleteHeader, editProfileBody, standardHeader } from "../headers/headers.mjs";
 
 import { closeModal, modalFunction } from "../components/modals.mjs";
 import { insertValueAsPlaceholder } from "../components/editPost.mjs";
@@ -12,7 +12,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id")
 
 const postSpecUrl = baseURL + "api/v1/social/posts/" + id + "?_author=true&_comments=true&_reactions=true";
-const postTemplate = document.querySelector('#postTemplate').content;
+const postTemplate = document.querySelector('#postSpecsTemplate').content;
 
 async function createPostSpec() {
     const accessToken = localStorage.getItem('accessToken');
@@ -41,12 +41,19 @@ async function createPostSpec() {
     if (results.author.name === username) {
       postClone.querySelector("#followDiv").classList.add("d-none");
     }
+    if (results.author.name === username) {
+        postClone.querySelector('#deletePost').classList.remove("d-none");
+    }
     postContainer.appendChild(postClone);
 
     const editButton = document.querySelector("#editPost");
     editButton.addEventListener('click', () => {
         insertValueAsPlaceholder(title, tags, body, media);
         modalFunction();
+    })
+
+    document.querySelector('#deletePost').addEventListener('click', () => {
+        deletePost();
     })
     
 }
@@ -65,4 +72,11 @@ async function editPost(event) {
     console.log(values);
     await standardFetch(url, editProfileBody(values, accessToken));
     location.reload();
+}
+
+async function deletePost() {
+    const url = baseURL + submitPostUrl + "/" + id;
+    const accessToken = localStorage.getItem('accessToken');
+    await standardFetch(url, deleteHeader(accessToken))
+    location.href = "../../public/home";
 }

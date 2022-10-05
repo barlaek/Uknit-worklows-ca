@@ -55,7 +55,7 @@
     <main>
       <section class="post-section mt-5">
         <div class="container justify-content-center d-flex" id="postContainer">
-          <template id="postTemplate">
+          <template id="postSpecsTemplate">
             <div class="card card-large d-flex flex-column gap-4 w-large w-100">
               <div class="card-header d-flex align-items-center">
                 <div class="content d-flex gap-4 align-items-center f-wrap w-100">
@@ -65,7 +65,9 @@
                   <div class="avatar-name m-right-auto">
                     <h4 class="mt-2" id="postAuthor"></h4>
                   </div>
-                  <button class="btn btn-small-primary">Delete Post</button>
+                  <div id="deletePost" class="d-none">
+                    <button class="btn btn-small-primary">Delete Post</button>
+                  </div>
                 </div>
               </div>
               <div class="card-body">

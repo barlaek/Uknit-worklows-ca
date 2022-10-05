@@ -81,10 +81,20 @@ export function standardPOSTHeader(values, accessToken) {
     }
 }
 
-// Good header
+// Like header
 export function likeHeader(accessToken) {
     return {
         method: 'PUT',
+        headers: {
+            'Authorization': `Bearer ${accessToken}`
+        },
+    }
+}
+
+// DELETE header
+export function deleteHeader(accessToken) {
+    return {
+        method: 'DELETE',
         headers: {
             'Authorization': `Bearer ${accessToken}`
         },

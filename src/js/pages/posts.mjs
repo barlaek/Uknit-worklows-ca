@@ -108,6 +108,7 @@ async function createPosts(sortUrl = "") {
         postClone.querySelector("#postReactionCount").innerHTML = `${filteredPosts[i]._count.reactions}`;
         postClone.querySelector("#postAvatar").innerHTML = `<img src="${filteredPosts[i].author.avatar}">`;
         postClone.querySelector("#commentCount").innerHTML = `${filteredPosts[i]._count.comments}`;
+        postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${filteredPosts[i].id}" class="btn btn-small-primary">View Post</a>`;
         if (filteredPosts[i].author.name === username) {
           postClone.querySelector("#followDiv").classList.add("d-none");
         }
