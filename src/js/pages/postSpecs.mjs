@@ -1,8 +1,8 @@
-import { baseURL } from "../constants/constants.mjs";
+import { baseURL, submitPostUrl } from "../constants/constants.mjs";
 import { postContainer } from "../constants/constants.mjs";
 
 import { standardFetch } from "../fetch/fetch.mjs";
-import { standardHeader } from "../headers/headers.mjs";
+import { editProfileBody, likeHeader, standardHeader } from "../headers/headers.mjs";
 
 import { closeModal, modalFunction } from "../components/modals.mjs";
 import { insertValueAsPlaceholder } from "../components/editPost.mjs";
@@ -17,7 +17,7 @@ const postTemplate = document.querySelector('#postTemplate').content;
 async function createPostSpec() {
     const accessToken = localStorage.getItem('accessToken');
     const results = await standardFetch(postSpecUrl, standardHeader(accessToken))
-    const {title, body, tags, media} = results;
+    const {title, body, tags, media, id} = results;
     const postClone = document.importNode(postTemplate, true);
     // Reaction count
     const reactionCount = () => {
@@ -52,3 +52,17 @@ async function createPostSpec() {
 }
 createPostSpec();
 
+document.querySelector('#editPostForm').addEventListener('submit', (event) => {
+    editPost(event);
+})
+
+async function editPost(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const values = Object.fromEntries(data.entries());
+    const accessToken = localStorage.getItem('accessToken');
+    const url = baseURL + submitPostUrl + "/" + id;
+    console.log(values);
+    await standardFetch(url, editProfileBody(values, accessToken));
+    location.reload();
+}
