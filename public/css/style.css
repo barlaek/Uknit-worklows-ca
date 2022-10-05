@@ -681,6 +681,7 @@ select {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
   height: 100px;
 }
 .main-nav a {
@@ -696,20 +697,20 @@ select {
   align-items: center;
 }
 
+.nav-ul {
+  margin-top: 10rem;
+}
+
 .collapse-nav {
   position: absolute;
   width: 100%;
   transform: translateY(-100%);
   left: 0;
   overflow: hidden;
-  top: 100px;
+  top: 0;
   height: 100vh;
   transition: 300ms;
   background-color: #c96973;
-}
-
-.logo a {
-  color: #fafafa;
 }
 
 .list-item {
@@ -756,6 +757,9 @@ select {
     justify-content: space-between;
     height: unset;
     background-color: transparent;
+  }
+  .nav-ul {
+    margin-top: 0;
   }
   .nav-icon-wrapper {
     justify-content: flex-end;
