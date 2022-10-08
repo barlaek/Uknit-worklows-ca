@@ -1,4 +1,4 @@
-// URL'S
+// ------------  URL'S --------------- //
 export const baseURL = "https://nf-api.onrender.com/";
 export const statusUrl = "status/"
 export const registerUrl = "api/v1/social/auth/register";
@@ -20,15 +20,15 @@ export const editSubmit = document.querySelector('#editSubmit');
 export const avatarImageWrap = document.querySelector('#avatarImageWrap');
 export const logoutButton = document.querySelector('#logoutButton');
 
-// Profile
+// ------------- Profile ------------- //
 export const profileUsername = document.querySelector('#profileUsername');
 export const followerCount = document.querySelector('#followerCount');
 export const followingCount = document.querySelector('#followingCount');
 export const postForm = document.querySelector('#postForm');
 
-// search 
+// ------------- search -------------- //
 export const searchUsersInput = document.getElementById('searchUsersInput');
 export const searchPosts = document.querySelector('#searchPosts');
 
-// sort
+// ------------- sort --------------- //
 export const sortSelect = document.querySelector('#sortPosts');

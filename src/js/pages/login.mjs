@@ -6,14 +6,14 @@ import { loginFetch } from "../fetch/fetch.mjs";
 // DOM
 const loginForm = document.querySelector('#loginForm');
 
-// Function collects data from inputs and puts them in object "values";
+/**
+ * Collects input values from form and puts them in object "values"
+ * @param {event} event submit
+ */
 function loginSubmit(event) {
     event.preventDefault();
-    // creates new object from FormData on submit 
     const data = new FormData(event.target);
     const values = Object.fromEntries(data.entries());
-    // Run async function that sends fetch request 
-    // Parameters are imported url and imported function that creates the body
     loginFetch(baseURL + loginUrl, createBody(values));
 }
 

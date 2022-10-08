@@ -32,6 +32,9 @@ export function closeModal(modal) {
 }
 
 
+/**
+ * Opens modal on click event, and closes modal on click of overlay or close button
+ */
 export function modalFunction() {
   const overlay = document.querySelector("#modal-overlay")
       const editPostModal = document.querySelector('#editPostModal');

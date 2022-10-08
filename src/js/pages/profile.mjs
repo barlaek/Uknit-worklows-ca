@@ -26,6 +26,9 @@ modalListeners(openModal, closeModal);
 let accessToken;
 let username;
 
+/**
+ * Creates profile using fetch and local storage. If user does not have a profile image, profile image is set as a stock icon.
+ */
 async function createProfile() {
     username = localStorage.getItem('username');
     accessToken = localStorage.getItem('accessToken');
@@ -49,7 +52,9 @@ async function createProfile() {
 }
 createProfile();
 
-// Fetching user posts 
+/**
+ * Displays the user´s own posts using a fetch with results filtered by username. 
+ */
 async function createPosts() {
     // Fetch with createHeader function as parameter
     const resultArray = await standardFetch(baseURL + allPostsUrl, createHeaderAllPosts(accessToken));
@@ -92,6 +97,9 @@ createPosts();
 
 const editProfileForm = document.querySelector('#editProfileForm');
 
+/**
+ * Fetch to change avatar image on submit event of form
+ */
 editProfileForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(event.target);

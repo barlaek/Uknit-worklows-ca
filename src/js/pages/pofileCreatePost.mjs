@@ -15,16 +15,17 @@ import { profileUsername, followerCount, followingCount, avatarImageWrap } from 
 // Declaring variable to use it later with collected value
 let accessToken;
 
+/**
+ * Creates profile using fetch and local storage. If user does not have a profile image, profile image is set as a stock icon.
+ */
 async function createProfile() {
     const username = localStorage.getItem('username');
     accessToken = localStorage.getItem('accessToken');
-    // Fetch with createHeader function as parameter
     const profileData = await standardFetch(baseURL + profileUrl + username + profileExtUrl, createProfileHeader(accessToken));
     profileUsername.innerText = profileData.name;
     followerCount.innerText = profileData._count.followers;
     followingCount.innerText = profileData._count.following;
 
-    // 
     function buildAvatar() {
         if (profileData.avatar) {
             return profileData.avatar;
@@ -45,6 +46,9 @@ modalListeners(openModal, closeModal);
 
 const editProfileForm = document.querySelector('#editProfileForm');
 
+/**
+ * Fetch to change avatar image on submit event of form
+ */
 editProfileForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -56,21 +60,21 @@ editProfileForm.addEventListener("submit", async (event) => {
     createProfile();
 })
 
-// CREATE POST 
+// ------------ CREATE POST ------------ //
 import { postForm, submitPostUrl } from "../constants/constants.mjs";
 import { standardPOSTHeader } from "../headers/headers.mjs";
 
+/**
+ * Creates object from inputs and sends fetch to create a post 
+ */
 function submitPost(event) {
     event.preventDefault();
-    // creates new object from FormData on submit 
     const data = new FormData(event.target);
     const values = Object.fromEntries(data.entries());
-    // Run async function that sends fetch request 
-    // Parameters are imported url and imported function that creates the body
-    console.log(values);
     standardFetch(baseURL + submitPostUrl, standardPOSTHeader(values, accessToken));
     postForm.reset()
 }
 
 // addEventListener on submit of loginForm
 postForm.addEventListener('submit', submitPost);
+
