@@ -37,11 +37,11 @@ export function closeModal(modal) {
  */
 export function modalFunction() {
   const overlay = document.querySelector("#modal-overlay")
-      const editPostModal = document.querySelector('#editPostModal');
-      overlay.classList.add('active');
-      overlay.addEventListener('click', () => {
-          overlay.classList.remove('active');
-          editPostModal.classList.remove('active');
-      })
-      editPostModal.classList.add('active');
+  const editPostModal = document.querySelector('#editPostModal');
+  overlay.classList.add('active');
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    editPostModal.classList.remove('active');
+  })
+  editPostModal.classList.add('active');
 }

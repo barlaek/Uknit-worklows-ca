@@ -1,7 +1,7 @@
 // Functions
 import { toggleNav } from "../components/toggleNav.mjs";
 import { createHeaderAllPosts, likeHeader } from "../headers/headers.mjs";
-import { standardFetch, likeFetch } from "../fetch/fetch.mjs";
+import { standardFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllUsers } from "../headers/headers.mjs";
 
 // search
@@ -31,7 +31,9 @@ let username;
 // Collecting accessToken from localStorage
 export let accessToken = localStorage.getItem("accessToken");
 
-// Sorting
+/**
+ * Function that adds variable containing sorting url to params of createPosts function.
+ */
 function runSort() {
   sortSelect.addEventListener("change", () => {
     switch (sortSelect.value) {
@@ -50,14 +52,21 @@ function runSort() {
 }
 runSort();
 
-// Function to fetch posts
+/**
+ * Function to fetch posts and build them on page.
+ * @param {string} sortUrl Additional string for url in fetch if sorting is applied. If not, variable is empty.
+ */
 async function createPosts(sortUrl = "") {
   // Fetch with createHeader function as parameter
   const resultArray = await standardFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
+  console.log(resultArray);
   for (let i = 0; i < resultArray.length; i++) {
-
-    // const { postText, postCreated, postID, postMedia, postTag, postTitle } = resultArray[i];
-
+    // Destructuring each result from loop
+    const { author: { name }, author: { avatar }, body, title, media, id, _count: { comments } } = resultArray[i];
+    /**
+     * Checks the amount of reactions(likes) on a post
+     * @returns the amount of likes if > 0, otherwise returns 0
+     */
     const reactionCount = () => {
       if (resultArray[i].reactions[0]) {
         return resultArray[i].reactions[0].count;
@@ -67,14 +76,20 @@ async function createPosts(sortUrl = "") {
     };
 
     const postClone = document.importNode(postTemplate, true);
-    postClone.querySelector("#postAuthor").innerText = `${resultArray[i].author.name}`;
-    postClone.querySelector("#postTitle").innerText = `${resultArray[i].title}`;
-    postClone.querySelector("#postMedia").innerHTML = `<img src="${resultArray[i].media}">`;
-    postClone.querySelector("#postText").innerHTML = `${resultArray[i].body}`;
+    postClone.querySelector("#postAuthor").innerText = `${name}`;
+    postClone.querySelector("#postTitle").innerText = `${title}`;
+
+    if (media) {
+      postClone.querySelector("#postMedia").innerHTML = `<img src="${media}">`;
+    }
+    else {
+      postClone.querySelector("#postMedia").classList.add("d-none");
+    }
+    postClone.querySelector("#postText").innerHTML = `${body}`;
     postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
-    postClone.querySelector("#postAvatar").innerHTML = `<img src="${resultArray[i].author.avatar}">`;
-    postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${resultArray[i].id}" class="btn btn-small-primary">View Post</a>`;
-    postClone.querySelector("#commentCount").innerHTML = `${resultArray[i]._count.comments}`;
+    postClone.querySelector("#postAvatar").innerHTML = `<img src="${avatar}">`;
+    postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${id}" class="btn btn-small-primary">View Post</a>`;
+    postClone.querySelector("#commentCount").innerHTML = `${comments}`;
     postClone.querySelector("#likeButton").addEventListener('click', () => {
       like(resultArray, i, accessToken);
     });
@@ -87,7 +102,9 @@ async function createPosts(sortUrl = "") {
   }
 
 
-  // Search
+  /**
+   * Function for searching posts
+   */
   function postsSearch() {
     searchPosts.addEventListener("keyup", (event) => {
       const inputValue = event.target.value.toLowerCase();
@@ -118,7 +135,9 @@ async function createPosts(sortUrl = "") {
 }
 createPosts();
 
-// Function to fetch users
+/**
+ * Function to build usersArray and create div from each user
+ */
 async function createUsers() {
   // Fetch with createHeader function as parameter
   const usersArray = await standardFetch(baseURL + allUsersUrl, createHeaderAllUsers(accessToken));

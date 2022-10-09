@@ -1,5 +1,5 @@
 import { baseURL } from "../constants/constants.mjs";
-import { likeFetch } from "../fetch/fetch.mjs";
+import { standardFetch } from "../fetch/fetch.mjs";
 import { likeHeader } from "../headers/headers.mjs";
 
 /**
@@ -9,8 +9,8 @@ import { likeHeader } from "../headers/headers.mjs";
  * @param {string} accessToken The accessToken collected from local storage
  */
 export async function like(array, loop, accessToken) {
-    const id = array[loop].id;
-    const likeUrl = baseURL + `api/v1/social/posts/${id}/react/👍`;
-    const results = await likeFetch(likeUrl, likeHeader(accessToken));
-  }
-  
+  const id = array[loop].id;
+  const likeUrl = baseURL + `api/v1/social/posts/${id}/react/👍`;
+  await standardFetch(likeUrl, likeHeader(accessToken));
+  location.reload();
+}
