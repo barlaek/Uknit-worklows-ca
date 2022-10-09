@@ -20,7 +20,7 @@ const mostPopularTemplate = document.querySelector("#mostPopularTemplate").conte
 import { baseURL, allPostsUrl, allUsersUrl } from "../constants/constants.mjs";
 
 // Like
-import {like} from "../components/likeButton.mjs";
+import { like } from "../components/likeButton.mjs";
 
 // Running functions
 toggleNav();
@@ -55,6 +55,7 @@ async function createPosts(sortUrl = "") {
   // Fetch with createHeader function as parameter
   const resultArray = await standardFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
   for (let i = 0; i < resultArray.length; i++) {
+
     // const { postText, postCreated, postID, postMedia, postTag, postTitle } = resultArray[i];
 
     const reactionCount = () => {
@@ -91,10 +92,7 @@ async function createPosts(sortUrl = "") {
     searchPosts.addEventListener("keyup", (event) => {
       const inputValue = event.target.value.toLowerCase();
       const filteredPosts = resultArray.filter((resultArray) => {
-        if (
-          resultArray.title.toLowerCase().startsWith(inputValue) ||
-          resultArray.author.name.toLowerCase().startsWith(inputValue)
-        ) {
+        if (resultArray.title.toLowerCase().startsWith(inputValue) || resultArray.author.name.toLowerCase().startsWith(inputValue)) {
           postContainer.innerHTML = "";
           return resultArray;
         }
