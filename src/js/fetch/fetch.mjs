@@ -10,7 +10,6 @@ export async function loginFetch(url, body) {
   try {
     const response = await fetch(url, body);
     const data = await response.json();
-    console.log(data);
 
     // If user is rejected
     if (!response.ok) {
@@ -55,7 +54,6 @@ export async function registerFetch(url, body) {
 export async function standardFetch(url, body) {
   const response = await fetch(url, body);
   const data = await response.json();
-  console.log(data);
   if (response.ok) {
     return data;
   }

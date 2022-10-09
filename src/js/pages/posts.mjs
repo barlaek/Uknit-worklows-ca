@@ -59,7 +59,6 @@ runSort();
 async function createPosts(sortUrl = "") {
   // Fetch with createHeader function as parameter
   const resultArray = await standardFetch(baseURL + allPostsUrl + sortUrl, createHeaderAllPosts(accessToken));
-  console.log(resultArray);
   for (let i = 0; i < resultArray.length; i++) {
     // Destructuring each result from loop
     const { author: { name }, author: { avatar }, body, title, media, id, _count: { comments } } = resultArray[i];

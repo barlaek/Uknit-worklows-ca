@@ -14,3 +14,14 @@ export async function like(array, loop, accessToken) {
   await standardFetch(likeUrl, likeHeader(accessToken));
   location.reload();
 }
+
+/**
+ * Like function when on post specs page.
+ * @param {number} id ID of post
+ * @param {string} accessToken AccessToken
+ */
+export async function likeSpecs(id, accessToken) {
+  const likeUrl = baseURL + `api/v1/social/posts/${id}/react/👍`;
+  await standardFetch(likeUrl, likeHeader(accessToken));
+  location.reload();
+}

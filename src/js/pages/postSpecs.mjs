@@ -9,6 +9,8 @@ import { deleteHeader, editProfileBody, standardHeader } from "../headers/header
 import { closeModal, modalFunction } from "../components/modals.mjs";
 import { insertValueAsPlaceholder } from "../components/editPost.mjs";
 
+import { likeSpecs } from "../components/likeButton.mjs";
+
 // Running functions
 toggleNav();
 
@@ -49,6 +51,9 @@ async function createPostSpec() {
   if (results.author.name === username) {
     postClone.querySelector("#deletePost").classList.remove("d-none");
   }
+  postClone.querySelector("#likeButton").addEventListener('click', () => {
+    likeSpecs(id, accessToken);
+  });
   postContainer.appendChild(postClone);
 
   const editButton = document.querySelector("#editPost");
@@ -73,7 +78,6 @@ async function editPost(event) {
   const values = Object.fromEntries(data.entries());
   const accessToken = localStorage.getItem("accessToken");
   const url = baseURL + submitPostUrl + "/" + id;
-  console.log(values);
   await standardFetch(url, editProfileBody(values, accessToken));
   location.reload();
 }
