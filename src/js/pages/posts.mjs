@@ -114,15 +114,17 @@ async function createPosts(sortUrl = "") {
         }
       });
       for (let i = 0; i < filteredPosts.length; i++) {
+        // Destructuring result objects
+        const { author: { name }, author: { avatar }, body, title, media, id, _count: { comments } } = filteredPosts[i];
         const postClone = document.importNode(postTemplate, true);
-        postClone.querySelector("#postAuthor").innerText = `${filteredPosts[i].author.name}`;
-        postClone.querySelector("#postTitle").innerText = `${filteredPosts[i].title}`;
-        postClone.querySelector("#postMedia").innerHTML = `<img src="${filteredPosts[i].media}">`;
-        postClone.querySelector("#postText").innerHTML = `${filteredPosts[i].body}`;
+        postClone.querySelector("#postAuthor").innerText = `${name}`;
+        postClone.querySelector("#postTitle").innerText = `${title}`;
+        postClone.querySelector("#postMedia").innerHTML = `<img src="${media}">`;
+        postClone.querySelector("#postText").innerHTML = `${body}`;
         postClone.querySelector("#postReactionCount").innerHTML = `${filteredPosts[i]._count.reactions}`;
-        postClone.querySelector("#postAvatar").innerHTML = `<img src="${filteredPosts[i].author.avatar}">`;
-        postClone.querySelector("#commentCount").innerHTML = `${filteredPosts[i]._count.comments}`;
-        postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${filteredPosts[i].id}" class="btn btn-small-primary">View Post</a>`;
+        postClone.querySelector("#postAvatar").innerHTML = `<img src="${avatar}">`;
+        postClone.querySelector("#commentCount").innerHTML = `${comments}`;
+        postClone.querySelector("#viewPostButton").innerHTML = `<a href="../post-specs/post-specs.html?id=${id}" class="btn btn-small-primary">View Post</a>`;
         if (filteredPosts[i].author.name === username) {
           postClone.querySelector("#followDiv").classList.add("d-none");
         }
