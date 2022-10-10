@@ -71,6 +71,7 @@ function submitPost(event) {
     event.preventDefault();
     const data = new FormData(event.target);
     const values = Object.fromEntries(data.entries());
+    if (values.media === "") { delete values.media }
     standardFetch(baseURL + submitPostUrl, standardPOSTHeader(values, accessToken));
     postForm.reset()
 }
