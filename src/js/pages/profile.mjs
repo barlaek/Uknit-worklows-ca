@@ -1,10 +1,10 @@
 // functions
 import { dashBoard } from "../components/dashboardNavToggle.mjs";
 import { toggleNav } from "../components/toggleNav.mjs";
-import { createProfileHeader } from "../headers/headers.mjs";
+import { standardHeader } from "../headers/headers.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
 import { createHeaderAllPosts } from "../headers/headers.mjs";
-import {logOut} from "../components/logout.mjs";
+import { logOut } from "../components/logout.mjs";
 logOut();
 dashBoard();
 toggleNav();
@@ -33,7 +33,7 @@ async function createProfile() {
     username = localStorage.getItem('username');
     accessToken = localStorage.getItem('accessToken');
     // Fetch with createHeader function as parameter
-    const profileData = await standardFetch(baseURL + profileUrl + username + profileExtUrl, createProfileHeader(accessToken));
+    const profileData = await standardFetch(baseURL + profileUrl + username + profileExtUrl, standardHeader(accessToken));
     profileUsername.innerText = profileData.name;
     followerCount.innerText = profileData._count.followers;
     followingCount.innerText = profileData._count.following;
@@ -87,7 +87,7 @@ async function createPosts() {
         if (ownPostsArray[i].author.name === username) {
             postClone.querySelector('#followDiv').classList.add("d-none");
         }
-        
+
         postContainer.appendChild(postClone);
     }
 }

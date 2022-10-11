@@ -25,3 +25,4 @@ export async function likeSpecs(id, accessToken) {
   await standardFetch(likeUrl, likeHeader(accessToken));
   location.reload();
 }
+

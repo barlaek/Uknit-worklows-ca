@@ -1,8 +1,7 @@
 // Functions
 import { toggleNav } from "../components/toggleNav.mjs";
-import { createHeaderAllPosts, likeHeader } from "../headers/headers.mjs";
+import { createHeaderAllPosts, standardHeader } from "../headers/headers.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
-import { createHeaderAllUsers } from "../headers/headers.mjs";
 
 // search
 import { searchUsersInput } from "../constants/constants.mjs";
@@ -21,6 +20,9 @@ import { baseURL, allPostsUrl, allUsersUrl } from "../constants/constants.mjs";
 
 // Like
 import { like } from "../components/likeButton.mjs";
+
+// Follow
+import { follow } from "../components/follow.mjs";
 
 // Running functions
 toggleNav();
@@ -97,6 +99,11 @@ async function createPosts(sortUrl = "") {
     if (resultArray[i].author.name === username) {
       postClone.querySelector("#followDiv").classList.add("d-none");
     }
+    else {
+      postClone.querySelector("#followDiv").addEventListener("click", () => {
+        follow(resultArray, i, accessToken);
+      })
+    }
     postContainer.appendChild(postClone);
   }
 
@@ -141,7 +148,7 @@ createPosts();
  */
 async function createUsers() {
   // Fetch with createHeader function as parameter
-  const usersArray = await standardFetch(baseURL + allUsersUrl, createHeaderAllUsers(accessToken));
+  const usersArray = await standardFetch(baseURL + allUsersUrl, standardHeader(accessToken));
 
   for (let i = 0; i < usersArray.length; i++) {
     const userClone = document.importNode(mostPopularTemplate, true);

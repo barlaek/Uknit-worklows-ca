@@ -1,7 +1,7 @@
 // functions
 import { dashBoard } from "../components/dashboardNavToggle.mjs";
 import { toggleNav } from "../components/toggleNav.mjs";
-import { createProfileHeader } from "../headers/headers.mjs";
+import { standardHeader } from "../headers/headers.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
 dashBoard();
 toggleNav();
@@ -21,7 +21,7 @@ let accessToken;
 async function createProfile() {
     const username = localStorage.getItem('username');
     accessToken = localStorage.getItem('accessToken');
-    const profileData = await standardFetch(baseURL + profileUrl + username + profileExtUrl, createProfileHeader(accessToken));
+    const profileData = await standardFetch(baseURL + profileUrl + username + profileExtUrl, standardHeader(accessToken));
     profileUsername.innerText = profileData.name;
     followerCount.innerText = profileData._count.followers;
     followingCount.innerText = profileData._count.following;
