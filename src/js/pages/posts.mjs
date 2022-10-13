@@ -115,7 +115,7 @@ async function createPosts(sortUrl = "") {
     searchPosts.addEventListener("keyup", (event) => {
       const inputValue = event.target.value.toLowerCase();
       const filteredPosts = resultArray.filter((resultArray) => {
-        if (resultArray.title.toLowerCase().startsWith(inputValue) || resultArray.author.name.toLowerCase().startsWith(inputValue)) {
+        if (resultArray.title.toLowerCase().includes(inputValue) || resultArray.author.name.toLowerCase().includes(inputValue)) {
           postContainer.innerHTML = "";
           return resultArray;
         }
