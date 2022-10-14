@@ -58,13 +58,14 @@ createProfile();
 async function createPosts() {
     // Fetch with createHeader function as parameter
     const resultArray = await standardFetch(baseURL + allPostsUrl, createHeaderAllPosts(accessToken));
-    console.log(resultArray);
     const ownPostsArray = resultArray.filter((resultArray) => {
         return resultArray.author.name === username;
     });
 
+    console.log(ownPostsArray);
     for (let i = 0; i < ownPostsArray.length; i++) {
-        // const { postText, postCreated, postID, postMedia, postTag, postTitle } = resultArray[i];
+
+        const { author: { name }, author: { avatar }, body, title, media, id, _count: { comments } } = ownPostsArray[i];
 
         const reactionCount = () => {
             if (ownPostsArray[i].reactions[0]) {
@@ -76,13 +77,17 @@ async function createPosts() {
         }
 
         const postClone = document.importNode(postTemplate, true);
-        postClone.querySelector("#postAuthor").innerText = `${ownPostsArray[i].author.name}`;
-        postClone.querySelector("#postTitle").innerText = `${ownPostsArray[i].title}`;
-        postClone.querySelector("#postMedia").innerHTML = `<img src="${ownPostsArray[i].media}">`;
-        postClone.querySelector("#postText").innerHTML = `${ownPostsArray[i].body}`;
+        postClone.querySelector("#postAuthor").innerText = `${name}`;
+        postClone.querySelector("#postTitle").innerText = `${title}`;
+        if (media) {
+            postClone.querySelector("#postMedia").innerHTML = `<img src="${media}">`;
+        } else {
+            postClone.querySelector("#postMedia").classList.add("d-none");
+        }
+        postClone.querySelector("#postText").innerHTML = `${body}`;
         postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
-        postClone.querySelector("#postAvatar").innerHTML = `<img src="${ownPostsArray[i].author.avatar}">`;
-        postClone.querySelector("#viewPostButton").innerHTML = `<a href="/public/post-specs/post-specs.html?id=${ownPostsArray[i].id}" class="btn btn-small-primary">View Post</a>`;
+        postClone.querySelector("#postAvatar").innerHTML = `<img src="${avatar}">`;
+        postClone.querySelector("#viewPostButton").innerHTML = `<a href="/public/post-specs/post-specs.html?id=${id}" class="btn btn-small-primary">View Post</a>`;
 
         if (ownPostsArray[i].author.name === username) {
             postClone.querySelector('#followDiv').classList.add("d-none");

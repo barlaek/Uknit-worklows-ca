@@ -25,6 +25,7 @@ const postTemplate = document.querySelector("#postSpecsTemplate").content;
 async function createPostSpec() {
   const accessToken = localStorage.getItem("accessToken");
   const results = await standardFetch(postSpecUrl, standardHeader(accessToken));
+  console.log(results);
   const { title, body, tags, media, id } = results;
   const postClone = document.importNode(postTemplate, true);
   // Reaction count
@@ -37,7 +38,6 @@ async function createPostSpec() {
   };
   postClone.querySelector("#postAuthor").innerText = `${results.author.name}`;
   postClone.querySelector("#postTitle").innerText = `${results.title}`;
-  postClone.querySelector("#postMedia").innerHTML = `<img src="${results.media}">`;
   postClone.querySelector("#postText").innerHTML = `${results.body}`;
   postClone.querySelector("#postReactionCount").innerHTML = `${reactionCount()}`;
   postClone.querySelector("#postAvatar").innerHTML = `<img src="${results.author.avatar}">`;
@@ -54,6 +54,12 @@ async function createPostSpec() {
   postClone.querySelector("#likeButton").addEventListener('click', () => {
     likeSpecs(id, accessToken);
   });
+  if (media) {
+    postClone.querySelector("#postMedia").innerHTML = `<img src="${results.media}">`;
+  }
+  else {
+    postClone.querySelector("#postMedia").classList.add("d-none");
+  }
   postContainer.appendChild(postClone);
 
   const editButton = document.querySelector("#editPost");
@@ -76,6 +82,9 @@ async function editPost(event) {
   event.preventDefault();
   const data = new FormData(event.target);
   const values = Object.fromEntries(data.entries());
+  if (!values.media) {
+    delete values.media;
+  }
   const accessToken = localStorage.getItem("accessToken");
   const url = baseURL + submitPostUrl + "/" + id;
   await standardFetch(url, editProfileBody(values, accessToken));
