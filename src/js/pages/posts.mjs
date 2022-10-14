@@ -2,30 +2,25 @@
 import { toggleNav } from "../components/toggleNav.mjs";
 import { createHeaderAllPosts, standardHeader } from "../headers/headers.mjs";
 import { standardFetch } from "../fetch/fetch.mjs";
-
 // search
 import { searchUsersInput } from "../constants/constants.mjs";
 import { searchPosts } from "../constants/constants.mjs";
-
 // filter
 import { sortSelect } from "../constants/constants.mjs";
-
 // DOM
 import { postContainer } from "../constants/constants.mjs";
 const postTemplate = document.querySelector("#postTemplate").content;
 const mostPopularTemplate = document.querySelector("#mostPopularTemplate").content;
-
 // Url's
 import { baseURL, allPostsUrl, allUsersUrl } from "../constants/constants.mjs";
-
 // Like
 import { like } from "../components/likeButton.mjs";
-
 // Follow
 import { follow } from "../components/follow.mjs";
-
 // Running functions
 toggleNav();
+
+
 
 // Declaring variables
 let username;
