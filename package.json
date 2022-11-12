@@ -2,6 +2,7 @@
   "name": "workflows",
   "version": "0.1.0",
   "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
+  "type": "module",
   "main": "public/index.html",
   "author": "5t3ph",
   "scripts": {
@@ -45,5 +46,8 @@
   "bugs": {
     "url": "https://github.com/barlaek/Uknit-worklows-ca/issues"
   },
-  "homepage": "https://github.com/barlaek/Uknit-worklows-ca#readme"
+  "homepage": "https://github.com/barlaek/Uknit-worklows-ca#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
 }
