@@ -18,7 +18,8 @@
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "test": "node src/js/joker.js",
     "format": "prettier -w src/js/joker.js",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*/*.js",
+    "lint-fix": "eslint src/**/*/*.js --cache --fix"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
