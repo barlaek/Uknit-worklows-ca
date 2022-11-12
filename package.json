@@ -17,7 +17,8 @@
     "build": "npm-run-all copy:html build:*",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "test": "node src/js/joker.js",
-    "format": "prettier -w src/js/joker.js"
+    "format": "prettier -w src/js/joker.js",
+    "lint": "eslint src/**/*.js"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
