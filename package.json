@@ -16,7 +16,7 @@
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:html build:*",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "test": "node src/js/joker.js && npm run test-unit",
+    "test": "node src/js/joker.js && npm run test-unit && npm run cypress:open",
     "test-unit": "jest",
     "cypress:open": "cypress open",
     "format": "prettier -w src/js/joker.js",
