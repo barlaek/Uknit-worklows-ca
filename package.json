@@ -50,6 +50,7 @@
   },
   "homepage": "https://github.com/barlaek/Uknit-worklows-ca#readme",
   "devDependencies": {
+    "eslint": "^8.27.0",
     "prettier": "^2.7.1"
   }
 }
