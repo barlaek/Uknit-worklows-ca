@@ -19,7 +19,8 @@
     "test": "node src/js/joker.js",
     "format": "prettier -w src/js/joker.js",
     "lint": "eslint src/**/*/*.js",
-    "lint-fix": "eslint src/**/*/*.js --cache --fix"
+    "lint-fix": "eslint src/**/*/*.js --cache --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
@@ -53,6 +54,20 @@
   "homepage": "https://github.com/barlaek/Uknit-worklows-ca#readme",
   "devDependencies": {
     "eslint": "^8.27.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+        "prettier --write"
+    ],
+    "*.scss": [
+        "prettier --write"
+    ]
   }
 }
