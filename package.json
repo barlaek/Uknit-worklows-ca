@@ -1,6 +1,6 @@
 {
   "name": "workflows",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
   "type": "module",
   "main": "public/index.html",
